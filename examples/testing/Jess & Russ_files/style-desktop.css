@@ -242,26 +242,26 @@ a.credit {
 	}
 
 #intro-her {															/* 3 Chris Neal */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/3a.jpg') 50% 0 no-repeat fixed;
+	background: url('3a.jpg') 50% 0 no-repeat fixed;
 	background-color: black;
 	}
 
 	#intro-her .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/3b.png') 50% 0 repeat-x fixed;
+		background: url('3b.png') 50% 0 repeat-x fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 100;
 		}
 
 	#intro-her .c {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/3c.png') 50% 0 no-repeat fixed;
+		background: url('3c.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
 		}
 
 	#intro-her .d {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/2d.png') 50% 0 no-repeat fixed;
+		background: url('3d.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 102;
