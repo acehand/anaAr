@@ -1,7 +1,6 @@
 /* ==|== primary styles =====================================================
    Author: Russ Maschmeyer & Jessica Hische
    ========================================================================== */
-
 #frame {
 	position: relative;
 	border: 2px solid red;
@@ -44,7 +43,7 @@ a.nav-link {
 	}
 
 .text {
-	background: url('http://c15117992.r92.cf2.rackcdn.com/lines.png') repeat-y center;
+	background: url('../assets/lines.png') repeat-y center;
 	}
 
 .story {
@@ -55,7 +54,7 @@ a.nav-link {
 	margin: 0 auto;
 	padding: 99px 12px;
 	background-color: #000;
-	background-image: url('http://c15117992.r92.cf2.rackcdn.com/story-top.png'), url('http://c15117992.r92.cf2.rackcdn.com/story-bottom.png');
+	background-image: url('../assets/story-top.png'), url('../assets/story-bottom.png');
 	background-repeat: no-repeat, no-repeat;
 	background-position: top center, bottom center;
 	}
@@ -150,7 +149,7 @@ div.artist-bio img{
 	}
 
 .frame {
-	background-image: url('http://c15117992.r92.cf2.rackcdn.com/frame-top.png'), url('http://c15117992.r92.cf2.rackcdn.com/frame-bottom.png'), url('http://c15117992.r92.cf2.rackcdn.com/frame-rep.png');
+	background-image: url('../assets/frame-top.png'), url('../assets/frame-bottom.png'), url('../assets/frame-rep.png');
 	background-position: center top, center bottom, center;
 	background-repeat: no-repeat, no-repeat, repeat-y;
 	width: 100%;
@@ -231,7 +230,7 @@ a.credit {
 	}
 
 	#title .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/1b.png') center no-repeat;
+		background: url('../assets/1b.png') center no-repeat;
 		width: 100%;
 		position: absolute;
 		z-index: 100;
@@ -242,26 +241,26 @@ a.credit {
 	}
 
 #intro-her {															/* 3 Chris Neal */
-	background: url('3a.jpg') 50% 0 no-repeat fixed;
+	background: url('../assets/3a.jpg') 50% 0 no-repeat fixed;
 	background-color: black;
 	}
 
 	#intro-her .b {
-		background: url('3b.png') 50% 0 repeat-x fixed;
+		background: url('../assets/3b.png') 50% 0 repeat-x fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 100;
 		}
 
 	#intro-her .c {
-		background: url('3c.png') 50% 0 no-repeat fixed;
+		/* background: url('../assets/3c.png') 50% 0 no-repeat fixed; */
 		width: 100%;
 		position: absolute;
 		z-index: 101;
 		}
 
 	#intro-her .d {
-		background: url('3d.png') 50% 0 no-repeat fixed;
+		background: url('../assets/3d.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 102;
@@ -277,19 +276,19 @@ a.credit {
 	}
 
 #intro-him {															/* 5 Frank Stockton */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/5a.jpg') 50% 0 no-repeat fixed;
+	background: url('../assets/5a.jpg') 50% 0 no-repeat fixed;
 	background-color: black;
 	}
 
 	#intro-him .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/5b.png') 50% 0 no-repeat fixed;
+		background: url('../assets/5b.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
 		}
 
 	#intro-him .c {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/5c.png') 50% 0 no-repeat fixed;
+		background: url('../assets/5c.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 102;
@@ -305,12 +304,12 @@ a.credit {
 	}
 
 #discovery {															/* 7 Nick Felton */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/7a.png') 50% 0 no-repeat fixed;
+	background: url('../assets/7a.png') 50% 0 no-repeat fixed;
 	background-color: #bc9d51;
 	}
 
 	#discovery .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/7b.png') 50% 0 no-repeat fixed;
+		background: url('../assets/7b.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
@@ -321,12 +320,12 @@ a.credit {
 	}
 
 #star-crossed {															/* 9 Sam Weber */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/9a.jpg') 50% 0 no-repeat fixed;
+	background: url('../assets/9a.jpg') 50% 0 no-repeat fixed;
 	background-color: black;
 	}
 
 	#star-crossed .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/9b.png') 50% 0 repeat-y fixed;
+		background: url('../assets/9b.png') 50% 0 repeat-y fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
@@ -342,12 +341,12 @@ a.credit {
 	}
 
 #waiting {																/* 11 Josh Cochran */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/11a.jpg') center no-repeat;
+	background: url('../assets/11a.jpg') center no-repeat;
 	background-color: black;
 	}
 
 	#waiting .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/11b.png') 50% 0 no-repeat;
+		background: url('../assets/11b.png') 50% 0 no-repeat;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
@@ -381,19 +380,19 @@ a.credit {
 	}
 
 #closed {																/* 13 Gilbert Ford */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/13a.jpg') center bottom no-repeat;
+	background: url('../assets/13a.jpg') center bottom no-repeat;
 	background-color: black;
 	}
 
 	#closed .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/13b.png') 50% 0 repeat-y fixed;
+		background: url('../assets/13b.png') 50% 0 repeat-y fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
 		}
 
 	#closed .c {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/13c.png') 50% 0 repeat-y fixed;
+		background: url('../assets/13c.png') 50% 0 repeat-y fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 102;
@@ -409,26 +408,26 @@ a.credit {
 	}
 
 #falling-in-love {														/* 15 Jason Kernevich */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/15a.jpg') 50% 0 no-repeat fixed;
+	background: url('../assets/15a.jpg') 50% 0 no-repeat fixed;
 	background-color: #bc9d51;
 	}
 
 	#falling-in-love .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/15b.png') 50% 0 no-repeat fixed;
+		background: url('../assets/15b.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
 		}
 
 	#falling-in-love .c {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/15c.png') 50% 0 no-repeat fixed;
+		background: url('../assets/15c.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 102;
 		}
 
 	#falling-in-love .d {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/15d.png') 50% 0 no-repeat fixed;
+		background: url('../assets/15d.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 103;
@@ -444,7 +443,7 @@ a.credit {
 	}
 
 #high-seas {															/* 17 Chris Buzelli */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/17a.jpg') 50% 0 no-repeat fixed;
+	background: url('../assets/17a.jpg') 50% 0 no-repeat fixed;
 	background-color: #dfd6b9;
 	}
 
@@ -453,19 +452,19 @@ a.credit {
 	}
 
 #new-lives {															/* 19 Grady McFerrin */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/19a.jpg') 50% 0 no-repeat fixed;
+	background: url('../assets/19a.jpg') 50% 0 no-repeat fixed;
 	background-color: white;
 	}
 
 	#new-lives .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/19b.png') 50% 0 no-repeat fixed;
+		background: url('../assets/19b.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
 		}
 
 	#new-lives .c {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/19c.png') 50% 0 no-repeat fixed;
+		background: url('../assets/19c.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 102;
@@ -480,40 +479,40 @@ a.credit {
 	}
 
 #big-move {																/* 21 Alex Eben Meyer */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/21a.png') 50% 0 no-repeat fixed;
+	background: url('../assets/21a.png') 50% 0 no-repeat fixed;
 	background-color: #696351;
 	}
 
 	#big-move .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/21b.png') 50% 0 no-repeat fixed;
+		background: url('../assets/21b.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
 		}
 
 	#big-move .c {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/21c.png') 50% 0 no-repeat fixed;
+		background: url('../assets/21c.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 102;
 		}
 
 	#big-move .d {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/21d.png') 50% 0 no-repeat fixed;
+		background: url('../assets/21d.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 103;
 		}
 
 	#big-move .e {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/21e.png') 50% 0 no-repeat fixed;
+		background: url('../assets/21e.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 104;
 		}
 
 	#big-move .f {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/21f.png') 50% 0 no-repeat fixed;
+		background: url('../assets/21f.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 105;
@@ -524,19 +523,19 @@ a.credit {
 	}
 
 #jessica {																/* 23 Neil Swaab */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/23a.jpg') 50% 0 no-repeat fixed;
+	background: url('../assets/23a.jpg') 50% 0 no-repeat fixed;
 	background-color: #f8f0de;
 	}
 
 	#jessica .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/23b.png') 50% 0 no-repeat fixed;
+		background: url('../assets/23b.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
 		}
 
 	#jessica .c {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/23c.png') 50% 0 no-repeat fixed;
+		background: url('../assets/23c.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 102;
@@ -544,7 +543,7 @@ a.credit {
 
 	#jessica .d {
 		/* vignette */
-		background: url('http://c15117992.r92.cf2.rackcdn.com/23d.png') 50% 0 no-repeat fixed;
+		background: url('../assets/23d.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 103;
@@ -557,7 +556,7 @@ a.credit {
 
 	#jessica .e {
 		/* thought bubble */
-		background: url('http://c15117992.r92.cf2.rackcdn.com/23e.png') 50% 0 no-repeat fixed;
+		background: url('../assets/23e.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 104;
@@ -577,19 +576,19 @@ a.credit {
 	}
 
 #broke {																/* 25 Jennifer Daniel */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/25a.png') 50% 0 no-repeat fixed;
+	background: url('../assets/25a.png') 50% 0 no-repeat fixed;
 	background-color: black;
 	}
 
 	#broke .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/25b.png') 50% 0 no-repeat fixed;
+		background: url('../assets/25b.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
 		}
 
 	#broke .c {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/25c.png') 50% 0 no-repeat fixed;
+		background: url('../assets/25c.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 102;
@@ -610,7 +609,7 @@ a.credit {
 	}
 
 	#it-happened .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/27b.png') center no-repeat;
+		background: url('../assets/27b.png') center no-repeat;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
@@ -621,26 +620,26 @@ a.credit {
 	}
 
 #park {																	/* 29 Gina + Matt */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/29a.jpg') 50% 0 no-repeat fixed;
+	background: url('../assets/29a.jpg') 50% 0 no-repeat fixed;
 	background-color: #FFF;
 	}
 
 	#park .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/29b.png') 50% 0 no-repeat fixed;
+		background: url('../assets/29b.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
 		}
 
 	#park .c {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/29c.png') 50% 0 no-repeat fixed;
+		background: url('../assets/29c.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 102;
 		}
 
 	#park .d {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/29d.png') 50% 0 no-repeat fixed;
+		background: url('../assets/29d.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 103;
@@ -651,12 +650,12 @@ a.credit {
 	}
 
 #restaurant {															/* 31 James Gulliver Hancock */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/31a.jpg') 50% 0 no-repeat fixed;
+	background: url('../assets/31a.jpg') 50% 0 no-repeat fixed;
 	background-color: #e3d4ae;
 	}
 
 	#restaurant .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/31b.png') 50% 0 no-repeat fixed;
+		background: url('../assets/31b.png') 50% 0 no-repeat fixed;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
@@ -671,23 +670,23 @@ a.credit {
 	}
 
 #friends {																/* 33 Jillian Tamaki */
-	background: url('http://c15117992.r92.cf2.rackcdn.com/33a.jpg') 50% 0 no-repeat fixed;
+	background: url('../assets/33a.jpg') 50% 0 no-repeat fixed;
 	background-color: black;
 	}
 
 #invitation {
-	background: url('http://c15117992.r92.cf2.rackcdn.com/lines.png') 50% repeat-y;
+	background: url('../assets/lines.png') 50% repeat-y;
 	}
 
 	#invitation .b {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/34b.png') 50% no-repeat;
+		background: url('../assets/34b.png') 50% no-repeat;
 		width: 100%;
 		position: absolute;
 		z-index: 101;
 		}
 
 	#invitation .c {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/34c.png') 50% 0 no-repeat;
+		background: url('../assets/34c.png') 50% 0 no-repeat;
 		height: 671px;
 		width: 100%;
 		margin-top: 600px;
@@ -716,7 +715,7 @@ a.credit {
 			}
 
 	#invitation .d {
-		background: url('http://c15117992.r92.cf2.rackcdn.com/34d.png') no-repeat center top;
+		background: url('../assets/34d.png') no-repeat center top;
 		width: 100%;
 		position: absolute;
 		z-index: 103;

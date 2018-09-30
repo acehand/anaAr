@@ -212,7 +212,7 @@ td { vertical-align: top; }
    ========================================================================== */
 
 body{
-	background:url("http://c15117992.r92.cf2.rackcdn.com/stars.jpg") repeat;
+	background:url("../assets/stars.jpg") repeat;
 	background-attachment: fixed;
 	font-family: 'Sentinel A', 'Sentinel B', Georgia;
 	overflow-x: hidden; min-width: 1000px; width: 100%;
@@ -441,7 +441,7 @@ h1.artist-maintitle em{
 }
 
 .lines{
-	background: url('http://c15117992.r92.cf2.rackcdn.com/lines.png') repeat-y;
+	background: url('../assets/lines.png') repeat-y;
 	height: 50px;
 	margin: 0 auto;
 	width: 10px;
@@ -453,7 +453,7 @@ h1.artist-maintitle em{
 	line-height: 30px;
 	margin: 0 auto;
 	background-color: #000;
-	background-image: url('http://c15117992.r92.cf2.rackcdn.com/story-top-letter.png'), url('http://c15117992.r92.cf2.rackcdn.com/story-bottom-letter.png');
+	background-image: url('../assets/story-top-letter.png'), url('../assets/story-bottom-letter.png');
 	background-repeat: no-repeat, no-repeat;
 	background-position: top center, bottom center;
 	}
@@ -471,7 +471,7 @@ h1.artist-maintitle em{
 	margin: 0 auto;
 	background-color: #000;
 	color:#fff;
-	background-image: url('http://c15117992.r92.cf2.rackcdn.com/story-top-short.png'), url('http://c15117992.r92.cf2.rackcdn.com/story-bottom-short.png');
+	background-image: url('../assets/story-top-short.png'), url('../assets/story-bottom-short.png');
 	background-repeat: no-repeat, no-repeat;
 	background-position: top center, bottom center;
 	}
@@ -492,7 +492,7 @@ h1.artist-maintitle em{
 	}
 
 #monogram {
-	background: url('http://c15117992.r92.cf2.rackcdn.com/heart-monogram.png') no-repeat top center;
+	background: url('../assets/heart-monogram.png') no-repeat top center;
 	height: 124px;
 	width: 100%;
 	}
@@ -500,7 +500,7 @@ h1.artist-maintitle em{
 /*.artist-wrap{
 	width:100%;
 	text-align:center;
-	background-image: url(http://c15117992.r92.cf2.rackcdn.com/frame-top.png), url(http://c15117992.r92.cf2.rackcdn.com/frame-bottom.png);
+	background-image: url(frame-top.png), url(frame-bottom.png);
 	background-position: center top, center bottom;
 	background-repeat: no-repeat, no-repeat;
 	margin:0px;
