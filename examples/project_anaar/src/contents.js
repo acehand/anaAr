@@ -47,7 +47,7 @@ export class SectionTwo extends React.Component {
   }
   render() {
     return (
-      <Container style={{ top:"20%", position:"absolute", left:"10%"}}>
+      <Container style={{ top: "20%", position: "absolute", left: "10%" }}>
         <Row>
           <CardColumns>
             <Card style={{ backgroundColor: '#FDF2E9', borderColor: '#blue' }}>
@@ -117,7 +117,7 @@ export class SectionFour extends React.Component {
       <Container className="align-center">
         <Media>
           <Media left href="#">
-            <Media object data-src="holder.js/64x64" alt="Generic placeholder image" />
+            <Media className="img-halfScreen" object src="/images/holdhands.jpg" />
           </Media>
           <Media body>
             <Media heading>

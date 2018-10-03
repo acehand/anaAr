@@ -5,7 +5,6 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavLink,
   NavItem,
@@ -30,11 +29,10 @@ class Navigate extends React.Component {
   render() {
     return (
       <BrowserRouter><div>
-          <Navbar fixed="top" color="warning" light expand="md">
-            <NavbarBrand href="/">Booya</NavbarBrand>
+        <Navbar fixed="sticky-top" color="warning" light expand="md" className="bb">
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
-              <Scrollspy items={['sOne', 'sTwo', 'sThree']} 
+              <Scrollspy items={['sOne', 'sTwo', 'sThree', 'sFour','sFive']}
               currentClassName="is-current" 
               className="ml-auto navbar nav leftNav">  
                 <NavItem>
@@ -44,7 +42,13 @@ class Navigate extends React.Component {
                   <Link smooth to="#sTwo" class="nav-link" >HER</Link>
                   </NavItem>
                   <NavItem>
-                  <Link smooth to="#sThree" class="nav-=link">Him</Link>
+                  <Link smooth to="#sThree" class="nav-link">Him</Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link smooth to="#sFour" class="nav-link">Invite</Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link smooth to="#sFive" class="nav-link">Location</Link>
                   </NavItem>
                 </Scrollspy>
             </Collapse>
