@@ -36,8 +36,7 @@ class Navigate extends React.Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Scrollspy items={['sOne', 'sTwo', 'sThree']} 
               currentClassName="is-current" 
-              className="ml-auto navbar nav leftNav" 
-              >  
+              className="ml-auto navbar nav leftNav">  
                 <NavItem>
                   <Link smooth to="#sOne">Intro</Link>
                   </NavItem>
