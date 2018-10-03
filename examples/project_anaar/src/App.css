@@ -22,7 +22,51 @@
   font-size: large;
 }
 
+/* body {
+  background-color :#805E73;
+  opacity: .45;
+} */
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+section {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  width: 90%;
+  height: 500px;
+}
+.is-current {
+  background-color: white;
+}
+#sOne {
+  background-color: #7B6090;
+  opacity: .8;
+  height: 1000px;
+}
+
+#sTwo {
+  background-color: black;
+  opacity: .8;
+  height: 1000px;
+}
+#sK {
+  background-color: #7B6090;
+  opacity: .8;
+  height: 500px;;
+}
+#sThree {
+  background-color: #7B6090;
+  opacity: .8;
+  height: 500px;;
+}
+.teal {
+  background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
+}
+
+
+.tomato {
+  background: linear-gradient(to right, tomato 0%, gold 100%);
 }
