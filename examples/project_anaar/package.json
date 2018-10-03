@@ -10,6 +10,7 @@
     "react-router-hash-link": "^1.2.0",
     "react-scripts": "1.1.5",
     "react-scrollspy": "^3.3.5",
+    "react-snowstorm": "0.0.2",
     "react-spring": "3.0.4",
     "reactstrap": "^6.4.0"
   },
