@@ -5,8 +5,6 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  Nav,
-  NavLink,
   NavItem,
 } from 'reactstrap';
 import Scrollspy from 'react-scrollspy'

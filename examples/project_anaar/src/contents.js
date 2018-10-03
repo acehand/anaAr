@@ -1,7 +1,7 @@
 import React from 'react';
 import { Spring} from 'react-spring';
 import {
-  Container, Row, Col,Card, Button, CardImg, CardTitle, CardText, CardColumns,
+  Container, Row, Col,Card,  CardTitle, CardText, CardColumns,
   CardSubtitle, CardBody, Media
 } from 'reactstrap';
 
@@ -117,7 +117,7 @@ export class SectionFour extends React.Component {
       <Container className="align-center">
         <Media>
           <Media left href="#">
-            <Media className="img-halfScreen" object src="/images/holdhands.jpg" />
+            <Media className="img-halfScreen" object src="./images/holdhands.jpg" />
           </Media>
           <Media body>
             <Media heading>

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Spring, Parallax, ParallaxLayer } from 'react-spring';
-import { Container, Row, Col } from 'reactstrap';
+import {Parallax } from 'react-spring';
 import Navigate from './nav';
 import {SectionOne, SectionTwo, SectionThree, SectionFour} from './contents'
 import SnowStorm from 'react-snowstorm';
@@ -30,7 +29,7 @@ class Contentsections extends React.Component{
   // }
   handleClick(parallax) {
     let currentOffset = parallax.offset;
-    if (currentOffset == this.state.offsetLen) {
+    if (currentOffset === this.state.offsetLen) {
       currentOffset=-1;
     }
     parallax.scrollTo(currentOffset + 1);
@@ -48,19 +47,20 @@ class Contentsections extends React.Component{
           </Parallax.Layer>
           <Parallax.Layer factor={1.25} offset={1} speed={.25} onClick={e => this.handleClick(this.parallax)}>
             <section id="sTwo">
-              <SnowStorm snowColor="Orange" targetElement="sTwo" snowCharacter="**" />
+              <SnowStorm snowColor="green" targetElement="sTwo" snowCharacter="~^~" />
+              
               <SectionTwo />
             </section>
           </Parallax.Layer>
           <Parallax.Layer factor={1} offset={2} speed={1} onClick={e => this.handleClick(this.parallax)}>
           <section id="sThree">
-              <SnowStorm snowColor="White" targetElement="sThree" snowCharacter="**" />      
-              <SectionThree/>
+              <SnowStorm snowColor="Orange" targetElement="sThree" snowCharacter="**" />
+            <SectionThree/>
           </section>
           </Parallax.Layer>
           <Parallax.Layer factor={1} offset={3} speed={.25} onClick={e => this.handleClick(this.parallax)}>
             <section id="sFour">
-              <SnowStorm snowColor="White" targetElement="sThree" snowCharacter="**" />
+              <SnowStorm snowColor="brown" targetElement="sFour" snowCharacter="**" />
               <SectionFour />
             </section>
           </Parallax.Layer>
