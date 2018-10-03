@@ -1,7 +1,11 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Spring} from 'react-spring';
+import {
+  Container, Row, Col,Card, Button, CardImg, CardTitle, CardText, CardColumns,
+  CardSubtitle, CardBody
+} from 'reactstrap';
 
-class SectionOne extends React.Component{
+export class SectionOne extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
@@ -30,4 +34,67 @@ class SectionOne extends React.Component{
     );
   }
 }
-export default SectionOne
+
+export class SectionTwo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      heading1: "Anand & Archana",
+      subHeading1: "Few years ago, they didnt know what they were meant to be",
+      subHeading2: "Now, they are all geared up to exchange rings, party around and get married",
+      eventDate: "Sunday, December 9th 2018"
+    }
+  }
+  render() {
+    return (
+      <Container style={{ top:"20%", position:"absolute", left:"10%"}}>
+        <Row>
+          <CardColumns>
+            <Card style={{ backgroundColor: '#FDF2E9', borderColor: '#blue' }}>
+              <CardBody>
+                <CardTitle>Archana</CardTitle>
+                <CardSubtitle>Card subtitle</CardSubtitle>
+                <CardText>Content</CardText>
+              </CardBody>
+            </Card>
+            <Card style={{ backgroundColor: '#FDF2E9', borderColor: '#blue' }}>
+              <CardBody>
+                <CardTitle>Wedding</CardTitle>
+                <CardText>Date 1</CardText>
+                <CardText>Date 2</CardText>
+              </CardBody>
+            </Card>
+            <Card style={{ backgroundColor: '#D98880', borderColor: '#blue' }}>
+              <CardBody>
+                <CardTitle>Anand</CardTitle>
+                <CardSubtitle>Card subtitle</CardSubtitle>
+                <CardText>Content</CardText>
+              </CardBody>
+            </Card>
+          </CardColumns>
+        </Row>
+      </Container>
+    );
+  }
+}
+export class SectionThree extends React.Component {
+  render() {
+    return(
+      <Container className="align-center">
+        <Row>
+          <Col md={{ size: 10 }} className="fWhite">
+            <h1 className="section-title">"Wedding"</h1>
+            <Spring from={
+              { color: "blue", fontSize: "0px", left: "0px" }
+            } to={
+              { color: 'white', fontSize: "50px", left: "45%" }
+            }
+              config={{ tension: 5, friction: 20 }}>
+              {props => <div class="section-title" style={props}><p class="section-text">we would like to invite you to the premiere of "The wedding kalyanam".</p> </div>}
+            </Spring>
+          </Col>
+        </Row>
+      </Container>
+    );
+  }
+}

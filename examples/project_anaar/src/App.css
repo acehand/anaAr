@@ -51,14 +51,22 @@ li.is-current {
   padding-bottom: 3rem;
 }
 .subK {
-  /* background: url("/images/HeaderMain.jpeg") no-repeat; */
+  /* background: linear-gradient(to bottom, gray 0%, orange 100%); */
 }
-
 #sOne {
   background: url("/images/HeaderMain.jpeg") center no-repeat;
   background-position: center;
   background-size: cover;
   opacity: 1;
+  height: 100%;
+  z-index: 0;
+}
+#sThree {
+  background: url("/images/skyline2.jpg") center no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+  height: 100%;
   z-index: 0;
 }
 #af{
@@ -66,20 +74,16 @@ li.is-current {
   top:0;
 }
 #sTwo {
-  background-color: black;
+  background: #7B6090;
   opacity: .8;
-  height: 1000px;
+  height: 100%;;
 }
 #sK {
   background-color: #7B6090;
   opacity: .8;
   height: 500px;;
 }
-#sThree {
-  background-color: #7B6090;
-  opacity: .8;
-  height: 500px;;
-}
+
 .teal {
   background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
 }

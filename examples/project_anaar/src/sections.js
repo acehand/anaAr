@@ -2,7 +2,7 @@ import React from 'react';
 import { Spring, Parallax, ParallaxLayer } from 'react-spring';
 import { Container, Row, Col } from 'reactstrap';
 import Navigate from './nav';
-import SectionOne from './contents'
+import {SectionOne, SectionTwo, SectionThree} from './contents'
 import SnowStorm from 'react-snowstorm';
 
 class Contentsections extends React.Component{  
@@ -38,13 +38,25 @@ class Contentsections extends React.Component{
   render() {
     return (
       <div>
-        {this._renderNavigation()}
-        <Parallax ref={ref => (this.parallax = ref)} pages={3} >
-          <Parallax.Layer id="sOne" factor={1} offset={0} speed={.25}  onClick={e => this.handleClick(this.parallax)}>
+          {this._renderNavigation()}
+        <Parallax ref={ref => (this.parallax = ref)} pages={3}>
+          <Parallax.Layer className="subK" factor={1.25} offset={0} speed={.25}  onClick={e => this.handleClick(this.parallax)}>
             <section id="sOne" class="img-fullscreen">
               <SnowStorm snowColor="green" targetElement="sOne" snowCharacter="~^~"/>
               <SectionOne/>
             </section>
+          </Parallax.Layer>
+          <Parallax.Layer factor={1.25} offset={1} speed={.25} onClick={e => this.handleClick(this.parallax)}>
+            <section id="sTwo">
+              <SnowStorm snowColor="Orange" targetElement="sTwo" snowCharacter="**" />
+              <SectionTwo />
+            </section>
+          </Parallax.Layer>
+          <Parallax.Layer factor={1} offset={2} speed={.25} onClick={e => this.handleClick(this.parallax)}>
+          <section id="sThree">
+              <SnowStorm snowColor="White" targetElement="sThree" snowCharacter="**" />      
+              <SectionThree/>
+          </section>
           </Parallax.Layer>
         </Parallax>
       </div>
