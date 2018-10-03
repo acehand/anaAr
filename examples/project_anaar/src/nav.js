@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom'
-import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { HashLink as Link } from 'react-router-hash-link';
 import {
   Collapse,
@@ -8,9 +7,9 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
+  NavLink,
   NavItem,
 } from 'reactstrap';
-import ContentSections from './sections'
 import Scrollspy from 'react-scrollspy'
 
 class Navigate extends React.Component {
@@ -31,23 +30,24 @@ class Navigate extends React.Component {
   render() {
     return (
       <BrowserRouter><div>
-        <ContentSections />
-          <Navbar fixed="top" color="warning" light expand="lg">
+          <Navbar fixed="top" color="warning" light expand="md">
+            <NavbarBrand href="/">Booya</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar justified fill>
-                <Scrollspy items={['sOne', 'sTwo', 'sThree']} currentClassName="is-current" className="nav">
-                  <NavItem>
-                    <Link to="#sOne">Components</Link>
+              <Scrollspy items={['sOne', 'sTwo', 'sThree']} 
+              currentClassName="is-current" 
+              className="ml-auto navbar nav leftNav" 
+              >  
+                <NavItem>
+                  <Link smooth to="#sOne">Intro</Link>
                   </NavItem>
                   <NavItem>
-                    <Link to="#sTwo">Components</Link>
+                  <Link smooth to="#sTwo" class="nav-link" >HER</Link>
                   </NavItem>
                   <NavItem>
-                    <Link to="#sThree">Components</Link>
+                  <Link smooth to="#sThree" class="nav-=link">Him</Link>
                   </NavItem>
                 </Scrollspy>
-              </Nav>
             </Collapse>
           </Navbar>
       </div>

@@ -30,7 +30,9 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
+.leftNav{
+  margin-right: 10px;
+}
 section {
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -46,7 +48,10 @@ section {
   opacity: .8;
   height: 1000px;
 }
-
+#af{
+  position: 'fixed-top'!important;
+  top:0;
+}
 #sTwo {
   background-color: black;
   opacity: .8;
