@@ -7,11 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <ContentSections/>
-        <div id="footer">
-          <div className="container">
-            <p className="footer-block">Place sticky footer content here.</p>
-          </div>
-        </div>
+        
       </div>
     );
   }

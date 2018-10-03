@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom'
-import { HashLink as Link } from 'react-router-hash-link';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
+  NavLink,
   NavItem,
 } from 'reactstrap';
 import Scrollspy from 'react-scrollspy'
@@ -27,26 +27,26 @@ class Navigate extends React.Component {
   render() {
     return (
       <BrowserRouter><div>
-        <Navbar fixed="sticky-top" color="warning" light expand="md" className="bb">
+        <Navbar fixed="top" color="warning" light expand="md" className="bb">
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Scrollspy items={['sOne', 'sTwo', 'sThree', 'sFour','sFive']}
               currentClassName="is-current" 
               className="ml-auto navbar nav leftNav">  
                 <NavItem>
-                  <Link smooth to="#sOne">Intro</Link>
+                  <NavLink smooth="true" href="#sOne">Intro</NavLink>
                   </NavItem>
                   <NavItem>
-                  <Link smooth to="#sTwo" class="nav-link" >HER</Link>
+                <NavLink smooth="true" href="#sTwo">HER</NavLink>
                   </NavItem>
                   <NavItem>
-                  <Link smooth to="#sThree" class="nav-link">Him</Link>
+                <NavLink smooth="true" href="#sThree">Him</NavLink>
                   </NavItem>
                   <NavItem>
-                    <Link smooth to="#sFour" class="nav-link">Invite</Link>
+                <NavLink smooth="true" href="#sFour">Invite </NavLink>
                   </NavItem>
                   <NavItem>
-                    <Link smooth to="#sFive" class="nav-link">Location</Link>
+                <NavLink smooth="true" href="#sFive">Location</NavLink>
                   </NavItem>
                 </Scrollspy>
             </Collapse>

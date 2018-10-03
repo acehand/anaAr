@@ -38,8 +38,9 @@
 }
 
 li.is-current {
-  background-color: #1A2629;
+  background-color: grey;
   padding: 4px;
+  height: 100%;
   border-box :5 px;
 }
 
@@ -63,7 +64,8 @@ li.is-current {
   display: -o-flex;
   align-items: center;
   -webkit-align-items: center;
-  width: 200px;
+  width: 300px;
+  height:100%;
 }
 #footer {
     bottom: 0;
@@ -79,16 +81,18 @@ li.is-current {
   /* background: linear-gradient(to bottom, gray 0%, orange 100%); */
 }
 #sOne {
-  background: url("/images/HeaderMain.jpeg") center no-repeat;
+  background: url("./Images/HeaderMain.jpeg") center no-repeat;
   background-position: center;
   background-size: cover;
   opacity: 1;
   height: 100%;
+  width: 80%;
+  margin-left:10%;
   z-index: 0;
   position: relative;
 }
 #sThree {
-  background: url("/images/skyline2.jpg") center no-repeat;
+  background: url("./Images/skyline2.jpg") center no-repeat;
   background-position: center;
   background-size: cover;
   opacity: 0.5;
@@ -106,15 +110,19 @@ li.is-current {
   opacity: .8;
   height: 100%;
 }
-#sTwo, #sFour {
-  background: #white;
-  opacity: .8;
+
+#sFour {
+  background:white;
   height: 100%;
+  width: 100%;
 }
+div.border {
+  margin-top: 5%;
+}
+
 #sFive {
-  background: #white;
-  opacity: .8;
-  height: 100%;
+  border-top: 2px;
+  height: 400px;
   width:100%;
 }
 #sFive iframe{
