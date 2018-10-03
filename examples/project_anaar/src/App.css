@@ -60,6 +60,7 @@ li.is-current {
   opacity: 1;
   height: 100%;
   z-index: 0;
+  position: relative;
 }
 #sThree {
   background: url("/images/skyline2.jpg") center no-repeat;
@@ -68,6 +69,7 @@ li.is-current {
   opacity: 0.5;
   height: 100%;
   z-index: 0;
+  position: relative;
 }
 #af{
   position: 'fixed-top'!important;
@@ -76,7 +78,14 @@ li.is-current {
 #sTwo {
   background: #7B6090;
   opacity: .8;
-  height: 100%;;
+  height: 100%;
+  position: relative;
+}
+#sTwo {
+  background: #white;
+  opacity: .8;
+  height: 100%;
+  position: relative;
 }
 #sK {
   background-color: #7B6090;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Spring} from 'react-spring';
 import {
   Container, Row, Col,Card, Button, CardImg, CardTitle, CardText, CardColumns,
-  CardSubtitle, CardBody
+  CardSubtitle, CardBody, Media
 } from 'reactstrap';
 
 export class SectionOne extends React.Component{
@@ -94,6 +94,48 @@ export class SectionThree extends React.Component {
             </Spring>
           </Col>
         </Row>
+      </Container>
+    );
+  }
+}
+
+
+export class SectionFour extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      heading1: "Invite",
+      subHeading1: "your are invited to cheer two crazies",
+      subHeading2: "team up for their game of life on",
+      subHeading3: "& dont forget to bring ur fun and party size on",
+      eventDate: "Sunday, December 9th 2018",
+      partyDate: "Saturday, December 8th 2018",
+    }
+  }
+  render() {
+    return (
+      <Container className="align-center">
+        <Media>
+          <Media left href="#">
+            <Media object data-src="holder.js/64x64" alt="Generic placeholder image" />
+          </Media>
+          <Media body>
+            <Media heading>
+              <h1 className="section-title">{this.state.heading1}</h1>
+            </Media>
+            <h3 className="section-subtitle  mbr-light">
+              <span>{this.state.subHeading1}</span><br />
+              <span>{this.state.subHeading2}</span>
+            </h3>
+            <p className="section-subtitle mbr-light">
+              {this.state.eventDate}
+            </p>
+            <p className="section-subtitle mbr-light">
+              <span>{this.state.subHeading3}</span><br/>
+              <span>{this.state.partyDate}</span>
+            </p>
+      </Media>
+        </Media>
       </Container>
     );
   }
