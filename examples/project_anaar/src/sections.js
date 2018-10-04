@@ -50,14 +50,15 @@ class Contentsections extends React.Component{
         <Parallax ref={ref => (this.parallax = ref)} pages={6}>
           <Parallax.Layer offset={1} speed={1} style={{ backgroundColor: '#00C853' }} />
           <Parallax.Layer offset={2} speed={1} style={{ backgroundColor: '#18FFFF' }} />
-          <Parallax.Layer offset={0} speed={0} factor={5} style={{ backgroundImage: `url(${stars})`, backgroundSize: 'cover' }} onClick={e => this.handleClick(this.parallax)}/>
+          <Parallax.Layer offset={0} speed={0} factor={6} style={{ backgroundImage: `url(${stars})`, backgroundSize: 'cover' }} onClick={e => this.handleClick(this.parallax)}/>
           <Parallax.Layer factor={1} offset={0.2} speed={-0.3} onClick={e => this.handleClick(this.parallax)}>
             <section id="sOne" class="img-fullscreen">
               <SectionOne />
             </section>
           </Parallax.Layer>
-          <Parallax.Layer offset={1} speed={.5} onClick={e => this.handleClick(this.parallax)} />
-        
+          <Parallax.Layer offset={1} speed={.5} onClick={e => this.handleClick(this.parallax)}>
+            <section id="sTwo"></section>
+          </Parallax.Layer>
           <Parallax.Layer  offset={2.2} speed={-.5} style={{ backgroundColor: '#00C853', width: "30%", marginLeft: "10%", height: "100px" }}/>
           <Parallax.Layer  offset={2.2} speed={-.5} style={{ backgroundColor: '#18FFFF', width: "30%", marginLeft: "50%", height: "100px" }}/>
           <Parallax.Layer  offset={2.6} speed={-.5} style={{ backgroundColor: '#00C852', width: "30%", marginLeft: "10%", height: "100px" }}/>
@@ -65,7 +66,9 @@ class Contentsections extends React.Component{
 
           <Parallax.Layer offset={3} speed={.5} onClick={e => this.handleClick(this.parallax)} />
           <Parallax.Layer offset={3} speed={0} factor={1} style={{ backgroundImage: `url(${skyline2})`, height: "20%", width: "100%", backgroundSize: "fill" }} onClick={e => this.handleClick(this.parallax)}>
-            <SectionThree /> 
+            <section id="sThree">
+              <SectionThree /> 
+            </section>
           </Parallax.Layer>
           
           <Parallax.Layer factor={1} offset={4} speed={-.1} onClick={e => this.handleClick(this.parallax)}>
