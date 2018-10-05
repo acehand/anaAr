@@ -6,11 +6,23 @@ import SnowStorm from 'react-snowstorm';
 import stars from './Images/stars.png'
 import HeaderMain from './Images/HeaderMain.jpeg'
 import skyline2 from './Images/skyline2.jpg'
+import {
+   Card, CardTitle, CardText, CardColumns, Fa,
+  CardSubtitle, CardBody, CardImage,
+} from 'mdbreact'
 
-
-// const ParallaxPage = ({offset, speed, that}) => (
-//   <Parallax.Layer offset={offset} speed={speed} onClick={e => that.handleClick(that.parallax)}/>
-// );
+const scrollSpySectionsOffset = [];
+const ParallaxCard = ({offset, img, title, content, marginLeft}) => (
+  <Parallax.Layer factor={.5} offset={offset} speed={-.1} style={{ width: "30%", marginLeft: `${marginLeft}` }}>
+    <Card>
+      <CardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" />
+      <CardBody>
+        <CardTitle>{title}</CardTitle>
+        <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+      </CardBody>
+    </Card>
+  </Parallax.Layer>
+);
 
 class Contentsections extends React.Component{  
   constructor(props) {
@@ -19,24 +31,44 @@ class Contentsections extends React.Component{
       isToggleOn: true, 
       offsetLen: 5,
       loadNavigation:false,
+      active : 1,
+      a:1
     };
     // This binding is necessary to make `this` work in the callback
     this.handleClick = this.handleClick.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
     this._renderNavigation = this._renderNavigation.bind(this);
   }
   componentDidMount() {
     this.setState({loadNavigation:true});
+    var container = this.parallax.container;
+    container.addEventListener('scroll', this.handleScroll);
   }
+  // _setSectionHeight(){
+  //   var container = this.parallax.refs.container,
+  //     scrollSpySections = container.getElementsByTagName('section');
+  //   for (let i = 0; i < scrollSpySections.length; i++) {
+  //     let currentOffsetTop = scrollSpySections[i].offsetTop - (i * 16);
+  //     if (!scrollSpySectionsOffset.includes(currentOffsetTop)) {
+  //       scrollSpySectionsOffset.push(currentOffsetTop);
+  //     }
+  //   }
+  // } 
   _renderNavigation() {
     if (this.state.loadNavigation) {
-      return <Navigate />;
-    }   
+      return <Navigate active={this.state.active}/>;
+    }
+  }
+  handleScroll() {
+    var activeState = this.parallax.current / 1000 + .8;
+    console.log(Math.round(activeState));
+    this.setState({active:Math.round(activeState)});
   }
   // _loadSections() {
   //   let 
   // }
-  handleClick(parallax) {
-    let currentOffset = parallax.offset;
+  handleClick(parallax, offset) {
+    let currentOffset = offset || parallax.offset;
     
     if (currentOffset === this.state.offsetLen) {
       currentOffset=-1;
@@ -46,25 +78,23 @@ class Contentsections extends React.Component{
   render() {
     return (
       <div>
-          {this._renderNavigation()}
+          {this._renderNavigation(this.state.active)}
         <Parallax ref={ref => (this.parallax = ref)} pages={6}>
-          <Parallax.Layer offset={1} speed={1} style={{ backgroundColor: '#00C853' }} />
-          <Parallax.Layer offset={2} speed={1} style={{ backgroundColor: '#18FFFF' }} />
-          <Parallax.Layer offset={0} speed={0} factor={6} style={{ backgroundImage: `url(${stars})`, backgroundSize: 'cover' }} onClick={e => this.handleClick(this.parallax)}/>
-          <Parallax.Layer factor={1} offset={0.2} speed={-0.3} onClick={e => this.handleClick(this.parallax)}>
+          <Parallax.Layer offset={0} speed={0} factor={6} style={{ backgroundImage: `url(${stars})`, backgroundSize: 'cover' }} onClick={e => this.handleClick(this.parallax, .6)}/>
+          <Parallax.Layer factor={1} offset={0.2} speed={0.3} onClick={e => this.handleClick(this.parallax)}>
             <section id="sOne" class="img-fullscreen">
               <SectionOne />
             </section>
           </Parallax.Layer>
-          <Parallax.Layer offset={1} speed={.5} onClick={e => this.handleClick(this.parallax)}>
-            <section id="sTwo"></section>
+          <Parallax.Layer offset={1.8} speed={.5} factor={1.5} onClick={e => this.handleClick(this.parallax, 2)}>
+              <section id ="sTwo"/>
           </Parallax.Layer>
-          <Parallax.Layer  offset={2.2} speed={-.5} style={{ backgroundColor: '#00C853', width: "30%", marginLeft: "10%", height: "100px" }}/>
-          <Parallax.Layer  offset={2.2} speed={-.5} style={{ backgroundColor: '#18FFFF', width: "30%", marginLeft: "50%", height: "100px" }}/>
-          <Parallax.Layer  offset={2.6} speed={-.5} style={{ backgroundColor: '#00C852', width: "30%", marginLeft: "10%", height: "100px" }}/>
-          <Parallax.Layer offset={2.6} speed={-.5} style={{ backgroundColor: '#18FFFB', width: "30%", marginLeft: "50%", height: "100px" }}/>
-
-          <Parallax.Layer offset={3} speed={.5} onClick={e => this.handleClick(this.parallax)} />
+          <ParallaxCard offset={1.3} title="a" content="" img="" marginLeft="10%" />
+          <ParallaxCard offset={1.3} title="b" content="" img="" marginLeft="60%" />
+          <ParallaxCard offset={2.0} title="c" content="" img="" marginLeft="10%" />
+          <ParallaxCard offset={2.0} title="d" content="" img="" marginLeft="60%" />
+          
+          <Parallax.Layer offset={2.5} speed={.5} onClick={e => this.handleClick(this.parallax, 2)} />
           <Parallax.Layer offset={3} speed={0} factor={1} style={{ backgroundImage: `url(${skyline2})`, height: "20%", width: "100%", backgroundSize: "fill" }} onClick={e => this.handleClick(this.parallax)}>
             <section id="sThree">
               <SectionThree /> 

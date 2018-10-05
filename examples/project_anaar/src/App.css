@@ -37,11 +37,9 @@
   margin-right: 10px;
 }
 
-li.is-current {
-  background-color: grey;
-  padding: 4px;
+li.is-current, li a.active {
+  background-color: white ;
   height: 100%;
-  border-box :5 px;
 }
 
 .img-fullscreen {

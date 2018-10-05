@@ -4,7 +4,7 @@ import { Parallax, Transition } from 'react-spring';
 import {
   Container, Row, Col,Card,  CardTitle, CardText, CardColumns,
   CardSubtitle, CardBody, Media
-} from 'reactstrap';
+} from 'mdbreact'
 import holdHands from './Images/holdHands.jpg'
 
 export class SectionOne extends React.Component{
@@ -107,8 +107,6 @@ export class SectionThree extends React.Component {
     );
   }
 }
-
-
 export class SectionFour extends React.Component {
   constructor(props) {
     super(props);

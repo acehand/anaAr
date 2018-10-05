@@ -3,10 +3,11 @@ import { BrowserRouter } from 'react-router-dom'
 import {
   Collapse,
   Navbar,
+  Nav,
   NavbarToggler,
   NavLink,
   NavItem,
-} from 'reactstrap';
+} from 'mdbreact';
 import Scrollspy from 'react-scrollspy'
 
 class Navigate extends React.Component {
@@ -14,9 +15,11 @@ class Navigate extends React.Component {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    console.log(props);
     this.state = {
       isOpen: false,
       test: "",
+      active: props.active
     };
   }
   toggle() {
@@ -24,31 +27,32 @@ class Navigate extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+  componentWillReceiveProps(nextProps) {
+    this.setState({ active : nextProps.active});
+  }
   render() {
     return (
       <BrowserRouter><div>
         <Navbar fixed="top" color="warning" light expand="md" className="bb">
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
-              <Scrollspy items={['sOne', 'sTwo', 'sThree', 'sFour','sFive']}
-              currentClassName="is-current" 
-              className="ml-auto navbar nav leftNav">  
+              <Nav navbar right>
                 <NavItem>
-                  <NavLink smooth="true" href="#sOne">Intro</NavLink>
+                <NavLink active={this.state.active === 1 ? true : false} smooth="true" to="#sOne">Intro</NavLink>
                   </NavItem>
                   <NavItem>
-                <NavLink smooth="true" href="#sTwo">HER</NavLink>
+                <NavLink active={this.state.active === 2 ? true : false} smooth="true" to="#sTwo">HER</NavLink>
                   </NavItem>
                   <NavItem>
-                <NavLink smooth="true" href="#sThree">Him</NavLink>
+                <NavLink active={this.state.active === 3 ? true : false} smooth="true" to="#sThree">Him</NavLink>
                   </NavItem>
                   <NavItem>
-                <NavLink smooth="true" href="#sFour">Invite </NavLink>
+                <NavLink active={this.state.active === 4 ? true : false} smooth="true" to="#sFour">Invite </NavLink>
                   </NavItem>
                   <NavItem>
-                <NavLink smooth="true" href="#sFive">Location</NavLink>
+                <NavLink active={this.state.active === 5 ? true : false} smooth="true" to="#sFive">Location</NavLink>
                   </NavItem>
-                </Scrollspy>
+                </Nav>
             </Collapse>
           </Navbar>
       </div>
