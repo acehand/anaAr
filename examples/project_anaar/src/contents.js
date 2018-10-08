@@ -12,8 +12,10 @@ export class SectionOne extends React.Component{
     super(props);
     this.state = {
       heading1: "Anand & Archana",
-      subHeading1: "Few years ago, they didnt know what they were meant to be",
-      subHeading2: "Now, they are all geared up to exchange rings, party around and get married",
+      subHeading1: "For a very long time, they knew each other.",
+      subHeading2: "But they never really saw each other.",
+      subHeading3: "Until they were struck by the lightning from each other.",
+      subHeading4: "After that, even Zues couldn't stop them.",
       eventDate: "Sunday, December 9th 2018"
     }
   }
@@ -21,22 +23,14 @@ export class SectionOne extends React.Component{
     return (
       <Container className="align-center">
         <Row>
-          <Col md={{ size: 10 }} className="fWhite">
-            <Transition
-              from={{ opacity: 0, top: "0" }}
-              enter={{ opacity: 1, top: "30px"}}
-              update={{ opacity: 0.5, height: "0"}}
-              leave={{ opacity: 0 }}>
-              {styles => <div style={styles}><h1 className="section-title">{this.state.heading1}</h1></div>}
-            </Transition>
-            
-            <h3 className="section-subtitle  mbr-light">
-              <span>{this.state.subHeading1}</span><br />
-              <span>{this.state.subHeading2}</span>
+          <Col lg={10} className="fWhite">
+            <div class="top-block"><h1 className="section-title top-block">{this.state.heading1}</h1></div>
+            <h3 className="section-subtitle  mbr-light mid-block">
+              <span>{this.state.subHeading1}</span><br/>
+              <span>{this.state.subHeading2}</span><br />
+              <span>{this.state.subHeading3}</span><br />
+              <span>{this.state.subHeading4}</span><br />
             </h3>
-            <p className="section-text display-7">
-              {this.state.eventDate}
-            </p>
           </Col>
         </Row>
       </Container>
@@ -44,7 +38,7 @@ export class SectionOne extends React.Component{
   }
 }
 
-export class SectionTwo extends React.Component {
+export class SectionThree extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -86,20 +80,32 @@ export class SectionTwo extends React.Component {
     );
   }
 }
-export class SectionThree extends React.Component {
+export class SectionTwo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      heading1: "One fine fall trip",
+      subHeading1: "Two people, who knew each other for a very long time but never really saw each other until they were struck by a lightning.",
+      subHeading2: "After that, even Zues couldn't stop them.",
+      eventDate: "Sunday, December 9th 2018",
+      content: 'He made her laugh. She made him work lesser. \n He played tricks on her. She teased him by not completing her stories.\n He woke her up every morning. She slept longer.\nHe talked and talked and talked. She listened!',
+      card2Content: "Hangouts brough them closer.So much so that, he `proposed` to her via Hangouts",
+      card3Content: "She dressed up for a photoshoot. \n She posed. But he Proposed. \n Of course, she said yes - t7hey had already decided a date! \n. As much as she saw it coming, she didnt see it coming\n",
+    }
+  }
   render() {
     return(
       <Container className="align-center">
         <Row>
-          <Col md={{ size: 10 }} className="fWhite">
-            <h1 className="section-title">"Wedding"</h1>
+          <Col md={10} className="fWhite center-block">
+            <h1 className="section-title center-text">One fall week</h1>
             <Spring from={
               { color: "blue", fontSize: "0px", left: "0px" }
             } to={
-              { color: 'white', fontSize: "50px", left: "45%" }
+              { color: 'white', fontSize: "50px", left: "10%" , textAlign:"center" }
             }
-              config={{ tension: 5, friction: 20 }}>
-              {props => <div className="section-title" style={props}><p className="section-text">we would like to invite you to the premiere of "The wedding kalyanam".</p> </div>}
+              config={{ tension: 15, friction: 50 }}>
+              {props => <div style={props}><p className="section-subtitle  mbr-light content center-text display-linebreak ">{this.state.content}</p> </div>}
             </Spring>
           </Col>
         </Row>

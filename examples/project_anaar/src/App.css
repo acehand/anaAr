@@ -41,7 +41,28 @@ li.is-current, li a.active {
   background-color: white ;
   height: 100%;
 }
+.top-block{
+  margin-top:-15%;
+  margin-left : 20%;
+}
+.center-text {
+  margin-left : 20%;
+}
 
+#sTwo P.content {
+  font-size: 37px;
+  line-height: 1;
+  font-weight: bold;
+}
+.mid-block{
+  margin-top:30%;
+  margin-left : 30%;
+}
+.display-linebreak {
+  white-space: pre-line;
+  text-align: "center";
+  align-content: "center";
+}
 .img-fullscreen {
   display: flex;
   display: -webkit-flex;
@@ -65,7 +86,30 @@ li.is-current, li a.active {
   width: 300px;
   height:100%;
 }
-#footer {
+
+div.topImg {
+  background: url("./Images/keyup.png") center no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  height: 100%;
+  width: 80%;
+  margin-left:10%;
+  z-index: 0;
+  position: relative;
+}
+div.bottomImg{
+  background: url("./Images/keydown.png") center no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  height: 100%;
+  width: 80%;
+  margin-left:10%;
+  z-index: 0;
+  position: relative;
+}
+/* #footer {
     bottom: 0;
     width: 100%;
     position: absolute;
@@ -74,10 +118,8 @@ li.is-current, li a.active {
     .footer-block {
       margin: 20px 0;
   }
-}
-.subK {
-  /* background: linear-gradient(to bottom, gray 0%, orange 100%); */
-}
+} */
+
 #sOne {
   background: url("./Images/HeaderMain.jpeg") center no-repeat;
   background-position: center;
@@ -89,21 +131,29 @@ li.is-current, li a.active {
   z-index: 0;
   position: relative;
 }
-#sThree {
+ #sTwo {
   background: url("./Images/skyline2.jpg") center no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 1;
   height: 100%;
+  width: 80%;
+  margin-left:10%;
   z-index: 0;
   position: relative;
 }
+#sThree {
+  background : teal;
+  opacity: .5;
+  height: 100%;
+  width: 80%;
+  margin-left: 10%;
 
+}
 #af{
   position: 'fixed-top'!important;
   top:0;
 }
-
 
 #sFour {
   background:white;
