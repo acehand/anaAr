@@ -1,7 +1,7 @@
 import React from 'react';
 import {Parallax } from 'react-spring';
 import Navigate from './nav';
-import {SectionOne, SectionTwo, SectionThree, SectionFour} from './contents';
+import {SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive} from './contents';
 import SnowStorm from 'react-snowstorm';
 import stars from './Images/stars.png'
 import HeaderMain from './Images/HeaderMain.jpeg'
@@ -78,40 +78,48 @@ class Contentsections extends React.Component{
     return (
       <div>
           {this._renderNavigation(this.state.active)}
-        <Parallax ref={ref => (this.parallax = ref)} pages={6}>
-          <Parallax.Layer offset={0} speed={0} factor={6} style={{ backgroundImage: `url(${stars})`, backgroundSize: 'cover' }} onClick={e => this.handleClick(this.parallax, .6)}/>
-          <Parallax.Layer factor={1} offset={0.2} speed={0.3} onClick={e => this.handleClick(this.parallax)}>
+        <Parallax ref={ref => (this.parallax = ref)} pages={8}>
+          <Parallax.Layer offset={0} speed={0} factor={8} style={{ backgroundImage: `url(${stars})`, backgroundSize: 'cover' }} onClick={e => this.handleClick(this.parallax, .6)}/>
+          <Parallax.Layer factor={1} offset={0.2} speed={.2} onClick={e => this.handleClick(this.parallax)}>
           <section id="sOne" class="img-fullscreen">
             <SectionOne />  
           </section>
           </Parallax.Layer>
-          <Parallax.Layer offset={1.2} speed={-.1} factor={1} onClick={e => this.handleClick(this.parallax)}>
+          <Parallax.Layer offset={1.2} speed={.2} factor={1} onClick={e => this.handleClick(this.parallax)}>
             <section id="sTwo">
               <SectionTwo/>
             </section>
           </Parallax.Layer>
-          <Parallax.Layer offset={2.2} speed={0} factor={2} onClick={e => this.handleClick(this.parallax, 2)}>
-            <section id="sThree"></section></Parallax.Layer>
-            
-            <Parallax.Layer offset={2.4} speed={-.5}  onClick={e => this.handleClick(this.parallax, 2)}>
+
+          <Parallax.Layer offset={2.2} speed={0.2} factor={1} onClick={e => this.handleClick(this.parallax, 2)}>
+            <section id="sThree"></section>
+          </Parallax.Layer>  
+          <Parallax.Layer offset={2.3} speed={-.310} onClick={e => this.handleClick(this.parallax, 2)}>
               <div class="topImg"></div>
             </Parallax.Layer>
-            <Parallax.Layer offset={2.7} speed={0.1}  onClick={e => this.handleClick(this.parallax, 2)}>
+          
+            <Parallax.Layer offset={2.43} speed={.5}  onClick={e => this.handleClick(this.parallax, 2)}>
               <div class="bottomImg"></div>
             </Parallax.Layer> 
           
-          <Parallax.Layer offset={3.5} speed={.5} onClick={e => this.handleClick(this.parallax, 2)} />
-          
-          <Parallax.Layer factor={1} offset={4} speed={-.1} onClick={e => this.handleClick(this.parallax)}>
+          <Parallax.Layer offset={4.1} speed={.5} onClick={e => this.handleClick(this.parallax, 2)} />
+          <Parallax.Layer factor={1} offset={4.4} speed={0} onClick={e => this.handleClick(this.parallax)}>
             <section id="sFour">
               <SectionFour />
             </section>
           </Parallax.Layer>
-          <Parallax.Layer factor={1} offset={5.1} speed={0} onClick={e => this.handleClick(this.parallax)} >
+          
+          <Parallax.Layer factor={1} offset={5.6} speed={0} onClick={e => this.handleClick(this.parallax)}>
             <section id="sFive">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.576894994789!2d80.25271465034191!3d12.934893219137827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525cdd5d90609f%3A0xf6d497e08ae5e492!2sThe+Royal+Palms!5e0!3m2!1sen!2sus!4v1538564720063"
-                frameborder="0" style={{ border: "0" }} allowfullscreen></iframe>
+              <SectionFive />
+            </section>
+          </Parallax.Layer>
+
+          <Parallax.Layer factor={1} offset={6.8} speed={0} onClick={e => this.handleClick(this.parallax)} >
+            <section id="sSix">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.576894994789!2d80.25271465034191!3d12.934893219137827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525cdd5d90609f%3A0xf6d497e08ae5e492!2sThe+Royal+Palms!5e0!3m2!1sen!2sus!4v1538564720063"
+                  frameborder="0" style={{ border: "0" }} allowfullscreen></iframe>
             </section>
           </Parallax.Layer>
           </Parallax>

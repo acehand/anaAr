@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom'
 import {
   Collapse,
+  Container,
   Navbar,
   Nav,
   NavbarToggler,
@@ -33,28 +34,29 @@ class Navigate extends React.Component {
   render() {
     return (
       <BrowserRouter><div>
-        <Navbar fixed="top" color="warning" light expand="md" className="bb">
+        <Container>
+        <Navbar fixed="top" color="warning" expand="lg" scrolling>
             <NavbarToggler onClick={this.toggle} />
-            <Collapse isOpen={this.state.isOpen} navbar>
               <Nav navbar right>
                 <NavItem>
-                <NavLink active={this.state.active === 1 ? true : false} smooth="true" to="#sOne">Intro</NavLink>
+                  <NavLink active={this.state.active === 1 ? true : false} smooth="true" to="#sOne">
+                  <p>Intro</p>
+                  </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink active={this.state.active === 2 ? true : false} smooth="true" to="#sTwo"><p>HER</p></NavLink>
                   </NavItem>
                   <NavItem>
-                <NavLink active={this.state.active === 2 ? true : false} smooth="true" to="#sTwo">HER</NavLink>
+                <NavLink active={this.state.active === 3 ? true : false} smooth="true" to="#sThree"><p>Him</p></NavLink>
                   </NavItem>
                   <NavItem>
-                <NavLink active={this.state.active === 3 ? true : false} smooth="true" to="#sThree">Him</NavLink>
+                <NavLink active={this.state.active === 4 ? true : false} smooth="true" to="#sFour"><p>Invite</p></NavLink>
                   </NavItem>
                   <NavItem>
-                <NavLink active={this.state.active === 4 ? true : false} smooth="true" to="#sFour">Invite </NavLink>
-                  </NavItem>
-                  <NavItem>
-                <NavLink active={this.state.active === 5 ? true : false} smooth="true" to="#sFive">Location</NavLink>
+                <NavLink active={this.state.active === 5 ? true : false} smooth="true" to="#sFive"><p>Location</p></NavLink>
                   </NavItem>
                 </Nav>
-            </Collapse>
-          </Navbar>
+          </Navbar></Container>
       </div>
     </BrowserRouter>
       

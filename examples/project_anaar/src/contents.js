@@ -3,9 +3,11 @@ import { Spring} from 'react-spring';
 import { Parallax, Transition } from 'react-spring';
 import {
   Container, Row, Col,Card,  CardTitle, CardText, CardColumns,
-  CardSubtitle, CardBody, Media
+  CardSubtitle, CardBody, Media, Animation
 } from 'mdbreact'
 import holdHands from './Images/holdHands.jpg'
+import propalLeft from './Images/proposalLeft2.jpg'
+import propalRight from './Images/proposalRight.jpg'
 
 export class SectionOne extends React.Component{
   constructor(props) {
@@ -90,14 +92,14 @@ export class SectionTwo extends React.Component {
       eventDate: "Sunday, December 9th 2018",
       content: 'He made her laugh. She made him work lesser. \n He played tricks on her. She teased him by not completing her stories.\n He woke her up every morning. She slept longer.\nHe talked and talked and talked. She listened!',
       card2Content: "Hangouts brough them closer.So much so that, he `proposed` to her via Hangouts",
-      card3Content: "She dressed up for a photoshoot. \n She posed. But he Proposed. \n Of course, she said yes - t7hey had already decided a date! \n. As much as she saw it coming, she didnt see it coming\n",
+      
     }
   }
   render() {
     return(
       <Container className="align-center">
         <Row>
-          <Col md={10} className="fWhite center-block">
+          <Col md={10} className="center-block">
             <h1 className="section-title center-text">One fall week</h1>
             <Spring from={
               { color: "blue", fontSize: "0px", left: "0px" }
@@ -117,8 +119,33 @@ export class SectionFour extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      heading1: "Invite",
+      heading1: "Proposal",
+      proposalContent: "She dressed up for a photoshoot. \n She posed. But he Proposed. \n As much as she saw it coming, she didnt see it coming\n Of course, she said yes - for they had already decided a date! \n. ",
+    }
+  }
+  render() {
+    return (
+      <div className="sticky-top">
+        <Animation type="jello" duration="1s" delay="2s">
+          <h3 className="text-center section-title fWhite">{this.state.heading1}</h3> 
+        </Animation>
+        <div class="z-depth-5 float-left d-inline-block rounded border-0 ">
+          <img className="img-halfScreen rounded" src={propalLeft} />
+        </div>
+        <div class="z-depth-5 float-right d-inline-block rounded border-0">
+          <img className="img-halfScreen rounded" src={propalRight} />
+        </div>
+      </div>
+    );
+  }
+}
 
+export class SectionFive extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      heading1: "Invite",
+      
       subHeading1: "your are invited to cheer two crazies",
       subHeading2: "team up for their game of life on",
       eventDate: "Sunday, December 9th 2018",
@@ -126,15 +153,14 @@ export class SectionFour extends React.Component {
       subHeading3: "dont forget to bring ur fun and party size on",
       partyDate: "Saturday, December 8th 2018",
 
-      inviteTitle: "And now, you are invited to brighten up the next page of their story",
-      invite1: " cheer two crazies",
-      invite2: "team up for their game of life on",
+      inviteTitle1: "Mangalyam Thandunanena",
+      inviteSub1: "And now, as these two crazies team up for their game of life,",
+      inviteSub2: "You are invited to brighten up the next page of their story",
 
-      reception1: "Dance on dont forget to bring ur fun and party size on",
+      reception1: "Starting with a reception that aims a cool dance party on,",
       receptionDate: "Saturday, December 8th 2018",
 
-      wedding1: "your are invited to cheer two crazies",
-      wedding2: "team up for their game of life on",
+      wedding1: "Followed by a traditional wedding ceremony on,",
       weddingDate: "Sunday, December 9th 2018",
     }
   }
@@ -162,18 +188,15 @@ export class SectionFour extends React.Component {
           </Media>
           <Media body>
             <Media heading>
-              <h1 className="section-title">{this.state.heading1}</h1>
+              <h1 className="section-title">{this.state.inviteTitle1}</h1>
             </Media>
-            <h3 className="section-subtitle  mbr-light">
-              <span>{this.state.subHeading1}</span><br />
-              <span>{this.state.subHeading2}</span>
-            </h3>
             <p className="section-subtitle mbr-light">
-              {this.state.eventDate}
-            </p>
-            <p className="section-subtitle mbr-light">
-              <span>&<br/>{this.state.subHeading3}</span><br/>
-              <span>{this.state.partyDate}</span>
+              {this.state.inviteSub1}<br />
+              {this.state.inviteSub2}<br /><br />
+              {this.state.reception1}<br />
+              <span>{this.state.receptionDate}</span><br />
+              {this.state.wedding1}<br />
+              <strong>{this.state.weddingDate}</strong><br/>
             </p>
       </Media>
         </Media>
