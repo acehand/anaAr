@@ -118,11 +118,24 @@ export class SectionFour extends React.Component {
     super(props);
     this.state = {
       heading1: "Invite",
+
       subHeading1: "your are invited to cheer two crazies",
       subHeading2: "team up for their game of life on",
-      subHeading3: "dont forget to bring ur fun and party size on",
       eventDate: "Sunday, December 9th 2018",
+
+      subHeading3: "dont forget to bring ur fun and party size on",
       partyDate: "Saturday, December 8th 2018",
+
+      inviteTitle: "And now, you are invited to brighten up the next page of their story",
+      invite1: " cheer two crazies",
+      invite2: "team up for their game of life on",
+
+      reception1: "Dance on dont forget to bring ur fun and party size on",
+      receptionDate: "Saturday, December 8th 2018",
+
+      wedding1: "your are invited to cheer two crazies",
+      wedding2: "team up for their game of life on",
+      weddingDate: "Sunday, December 9th 2018",
     }
   }
   render() {
