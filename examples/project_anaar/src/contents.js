@@ -8,6 +8,7 @@ import {
 import holdHands from './Images/holdHands.jpg'
 import propalLeft from './Images/proposalLeft2.jpg'
 import propalRight from './Images/proposalRight.jpg'
+import inviteImage from './Images/inviteImg.gif'
 
 export class SectionOne extends React.Component{
   constructor(props) {
@@ -101,14 +102,9 @@ export class SectionTwo extends React.Component {
         <Row>
           <Col md={10} className="center-block">
             <h1 className="section-title center-text">One fall week</h1>
-            <Spring from={
-              { color: "blue", fontSize: "0px", left: "0px" }
-            } to={
-              { color: 'white', fontSize: "50px", left: "10%" , textAlign:"center" }
-            }
-              config={{ tension: 15, friction: 50 }}>
-              {props => <div style={props}><p className="section-subtitle  mbr-light content center-text display-linebreak ">{this.state.content}</p> </div>}
-            </Spring>
+            <Animation type="slideInLeft" delay="1s" >
+              <p className="section-subtitle  mbr-light content center-text display-linebreak ">{this.state.content}</p> 
+            </Animation>
           </Col>
         </Row>
       </Container>
@@ -154,10 +150,10 @@ export class SectionFive extends React.Component {
       partyDate: "Saturday, December 8th 2018",
 
       inviteTitle1: "Mangalyam Thandunanena",
-      inviteSub1: "And now, as these two crazies team up for their game of life,",
-      inviteSub2: "You are invited to brighten up the next page of their story",
+      inviteSub1: "As these two crazies team up for their game of life,",
+      inviteSub2: "You are invited to brighten up the next page of their story.",
 
-      reception1: "Starting with a reception that aims a cool dance party on,",
+      reception1: "Starting with a reception that aims a cool dance party, on,",
       receptionDate: "Saturday, December 8th 2018",
 
       wedding1: "Followed by a traditional wedding ceremony on,",
@@ -167,30 +163,13 @@ export class SectionFive extends React.Component {
   render() {
     return (
       <Container className="align-center">
-        <Media>
-          <Media left className="border">
-            <Spring
-              from={{
-                opacity:0,
-                background: 'linear-gradient(to right, #30e8bf, #ff8235)',
-                boxShadow: '0px 1000px 1500px -10px #2D3747',
-              }}
-              to={{
-                height: "500px",
-                opacity:1,
-                background: 'linear-gradient(to right, #009fff, #ec2f4b)',
-                boxShadow: '0px 10px 15px -10px #2D3747',
-              }}
-              config={{ tension: 30, friction: 100 }}
-              >
-              {styles => <img style={styles} className="img-halfScreen" src={holdHands} />}
-            </Spring>
+          <h1 className="section-title">{this.state.inviteTitle1}</h1>
+      <Media>
+          <Media className="ml-4 border border-dark thumbnail">
+            <Media object src = {inviteImage}/>        
           </Media>
-          <Media body>
-            <Media heading>
-              <h1 className="section-title">{this.state.inviteTitle1}</h1>
-            </Media>
-            <p className="section-subtitle mbr-light">
+          <Media body className="ml-4">
+            <p style={{marginTop:"15%"}} className="section-subtitle mbr-light">
               {this.state.inviteSub1}<br />
               {this.state.inviteSub2}<br /><br />
               {this.state.reception1}<br />

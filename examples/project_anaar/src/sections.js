@@ -4,6 +4,7 @@ import Navigate from './nav';
 import {SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive} from './contents';
 import SnowStorm from 'react-snowstorm';
 import stars from './Images/stars.png'
+
 import HeaderMain from './Images/HeaderMain.jpeg'
 import skyline2 from './Images/skyline2.jpg'
 import {
@@ -12,6 +13,11 @@ import {
 } from 'mdbreact'
 
 const scrollSpySectionsOffset = [];
+
+const RainDropDiv = (() => {
+  return <div class="raindrop"></div>;
+});
+
 const ParallaxCard = ({offset, img, title, content, marginLeft, action, flipped}) => (
   <Parallax.Layer factor={1} offset={offset} speed={-.1} style={{ width: "30%", marginLeft: `${marginLeft}` }}>
     <Card className="card-image" style={{ backgroundImage: "url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')" }}>
@@ -75,11 +81,17 @@ class Contentsections extends React.Component{
     parallax.scrollTo(currentOffset + 1);
   }
   render() {
+    let rows = [];
+    for (let i = 0; i < 200; i++) {
+      rows.push(<RainDropDiv />);
+    }   
     return (
-      <div>
-          {this._renderNavigation(this.state.active)}
+      <div class="bgImage">
+        <div class="raindrops">
+          {rows}
+        </div>
         <Parallax ref={ref => (this.parallax = ref)} pages={8}>
-          <Parallax.Layer offset={0} speed={0} factor={8} style={{ backgroundImage: `url(${stars})`, backgroundSize: 'cover' }} onClick={e => this.handleClick(this.parallax, .6)}/>
+          <Parallax.Layer offset={0} speed={0} factor={8} style={{ }} onClick={e => this.handleClick(this.parallax, .6)}/>
           <Parallax.Layer factor={1} offset={0.2} speed={.2} onClick={e => this.handleClick(this.parallax)}>
           <section id="sOne" class="img-fullscreen">
             <SectionOne />  
@@ -93,7 +105,7 @@ class Contentsections extends React.Component{
 
           <Parallax.Layer offset={2.2} speed={0.2} factor={1} onClick={e => this.handleClick(this.parallax, 2)}>
             <section id="sThree"></section>
-          </Parallax.Layer>  
+          </Parallax.Layer>
           <Parallax.Layer offset={2.3} speed={-.310} onClick={e => this.handleClick(this.parallax, 2)}>
               <div class="topImg"></div>
             </Parallax.Layer>
@@ -102,14 +114,14 @@ class Contentsections extends React.Component{
               <div class="bottomImg"></div>
             </Parallax.Layer> 
           
-          <Parallax.Layer offset={4.1} speed={.5} onClick={e => this.handleClick(this.parallax, 2)} />
-          <Parallax.Layer factor={1} offset={4.4} speed={0} onClick={e => this.handleClick(this.parallax)}>
+          <Parallax.Layer offset={3.2} speed={.5} onClick={e => this.handleClick(this.parallax, 2)} />
+          <Parallax.Layer factor={1} offset={3.2} speed={0} onClick={e => this.handleClick(this.parallax)}>
             <section id="sFour">
               <SectionFour />
             </section>
           </Parallax.Layer>
           
-          <Parallax.Layer factor={1} offset={5.6} speed={0} onClick={e => this.handleClick(this.parallax)}>
+          <Parallax.Layer factor={1} offset={4.4} speed={0} onClick={e => this.handleClick(this.parallax)}>
             <section id="sFive">
               <SectionFive />
             </section>
