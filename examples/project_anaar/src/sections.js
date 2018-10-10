@@ -99,7 +99,7 @@ class Contentsections extends React.Component{
           </Parallax.Layer>
           <Parallax.Layer offset={1.2} speed={.2} factor={1} onClick={e => this.handleClick(this.parallax)}>
             <section id="sTwo">
-              <SectionTwo/>
+              {this.state.loadNavigation && <SectionTwo/>}
             </section>
           </Parallax.Layer>
 
@@ -127,7 +127,7 @@ class Contentsections extends React.Component{
             </section>
           </Parallax.Layer>
 
-          <Parallax.Layer factor={1} offset={6.8} speed={0} onClick={e => this.handleClick(this.parallax)} >
+          <Parallax.Layer factor={1} offset={5.6} speed={0} onClick={e => this.handleClick(this.parallax)} >
             <section id="sSix">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.576894994789!2d80.25271465034191!3d12.934893219137827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525cdd5d90609f%3A0xf6d497e08ae5e492!2sThe+Royal+Palms!5e0!3m2!1sen!2sus!4v1538564720063"

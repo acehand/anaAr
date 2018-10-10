@@ -83,6 +83,18 @@ export class SectionThree extends React.Component {
     );
   }
 }
+const AnimatedContent = ({left, right}) => {
+  return (<p className="section-subtitle  mbr-light content center-text display-linebreak">
+    <Animation className="reveal d-inline-block" type="slideInLeft" duration="3s" delay="2s">
+      {left}
+    </Animation>
+    <Animation className="d-inline-block" type="slideInRight" duration="3s" delay="2s">
+      {right}
+    </Animation>
+  </p>
+);
+};
+
 export class SectionTwo extends React.Component {
   constructor(props) {
     super(props);
@@ -91,7 +103,8 @@ export class SectionTwo extends React.Component {
       subHeading1: "Two people, who knew each other for a very long time but never really saw each other until they were struck by a lightning.",
       subHeading2: "After that, even Zues couldn't stop them.",
       eventDate: "Sunday, December 9th 2018",
-      content: 'He made her laugh. She made him work lesser. \n He played tricks on her. She teased him by not completing her stories.\n He woke her up every morning. She slept longer.\nHe talked and talked and talked. She listened!',
+      left1: "He made her laugh.", right1: "She made him work lesser.", left2: "He played tricks on her.", right2: " She teased him by not completing her stories.",
+      left3: "He woke her up every morning.", right3: "She slept longer.", left4: "He talked and talked and talked.", right4: "She listened!",
       card2Content: "Hangouts brough them closer.So much so that, he `proposed` to her via Hangouts",
       
     }
@@ -102,9 +115,10 @@ export class SectionTwo extends React.Component {
         <Row>
           <Col md={10} className="center-block">
             <h1 className="section-title center-text">One fall week</h1>
-            <Animation type="slideInLeft" delay="1s" >
-              <p className="section-subtitle  mbr-light content center-text display-linebreak ">{this.state.content}</p> 
-            </Animation>
+            <AnimatedContent left={this.state.left1} right={this.state.right1} />
+            <AnimatedContent left={this.state.left2} right={this.state.right2} />
+            <AnimatedContent left={this.state.left3} right={this.state.right3} />
+            <AnimatedContent left={this.state.left4} right={this.state.right4} />
           </Col>
         </Row>
       </Container>

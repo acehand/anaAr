@@ -58,6 +58,7 @@ li.a {
   font-size: 37px;
   line-height: 1;
   font-weight: bold;
+  position: relative;
 }
 .mid-block{
   margin-top:30%;
@@ -143,7 +144,7 @@ section {
   background-size: cover;
   opacity: 1;
   z-index: 0;
-  position: relative;
+  position: absolute;
 }
 #sThree {
   background : teal;
@@ -334,7 +335,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: .32;
+  opacity: 1;
   transform: rotateY(0);
   transition: -webkit-filter 600ms;
 }
