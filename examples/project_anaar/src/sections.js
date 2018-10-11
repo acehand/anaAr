@@ -87,9 +87,6 @@ class Contentsections extends React.Component{
     }   
     return (
       <div class="bgImage">
-        <div class="raindrops">
-          {rows}
-        </div>
         <Parallax ref={ref => (this.parallax = ref)} pages={8}>
           <Parallax.Layer offset={0} speed={0} factor={8} style={{ }} onClick={e => this.handleClick(this.parallax, .6)}/>
           <Parallax.Layer factor={1} offset={0.2} speed={.2} onClick={e => this.handleClick(this.parallax)}>
