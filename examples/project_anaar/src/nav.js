@@ -44,18 +44,25 @@ class Navigate extends React.Component {
                   </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink active={this.state.active === 2 ? true : false} smooth="true" to="#sTwo"><p>HER</p></NavLink>
+                <NavLink active={this.state.active === 2 ? true : false} smooth="true" to="#sTwo"><p>Story</p></NavLink>
                   </NavItem>
                   <NavItem>
-                <NavLink active={this.state.active === 3 ? true : false} smooth="true" to="#sThree"><p>Him</p></NavLink>
+                <NavLink active={this.state.active === 3 ? true : false} smooth="true" to="#sThree"><p>Hangout</p></NavLink>
                   </NavItem>
                   <NavItem>
-                <NavLink active={this.state.active === 4 ? true : false} smooth="true" to="#sFour"><p>Invite</p></NavLink>
+                <NavLink active={this.state.active === 4 ? true : false} smooth="true" to="#sFour"><p>PRoposals</p></NavLink>
                   </NavItem>
                   <NavItem>
-                <NavLink active={this.state.active === 5 ? true : false} smooth="true" to="#sFive"><p>Location</p></NavLink>
+                  <NavItem></NavItem>
+                    <NavLink active={this.state.active === 5 ? true : false} smooth="true" to="#sFive"><p>Invites</p></NavLink>
                   </NavItem>
-                </Nav>
+                <NavItem>
+                  <NavLink active={this.state.active === 6 ? true : false} smooth="true" to="#sFive"><p>Miinutes</p></NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink active={this.state.active === 6 ? true : false} smooth="true" to="#sFive"><p>Location</p></NavLink>
+                </NavItem>
+              </Nav>
           </Navbar></Container>
       </div>
     </BrowserRouter>

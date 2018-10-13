@@ -2,6 +2,7 @@ import React from 'react';
 import {Parallax } from 'react-spring';
 import Navigate from './nav';
 import {SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive} from './contents';
+import {SectionSix} from './section_six';
 import SnowStorm from 'react-snowstorm';
 import stars from './Images/stars.png'
 
@@ -87,7 +88,7 @@ class Contentsections extends React.Component{
     }   
     return (
       <div class="bgImage">
-        <Parallax ref={ref => (this.parallax = ref)} pages={8}>
+        <Parallax ref={ref => (this.parallax = ref)} pages={9}>
           <Parallax.Layer offset={0} speed={0} factor={8} style={{ }} onClick={e => this.handleClick(this.parallax, .6)}/>
           <Parallax.Layer factor={1} offset={0.2} speed={.2} onClick={e => this.handleClick(this.parallax)}>
           <section id="sOne" class="img-fullscreen">
@@ -124,8 +125,14 @@ class Contentsections extends React.Component{
             </section>
           </Parallax.Layer>
 
-          <Parallax.Layer factor={1} offset={5.6} speed={0} onClick={e => this.handleClick(this.parallax)} >
+          <Parallax.Layer factor={1} offset={5.6} speed={0} onClick={e => this.handleClick(this.parallax)}>
             <section id="sSix">
+              <SectionSix/>
+            </section>
+          </Parallax.Layer>
+
+          <Parallax.Layer factor={1} offset={6.8} speed={0} onClick={e => this.handleClick(this.parallax)} >
+            <section id="sSeven">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.576894994789!2d80.25271465034191!3d12.934893219137827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525cdd5d90609f%3A0xf6d497e08ae5e492!2sThe+Royal+Palms!5e0!3m2!1sen!2sus!4v1538564720063"
                   frameborder="0" style={{ border: "0" }} allowfullscreen></iframe>
