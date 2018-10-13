@@ -255,6 +255,18 @@ body {
   font-style: normal;
   line-height: 1.5;
 }
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: orangered -moz-use-text-color #FFFFFF;
+  border-style: solid none;
+  border-width: 2px 0;
+  margin-left: 5%;
+  width:80%;
+}
 .section-title {
   vertical-align: inherit;
   font-style: normal;

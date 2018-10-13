@@ -54,7 +54,9 @@ export class SectionSix extends React.Component {
             )
           }  
         </div>
-        <div className="row border-top border-dark" />
+        <div className="row mt-5">
+          <hr/>
+        </div>
         <div className="row">
           <blockquote className="blockquote bq-primary">
             <p className="bq-title">09/12/2018</p>
