@@ -24,11 +24,15 @@ export class SectionOne extends React.Component{
   }
   render() {
     return (
-      <Container className="align-center">
-        <Row>
-          <Col lg={10} className="fWhite">
-            <div class="top-block"><h1 className="section-title top-block">{this.state.heading1}</h1></div>
-            <h3 className="section-subtitle  mbr-light mid-block">
+      <div className="container h-100 mt-5">
+        <Row className="justify-content-center mt-5">
+          <Col className="fWhite mt-4 ml-5">
+            <h1 className="section-title white-text">{this.state.heading1}</h1>
+          </Col>
+        </Row>
+        <Row className="justify-content-center mt-3">
+          <Col lg={10} className="fWhite mt-7">
+            <h3 className="section-subtitle mbr-light text-center">
               <span>{this.state.subHeading1}</span><br/>
               <span>{this.state.subHeading2}</span><br />
               <span>{this.state.subHeading3}</span><br />
@@ -36,7 +40,7 @@ export class SectionOne extends React.Component{
             </h3>
           </Col>
         </Row>
-      </Container>
+      </div>
     );
   }
 }
@@ -130,23 +134,23 @@ export class SectionFour extends React.Component {
     super(props);
     this.state = {
       heading1: "Proposal",
-      proposalContent: "She dressed up for a photoshoot.\n She posed.But he Proposed.\n As much as she saw it coming, she didnt see it coming\n Of course, she said yes - for they had already decided a date!.\n",
+      proposalContent: "She dressed up for a photoshoot. She posed. But he Proposed. \n \xA0 \xA0 \xA0 \xA0 \xA0 As much as she saw it coming, she didnt see it coming.\n \xA0 \xA0 \xA0 \xA0 \xA0 \xA0 \xA0 \xA0 \xA0 Of course, she said yes!",
     }
   }
   render() {
     return (
       <div className="sticky-top">
         <Animation type="jello" duration="1s" delay="2s">
-          <h3 className="text-center section-title fWhite">{this.state.heading1}</h3> 
+          <h3 className="text-center section-title fWhite">{this.state.heading1}</h3>
         </Animation>
-        <div class="z-depth-5 float-left d-inline-block rounded border-0">
+        <div className="row justify-content-start z-depth-5 float-left d-inline-block rounded border-0">
           <img className="img-halfScreen rounded onHover" src={propalLeft} />
-        </div>
-        <div className="z-depth-5 d-inline-block border-0 rounded w-32 hoverable">
-          <p className="w-100 section-subtitle display-linebreak mbr-light mdb-color white-text">
+        </div>  
+        <div className="d-inline-block w-32">
+          <p className="w-100 section-subtitle display-linebreak mbr-light sRotate text-left">
               {this.state.proposalContent}
             </p></div>
-        <div class="z-depth-5 float-right d-inline-block rounded border-0">
+        <div class="row justify-content-end z-depth-5 float-right d-inline-block rounded border-0">
           <img className="img-halfScreen rounded onHover" src={propalRight} />
         </div>
       </div>
