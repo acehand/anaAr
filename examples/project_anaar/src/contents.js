@@ -114,7 +114,7 @@ export class SectionTwo extends React.Component {
       <Container className="align-center">
         <Row>
           <Col md={10} className="center-block">
-            <h1 className="section-title center-text">One fall week</h1>
+            <h1 className="section-title center-text white-text">One fall week</h1>
             <AnimatedContent left={this.state.left1} right={this.state.right1} />
             <AnimatedContent left={this.state.left2} right={this.state.right2} />
             <AnimatedContent left={this.state.left3} right={this.state.right3} />
