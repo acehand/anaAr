@@ -48,13 +48,13 @@ export class SectionSix extends React.Component {
             <p className="bq-title">08/12/2018</p>
           </blockquote>
         </div>
-        <div className="row align-items-start mt-2 ml-3">
+        <div className="row align-items-start mt-2  justify-content-center">
           {this.state.reception.map((obj) => 
             <ColumnElement heading={obj.title} value={obj.value} />
             )
           }  
         </div>
-        <div className="row mt-5">
+        <div className="row mt-5 justify-content-center">
           <hr/>
         </div>
         <div className="row">
@@ -62,7 +62,7 @@ export class SectionSix extends React.Component {
             <p className="bq-title">09/12/2018</p>
           </blockquote>
         </div>
-          <div className="row align-items-start mt-2 ml-4">
+          <div className="row align-items-start mt-2 justify-content-center">
             {this.state.marriage.map((obj) =>
               <ColumnElement heading={obj.title} value={obj.value} />
             )

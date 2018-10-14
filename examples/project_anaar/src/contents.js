@@ -130,7 +130,7 @@ export class SectionFour extends React.Component {
     super(props);
     this.state = {
       heading1: "Proposal",
-      proposalContent: "She dressed up for a photoshoot. \n She posed. But he Proposed. \n As much as she saw it coming, she didnt see it coming\n Of course, she said yes - for they had already decided a date! \n. ",
+      proposalContent: "She dressed up for a photoshoot.\n She posed.But he Proposed.\n As much as she saw it coming, she didnt see it coming\n Of course, she said yes - for they had already decided a date!.\n",
     }
   }
   render() {
@@ -139,11 +139,15 @@ export class SectionFour extends React.Component {
         <Animation type="jello" duration="1s" delay="2s">
           <h3 className="text-center section-title fWhite">{this.state.heading1}</h3> 
         </Animation>
-        <div class="z-depth-5 float-left d-inline-block rounded border-0 ">
-          <img className="img-halfScreen rounded" src={propalLeft} />
+        <div class="z-depth-5 float-left d-inline-block rounded border-0">
+          <img className="img-halfScreen rounded onHover" src={propalLeft} />
         </div>
+        <div className="z-depth-5 d-inline-block border-0 rounded w-32 hoverable">
+          <p className="w-100 section-subtitle display-linebreak mbr-light mdb-color white-text">
+              {this.state.proposalContent}
+            </p></div>
         <div class="z-depth-5 float-right d-inline-block rounded border-0">
-          <img className="img-halfScreen rounded" src={propalRight} />
+          <img className="img-halfScreen rounded onHover" src={propalRight} />
         </div>
       </div>
     );
