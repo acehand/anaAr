@@ -133,7 +133,7 @@ export class SectionFour extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      heading1: "When everything was all peachy...",
+      heading1: "When all was peachy...",
       proposalContent: "She dressed up for a photoshoot. She posed. But he Proposed. \n \xA0 \xA0 \xA0 \xA0 \xA0 As much as she saw it coming, she didn't see it coming.\n \xA0 \xA0 \xA0 \xA0 \xA0 \xA0 \xA0 \xA0 \xA0 Of course, she said yes!",
     }
   }
