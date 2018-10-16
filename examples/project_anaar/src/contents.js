@@ -189,8 +189,8 @@ export class SectionFive extends React.Component {
           <Media body className="ml-4">
             <p style={{marginTop:"15%"}} className="section-subtitle mbr-light">
               {this.state.inviteSub1}<br />
-              by<br/>
               {this.state.inviteSub2}<br /><br />
+              by<br/>
               {this.state.reception1}<br />
               on<br/>
               <span>{this.state.receptionDate}</span><br /><br/>
