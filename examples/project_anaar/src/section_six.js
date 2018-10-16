@@ -37,18 +37,18 @@ export class SectionSix extends React.Component {
         {title: 'Dum Dum Dum', value:  '9:00 : 10:30 AM' },
         {title: 'Sapadu', value:  "11:00 AM" },
       ],
-      condition1: "1. All times are subject to change ;)",
-      condition2: "2. No gift or boquets please. Rule breakers will be subjected to endless dancing!"
+      condition1: "* All times are subject to change ;)",
+      condition2: "** No gift or boquets please. Rule breakers will be subjected to endless dancing!"
     }
   }
   render() {
     return (
       <div className="container h-100">
-        <h1 className="section-title">Minutes<sup>1</sup></h1>
+        <h1 className="section-title">Minutes<sup>*</sup></h1>
         <div className="row">
           <blockquote className="blockquote bq-primary">
             <p className="bq-title">
-              Reception<sup>2</sup>, 8th of December 2018
+              Reception<sup>**</sup>, 8th of December 2018
             </p>
           </blockquote>
         </div>
