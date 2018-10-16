@@ -35,9 +35,7 @@ export class SectionOne extends React.Component {
           <Col lg={10} className="fWhite mt-7">
             <h3 className="section-subtitle mbr-light text-center">
               <span>{this.state.subHeading1}</span><br/>
-              <span>{this.state.subHeading2}</span><br />
-              <span>{this.state.subHeading3}</span><br />
-              <span>{this.state.subHeading4}</span><br />
+              <span>{this.state.subHeading2}</span><br/>
             </h3>
           </Col>
         </Row>

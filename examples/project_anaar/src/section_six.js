@@ -37,8 +37,8 @@ export class SectionSix extends React.Component {
         {title: 'Dum Dum Dum', value:  '9:00 : 10:30 AM' },
         {title: 'Sapadu', value:  "11:00 AM" },
       ],
-      condition1: ""
-      condition2: ""
+      condition1: "1. All times are subject to change ;)",
+      condition2: "2. No gift or boquets please. Rule breakers will be subjected to endless dancing!"
     }
   }
   render() {
@@ -73,8 +73,8 @@ export class SectionSix extends React.Component {
             }
         </div>
         <p className="section-subtitle">
-        1. All times are subject to change ;) <br/>
-        2. No gift or boquets please. Rule breakers will be subjected to endless dancing!<br/>
+        {this.state.condition1} <br/>
+        {this.state.condition2}
         </p>
       </div>
     );
