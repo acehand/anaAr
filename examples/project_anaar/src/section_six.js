@@ -26,40 +26,44 @@ export class SectionSix extends React.Component {
     super(props);
     this.state= {
       reception : [
-        {title: 'Entry', value : "6:00 PM"}, 
-        { title: 'Chat and Chit', value:  "6:30PM"}, 
-        { title: 'Performance', value:  '6:45PM'}, 
-        { title: "Food", value:  "7:00 PM Onwards"}, 
-        { title: 'CutLose and photos', value:  "8:00PM - 10:OOPM"}],
+        {title: 'Entry', value : "6:00 PM"},
+        {title: 'Chat and Chit', value:  "6:30PM"},
+        {title: "Food", value:  "7:00 PM Onwards"},
+        {title: 'Performance', value:  '7:30PM'},
+        {title: 'Dance and Photos', value:  "The whole time"}],
       marriage: [
-        {title: 'Kasi yathirai', value:  "7:30 AM"},
-        {title: 'oongal', value:  "7:45 AM" },
-        {title: 'Dum Dum Dum', value:  '8:15 : 9:30 AM' },
-        {title: 'Sapadu', value:  "10:00 AM" },
+        {title: 'Kasi yathirai', value:  "8:00 AM"},
+        {title: 'Oonjal', value:  "8:30 AM" },
+        {title: 'Dum Dum Dum', value:  '9:00 : 10:30 AM' },
+        {title: 'Sapadu', value:  "11:00 AM" },
       ],
+      condition1: ""
+      condition2: ""
     }
   }
   render() {
     return (
       <div className="container h-100">
-        <h1 className="section-title">Minutes</h1>
+        <h1 className="section-title">Minutes<sup>1</sup></h1>
         <div className="row">
           <blockquote className="blockquote bq-primary">
-            <p className="bq-title">08/12/2018</p>
+            <p className="bq-title">
+              Reception<sup>2</sup>, 8th of December 2018
+            </p>
           </blockquote>
         </div>
         <div className="row align-items-start mt-2  justify-content-center">
-          {this.state.reception.map((obj) => 
+          {this.state.reception.map((obj) =>
             <ColumnElement heading={obj.title} value={obj.value} />
             )
-          }  
+          }
         </div>
         <div className="row mt-5 justify-content-center">
           <hr/>
         </div>
         <div className="row">
           <blockquote className="blockquote bq-primary">
-            <p className="bq-title">09/12/2018</p>
+            <p className="bq-title">Wedding, 8th of December 2018</p>
           </blockquote>
         </div>
           <div className="row align-items-start mt-2 justify-content-center">
@@ -68,6 +72,10 @@ export class SectionSix extends React.Component {
             )
             }
         </div>
+        <p className="section-subtitle">
+        1. All times are subject to change ;) <br/>
+        2. No gift or boquets please. Rule breakers will be subjected to endless dancing!<br/>
+        </p>
       </div>
     );
   }
