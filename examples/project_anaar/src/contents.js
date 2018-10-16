@@ -164,12 +164,12 @@ export class SectionFive extends React.Component {
     this.state = {
       inviteTitle1: "Mangalyam Thandunanena",
       inviteSub1: "As we team up for the game of life,",
-      inviteSub2: "You are invited to brighten up the next page of our story <br/>by ",
+      inviteSub2: "You are invited to brighten up the next page of our story ",
 
-      reception1: "#1 Making the reception fun by dancing with us <br/>on",
+      reception1: "#1 Making the reception fun by dancing with us",
       receptionDate: "Saturday, 8th of December 2018",
 
-      wedding1: "#2 Cheering at our traditional wedding ceremony <br/>on",
+      wedding1: "#2 Cheering at our traditional wedding ceremony",
       weddingDate: "Sunday, 9th of December 2018",
       // reception1: "Starting with a reception that aims to be a fun dance party, on,",
       // receptionDate: "Saturday, 8th of December 2018",
@@ -189,10 +189,13 @@ export class SectionFive extends React.Component {
           <Media body className="ml-4">
             <p style={{marginTop:"15%"}} className="section-subtitle mbr-light">
               {this.state.inviteSub1}<br />
+              by<br/>
               {this.state.inviteSub2}<br /><br />
               {this.state.reception1}<br />
+              on<br/>
               <span>{this.state.receptionDate}</span><br /><br/>
               {this.state.wedding1}<br />
+              on<br/>
               <strong>{this.state.weddingDate}</strong><br/>
             </p>
       </Media>
