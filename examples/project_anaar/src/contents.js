@@ -140,7 +140,7 @@ export class SectionFour extends React.Component {
   render() {
     return (
       <div className="container h-100">
-        <div className="row justify-content-center h-5">
+        <div className="row justify-content-center">
           <div class="col">
             <h3 className="text-center section-title fWhite">{this.state.heading1}</h3>
           </div>
@@ -150,14 +150,14 @@ export class SectionFour extends React.Component {
             <img className="img-halfScreen rounded onHover" src={propalLeft} />
           </div>          
         </div>  
-        <div className="row w-32 justify-content-center h-25">
+        <div className="row w-32 h-25">
           <div class="col">
             <p className="section-subtitle display-linebreak mbr-light sRotate text-left ">
               {this.state.proposalContent}
             </p>
           </div>
         </div>
-        <div class="row  float-right w-25">
+        <div class="row float-right w-25">
           <div class="z-depth-5 rounded border-0">
             <img className="img-halfScreen rounded onHover" src={propalRight} />
           </div>

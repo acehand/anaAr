@@ -8,6 +8,7 @@ import {
   NavbarToggler,
   NavLink,
   NavItem,
+  Fa,
 } from 'mdbreact';
 import Scrollspy from 'react-scrollspy'
 
@@ -36,7 +37,8 @@ class Navigate extends React.Component {
       <BrowserRouter>
         <Navbar className="nav-stack" fixed="top">
           <Nav navbar right className="justify-content-center">
-            <NavItem className="justify-content-center">
+            <NavItem >
+                  <Fa icon="circle mt-2" size="9x" />
                   <NavLink active={this.state.active === 1 ? true : false} smooth="true" to="#sOne">
                   <p>Meet</p>
                   </NavLink>
