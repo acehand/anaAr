@@ -37,7 +37,7 @@ class Contentsections extends React.Component{
     super(props);
     this.state = { 
       isToggleOn: true, 
-      offsetLen: 5,
+      offsetLen: 6,
       loadNavigation:false,
       active : 1,
       a:1, 
@@ -88,6 +88,7 @@ class Contentsections extends React.Component{
     }   
     return (
       <div class="bgImage">
+      {this._renderNavigation()}
         <Parallax ref={ref => (this.parallax = ref)} pages={9}>
           <Parallax.Layer offset={0} speed={0} factor={8} style={{ }} onClick={e => this.handleClick(this.parallax, .6)}/>
           <Parallax.Layer factor={1} offset={0.2} speed={.2} onClick={e => this.handleClick(this.parallax)}>
@@ -95,6 +96,7 @@ class Contentsections extends React.Component{
             <SectionOne />  
           </section>
           </Parallax.Layer>
+          
           <Parallax.Layer offset={1.2} speed={.2} factor={1} onClick={e => this.handleClick(this.parallax)}>
             <section id="sTwo">
               {this.state.loadNavigation && <SectionTwo/>}
@@ -104,13 +106,12 @@ class Contentsections extends React.Component{
           <Parallax.Layer offset={2.2} speed={0.2} factor={1} onClick={e => this.handleClick(this.parallax, 2)}>
             <section id="sThree"></section>
           </Parallax.Layer>
-          <Parallax.Layer offset={2.3} speed={-.310} onClick={e => this.handleClick(this.parallax, 2)}>
-              <div class="topImg"></div>
+          <Parallax.Layer offset={2.1} speed={-.310} onClick={e => this.handleClick(this.parallax, 2)}>
+            <div class="topImg"></div>
             </Parallax.Layer>
-          
-            <Parallax.Layer offset={2.43} speed={.5}  onClick={e => this.handleClick(this.parallax, 2)}>
-              <div class="bottomImg"></div>
-            </Parallax.Layer> 
+          <Parallax.Layer offset={2.2} speed={.5}  onClick={e => this.handleClick(this.parallax, 2)}>
+            <div class="bottomImg"></div>
+          </Parallax.Layer> 
           
           <Parallax.Layer offset={3.2} speed={.5} onClick={e => this.handleClick(this.parallax, 2)} />
           <Parallax.Layer factor={1} offset={3.2} speed={0} onClick={e => this.handleClick(this.parallax)}>

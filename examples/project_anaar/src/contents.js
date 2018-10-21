@@ -25,10 +25,10 @@ export class SectionOne extends React.Component {
   }
   render() {
     return (
-      <div className="container h-100 mt-5">
-        <Row className="justify-content-center mt-5">
-          <Col className="fWhite mt-4 ml-5">
-            <h1 className="section-title white-text">{this.state.heading1}</h1>
+      <div className="container">
+        <Row className="justify-content-center">
+          <Col className="mt-6">
+            <h1 className=" section-title white-text">{this.state.heading1}</h1>
           </Col>
         </Row>
         <Row className="justify-content-center mt-3">
@@ -139,19 +139,29 @@ export class SectionFour extends React.Component {
   }
   render() {
     return (
-      <div className="sticky-top">
-        <Animation type="jello" duration="1s" delay="2s">
-          <h3 className="text-center section-title fWhite">{this.state.heading1}</h3>
-        </Animation>
-        <div className="row justify-content-start z-depth-5 float-left d-inline-block rounded border-0">
-          <img className="img-halfScreen rounded onHover" src={propalLeft} />
+      <div className="container h-100">
+        <div className="row justify-content-center h-5">
+          <div class="col">
+            <h3 className="text-center section-title fWhite">{this.state.heading1}</h3>
+          </div>
         </div>
-        <div className="d-inline-block w-32">
-          <p className="w-100 section-subtitle display-linebreak mbr-light sRotate text-left">
+        <div className="row float-left w-25">
+          <div class="z-depth-5 rounded border-0 ">
+            <img className="img-halfScreen rounded onHover" src={propalLeft} />
+          </div>          
+        </div>  
+        <div className="row w-32 justify-content-center h-25">
+          <div class="col">
+            <p className="section-subtitle display-linebreak mbr-light sRotate text-left ">
               {this.state.proposalContent}
-          </p></div>
-        <div class="row justify-content-end z-depth-5 float-right d-inline-block rounded border-0">
-          <img className="img-halfScreen rounded onHover" src={propalRight} />
+            </p>
+          </div>
+        </div>
+        <div class="row  float-right w-25">
+          <div class="z-depth-5 rounded border-0">
+            <img className="img-halfScreen rounded onHover" src={propalRight} />
+          </div>
+          
         </div>
       </div>
     );

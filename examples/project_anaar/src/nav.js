@@ -33,38 +33,35 @@ class Navigate extends React.Component {
   }
   render() {
     return (
-      <BrowserRouter><div>
-        <Container>
-        <Navbar fixed="top" color="warning" expand="lg" scrolling>
-            <NavbarToggler onClick={this.toggle} />
-              <Nav navbar right>
-                <NavItem>
+      <BrowserRouter>
+        <Navbar className="nav-stack" fixed="top">
+          <Nav navbar right className="justify-content-center">
+            <NavItem className="justify-content-center">
                   <NavLink active={this.state.active === 1 ? true : false} smooth="true" to="#sOne">
-                  <p>Intro</p>
+                  <p>Meet</p>
                   </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink active={this.state.active === 2 ? true : false} smooth="true" to="#sTwo"><p>Story</p></NavLink>
+                <NavLink active={this.state.active === 2 ? true : false} smooth="true" to="#sTwo"><p>Spark</p></NavLink>
                   </NavItem>
                   <NavItem>
-                <NavLink active={this.state.active === 3 ? true : false} smooth="true" to="#sThree"><p>Hangout</p></NavLink>
+                <NavLink active={this.state.active === 3 ? true : false} smooth="true" to="#sThree"><p>Grow</p></NavLink>
                   </NavItem>
                   <NavItem>
-                <NavLink active={this.state.active === 4 ? true : false} smooth="true" to="#sFour"><p>PRoposals</p></NavLink>
+                <NavLink active={this.state.active === 4 ? true : false} smooth="true" to="#sFour"><p>Confirm</p></NavLink>
                   </NavItem>
                   <NavItem>
                   <NavItem></NavItem>
-                    <NavLink active={this.state.active === 5 ? true : false} smooth="true" to="#sFive"><p>Invites</p></NavLink>
+                    <NavLink active={this.state.active === 5 ? true : false} smooth="true" to="#sFive"><p>Gather</p></NavLink>
                   </NavItem>
                 <NavItem>
-                  <NavLink active={this.state.active === 6 ? true : false} smooth="true" to="#sFive"><p>Miinutes</p></NavLink>
+                  <NavLink active={this.state.active === 6 ? true : false} smooth="true" to="#sFive"><p>D-Day</p></NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink active={this.state.active === 6 ? true : false} smooth="true" to="#sFive"><p>Location</p></NavLink>
+                  <NavLink active={this.state.active === 6 ? true : false} smooth="true" to="#sFive"><p>D-place</p></NavLink>
                 </NavItem>
               </Nav>
-          </Navbar></Container>
-      </div>
+          </Navbar>
     </BrowserRouter>
       
     
