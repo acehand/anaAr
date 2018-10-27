@@ -39,7 +39,7 @@ class Contentsections extends React.Component{
       isToggleOn: true, 
       offsetLen: 6,
       loadNavigation:false,
-      active : 1,
+      active : 34.5,
       a:1, 
       flipped : false,
 
@@ -69,8 +69,7 @@ class Contentsections extends React.Component{
   }
   handleScroll() {
     var activeState = this.parallax.current / 1000 + .8;
-    console.log(Math.round(activeState));
-    this.setState({active:Math.round(activeState)});
+    this.setState({active:Math.round(activeState) * 3});    
   }
   
   handleClick(parallax, offset) {

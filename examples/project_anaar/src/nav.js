@@ -12,11 +12,20 @@ import {
 } from 'mdbreact';
 import Scrollspy from 'react-scrollspy'
 
+const Item = ({title, property}) => (
+  <NavItem>
+    <Fa icon="circle" size="9x" />
+    <NavLink smooth="true" to="#sOne">
+      <p>{title}</p>
+    </NavLink>
+  </NavItem>
+);
 class Navigate extends React.Component {
   constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
     console.log(props);
     this.state = {
       isOpen: false,
@@ -24,6 +33,22 @@ class Navigate extends React.Component {
       active: props.active
     };
   }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+handleScroll(event) {
+  debugger;
+  let scrollTop = event.srcElement.body.scrollTop,
+    itemTranslate = Math.min(0, scrollTop / 3 - 60);
+
+  this.setState({
+    transform: itemTranslate
+  });
+}
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
@@ -36,35 +61,19 @@ class Navigate extends React.Component {
     return (
       <BrowserRouter>
         <Navbar className="nav-stack" fixed="top">
+          <div className="headBgImage"></div>
+          <div className="navPointer"></div>
           <Nav navbar right className="justify-content-center">
-            <NavItem >
-                  <Fa icon="circle mt-2" size="9x" />
-                  <NavLink active={this.state.active === 1 ? true : false} smooth="true" to="#sOne">
-                  <p>Meet</p>
-                  </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink active={this.state.active === 2 ? true : false} smooth="true" to="#sTwo"><p>Spark</p></NavLink>
-                  </NavItem>
-                  <NavItem>
-                <NavLink active={this.state.active === 3 ? true : false} smooth="true" to="#sThree"><p>Grow</p></NavLink>
-                  </NavItem>
-                  <NavItem>
-                <NavLink active={this.state.active === 4 ? true : false} smooth="true" to="#sFour"><p>Confirm</p></NavLink>
-                  </NavItem>
-                  <NavItem>
-                  <NavItem></NavItem>
-                    <NavLink active={this.state.active === 5 ? true : false} smooth="true" to="#sFive"><p>Gather</p></NavLink>
-                  </NavItem>
-                <NavItem>
-                  <NavLink active={this.state.active === 6 ? true : false} smooth="true" to="#sFive"><p>D-Day</p></NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink active={this.state.active === 6 ? true : false} smooth="true" to="#sFive"><p>D-place</p></NavLink>
-                </NavItem>
-              </Nav>
-          </Navbar>
-    </BrowserRouter>
+            <Item title="Meet"/>
+            <Item title="Spark" />
+            <Item title="Grow" />
+            <Item title="Confirm" />
+            <Item title="Gather" />
+            <Item title="D-Day" />
+            <Item title="D-place" />            
+          </Nav>
+        </Navbar>
+      </BrowserRouter>
       
     
     );
