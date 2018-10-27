@@ -1,11 +1,8 @@
 import React from 'react';
-import { Spring} from 'react-spring';
-import { Parallax, Transition } from 'react-spring';
 import {
   Container, Row, Col,Card,  CardTitle, CardText, CardColumns,
   CardSubtitle, CardBody, Media, Animation
 } from 'mdbreact'
-import holdHands from './Images/holdHands.jpg'
 import propalLeft from './Images/proposalLeft2.jpg'
 import propalRight from './Images/proposalRight.jpg'
 import inviteImage from './Images/inviteImg.gif'
@@ -147,7 +144,7 @@ export class SectionFour extends React.Component {
         </div>
         <div className="row float-left w-25">
           <div class="z-depth-5 rounded border-0 ">
-            <img className="img-halfScreen rounded onHover" src={propalLeft} />
+            <img alt="b" className="img-halfScreen rounded onHover" src={propalLeft} />
           </div>          
         </div>  
         <div className="row w-32 h-25">
@@ -159,7 +156,7 @@ export class SectionFour extends React.Component {
         </div>
         <div class="row float-right w-25">
           <div class="z-depth-5 rounded border-0">
-            <img className="img-halfScreen rounded onHover" src={propalRight} />
+            <img alt="b"  className="img-halfScreen rounded onHover" src={propalRight} />
           </div>
           
         </div>

@@ -1,36 +1,22 @@
 import React from 'react';
 import {Parallax } from 'react-spring';
 import Navigate from './nav';
-import {SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive} from './contents';
+import {SectionOne, SectionTwo, SectionFour, SectionFive} from './contents';
 import {SectionSix} from './section_six';
-import SnowStorm from 'react-snowstorm';
-import stars from './Images/stars.png'
 
-import HeaderMain from './Images/HeaderMain.jpeg'
-import skyline2 from './Images/skyline2.jpg'
-import {
-   Card, CardTitle, CardText, CardColumns, Fa,
-  CardSubtitle, CardBody, CardImage, FlippingCard, CardUp, Avatar
-} from 'mdbreact'
 
-const scrollSpySectionsOffset = [];
-
-const RainDropDiv = (() => {
-  return <div class="raindrop"></div>;
-});
-
-const ParallaxCard = ({offset, img, title, content, marginLeft, action, flipped}) => (
-  <Parallax.Layer factor={1} offset={offset} speed={-.1} style={{ width: "30%", marginLeft: `${marginLeft}` }}>
-    <Card className="card-image" style={{ backgroundImage: "url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')" }}>
-      <div className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-        <div>
-          <CardTitle tag="h3" className="pt-2 "><strong>{title}</strong></CardTitle>
-          <div className="display-linebreak"><p>{content}</p></div>
-        </div>
-      </div>
-    </Card>
-  </Parallax.Layer>
-);
+// const ParallaxCard = ({offset, img, title, content, marginLeft, action, flipped}) => (
+//   <Parallax.Layer factor={1} offset={offset} speed={-.1} style={{ width: "30%", marginLeft: `${marginLeft}` }}>
+//     <Card className="card-image" style={{ backgroundImage: "url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')" }}>
+//       <div className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+//         <div>
+//           <CardTitle tag="h3" className="pt-2 "><strong>{title}</strong></CardTitle>
+//           <div className="display-linebreak"><p>{content}</p></div>
+//         </div>
+//       </div>
+//     </Card>
+//   </Parallax.Layer>
+// );
 
 class Contentsections extends React.Component{  
   constructor(props) {
@@ -72,8 +58,7 @@ class Contentsections extends React.Component{
   }
   handleScroll() {
     var activeState = (this.parallax.current / this.parallax.container.offsetHeight),
-     threshold = this.state.threshold + (activeState * 10),
-     currentActive = this.state.maxLeft;
+     threshold = this.state.threshold + (activeState * 10);
      if (activeState === 0 || threshold < 0) {
        threshold = 0;
      }
@@ -89,10 +74,6 @@ class Contentsections extends React.Component{
     parallax.scrollTo(currentOffset + 1);
   }
   render() {
-    let rows = [];
-    for (let i = 0; i < 200; i++) {
-      rows.push(<RainDropDiv />);
-    }   
     return (
       <div class="bgImage">
       {this._renderNavigation()}
@@ -142,6 +123,7 @@ class Contentsections extends React.Component{
           <Parallax.Layer factor={1} offset={6.8} speed={0} onClick={e => this.handleClick(this.parallax)} >
             <section id="sSeven">
                 <iframe
+                  title = "maps"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.576894994789!2d80.25271465034191!3d12.934893219137827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525cdd5d90609f%3A0xf6d497e08ae5e492!2sThe+Royal+Palms!5e0!3m2!1sen!2sus!4v1538564720063"
                   frameborder="0" style={{ border: "0" }} allowfullscreen></iframe>
             </section>

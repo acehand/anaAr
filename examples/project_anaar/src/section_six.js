@@ -1,14 +1,5 @@
 import React from 'react';
-import { Spring } from 'react-spring';
-import { Parallax, Transition } from 'react-spring';
-import {
-  Container, Row, Col, Card, CardTitle, CardText, CardColumns,
-  CardSubtitle, CardBody, Media, Animation
-} from 'mdbreact'
-import holdHands from './Images/holdHands.jpg'
-import propalLeft from './Images/proposalLeft2.jpg'
-import propalRight from './Images/proposalRight.jpg'
-import inviteImage from './Images/inviteImg.gif'
+
 
 
 const ColumnElement = ({heading, value}) => {

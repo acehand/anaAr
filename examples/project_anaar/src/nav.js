@@ -1,16 +1,12 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom'
 import {
-  Collapse,
-  Container,
   Navbar,
   Nav,
-  NavbarToggler,
   NavLink,
   NavItem,
   Fa,
 } from 'mdbreact';
-import Scrollspy from 'react-scrollspy'
 
 const Item = ({title, property}) => (
   <NavItem>
