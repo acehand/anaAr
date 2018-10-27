@@ -39,7 +39,10 @@ class Contentsections extends React.Component{
       isToggleOn: true, 
       offsetLen: 6,
       loadNavigation:false,
-      active : 34.5,
+      threshold : 0,
+      active:-30.45,
+      maxLeft : -30.45,
+      maxRight : 30.45,
       a:1, 
       flipped : false,
 
@@ -68,8 +71,13 @@ class Contentsections extends React.Component{
     this.setState({flipped:true});
   }
   handleScroll() {
-    var activeState = this.parallax.current / 1000 + .8;
-    this.setState({active:Math.round(activeState) * 3});    
+    var activeState = (this.parallax.current / this.parallax.container.offsetHeight),
+     threshold = this.state.threshold + (activeState * 10),
+     currentActive = this.state.maxLeft;
+     if (activeState === 0 || threshold < 0) {
+       threshold = 0;
+     }
+     this.setState({active: (threshold + this.state.maxLeft)});
   }
   
   handleClick(parallax, offset) {

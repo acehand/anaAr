@@ -62,7 +62,7 @@ handleScroll(event) {
       <BrowserRouter>
         <Navbar className="nav-stack" fixed="top">
           <div className="headBgImage"></div>
-          <div className="navPointer"></div>
+          <div className="navPointer" style={{ marginLeft: this.state.active + '%' }}/>
           <Nav navbar right className="justify-content-center">
             <Item title="Meet"/>
             <Item title="Spark" />
@@ -74,8 +74,6 @@ handleScroll(event) {
           </Nav>
         </Navbar>
       </BrowserRouter>
-      
-    
     );
   }
 }
