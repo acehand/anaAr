@@ -22,60 +22,17 @@ export class SectionOne extends React.Component {
   }
   render() {
     return (
-      <div className="container">
-        <Row className="justify-content-center">
-          <Col className="mt-6">
-            <h1 className=" section-title white-text">{this.state.heading1}</h1>
-          </Col>
-        </Row>
-        <Row className="justify-content-center mt-3">
-          <Col lg={10} className="fWhite mt-7">
-            <h3 className="section-subtitle mbr-light text-center">
-              <span>{this.state.subHeading1}</span><br/>
-              <span>{this.state.subHeading2}</span><br/>
-            </h3>
-          </Col>
-        </Row>
+      <div className="d-flex flex-column justify-content-center w-100 h-100">
+        <div className="align-items-start title h-25 mb-auto">
+          <h1 className=" section-title white-text">{this.state.heading1}</h1>
+        </div>
+        <div className="align-self-center mb-auto">
+          <p className="section-subtitle mbr-light text-center">
+            {this.state.subHeading1}<br />
+            {this.state.subHeading2}<br />
+          </p>
+        </div>
       </div>
-    );
-  }
-}
-
-export class SectionThree extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    }
-  }
-  render() {
-    return (
-      <Container style={{ top: "20%", position: "absolute", left: "10%" }}>
-        <Row>
-          <CardColumns>
-            <Card style={{ backgroundColor: '#FDF2E9', borderColor: '#blue' }}>
-              <CardBody>
-                <CardTitle>Archana</CardTitle>
-                <CardSubtitle>Card subtitle</CardSubtitle>
-                <CardText>Content</CardText>
-              </CardBody>
-            </Card>
-            <Card style={{ backgroundColor: '#FDF2E9', borderColor: '#blue' }}>
-              <CardBody>
-                <CardTitle>Wedding</CardTitle>
-                <CardText>Date 1</CardText>
-                <CardText>Date 2</CardText>
-              </CardBody>
-            </Card>
-            <Card style={{ backgroundColor: '#D98880', borderColor: '#blue' }}>
-              <CardBody>
-                <CardTitle>Anand</CardTitle>
-                <CardSubtitle>Card subtitle</CardSubtitle>
-                <CardText>Content</CardText>
-              </CardBody>
-            </Card>
-          </CardColumns>
-        </Row>
-      </Container>
     );
   }
 }
@@ -88,8 +45,8 @@ const AnimatedContent = ({left, right}) => {
     <Animation className="d-inline-block" type="slideInRight" duration="3s" delay="2s">
       {right}
     </Animation>
-  </p>
-);
+    </p>
+  );
 };
 
 export class SectionTwo extends React.Component {
@@ -180,20 +137,18 @@ export class SectionFive extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="w-100 h-100">
         <div className="d-flex justify-content-center flex-column">
-          <div className="align-self-center title">
-            <h1 className="section-title">{this.state.inviteTitle1}</h1>
+          <div className="mb-auto">
+            <h3 className="section-title">{this.state.inviteTitle1}</h3>
           </div>
-        </div>
-        <div className="d-flex justify-content-left flex-row">
-          <div className="align-self-left title">
-            <Media object src={inviteImage} />
+        </div>        
+        <div className="d-flex flex-row justify-content-center w-100 h-75">
+          <div className="align-items-center mt-3 border border-dark thumbnail">
+            <Media object src={inviteImage} className="w-100 h-100" />
           </div>
-        </div>
-        <div className="d-flex justify-content-right flex-row">
-          <div className="align-self-center title">
-            <p style={{ marginTop: "5%" }} className="section-subtitle mbr-light">
+          <div className="align-self-center ml-5">
+            <p className="align-middle section-subtitle mbr-light">
               {this.state.inviteSub1}<br />
               {this.state.inviteSub2}<br />
               by<br />

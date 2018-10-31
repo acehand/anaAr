@@ -136,21 +136,22 @@ section {
   background-position: center;
   background-size: cover;
 }
-#sSix{
-  /* background: linear-gradient(rgba(245,255,239,0.7), rgba(255,255,255,.7)), url("./Images/minutes2.jpg") center no-repeat;
-  background-position: center;
-  background-size: cover; */
-}
 #sSeven {
-  border-top: 2px;
-  height: 400px;
+  background:teal;
+  width:90%;
+  border-top: 2px;  
   margin-left:10%
+}
+#sSeven iframe {
+  height: 400px;
+  width:100%;
+  opacity: 1;
 }
 .sRotate {
   font-weight: 900 !important;
   transform: rotate(-13Deg);
 }
-#sFour div.shadowLayer {
+div.shadowLayer {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -286,10 +287,7 @@ div.borderRight {
   box-shadow: 22px 22px 22px 21px rgba(0, 0, 3, 0.4);
 }
 
-#sSeven iframe{
-  height: 100%;
-  width:100%;
-}
+
 .whitey {
   background: linear-gradient(to right, white 0%, grey 100%);
 }  
