@@ -136,29 +136,20 @@ export class SectionFour extends React.Component {
   }
   render() {
     return (
-      <div className="container h-100">
-        <div className="row justify-content-center">
-          <div class="col">
-            <h3 className="text-center section-title fWhite">{this.state.heading1}</h3>
-          </div>
+      <div className="d-flex justify-content-center flex-column">
+        <div className="align-self-center title">
+          <h3 className="text-center section-title fWhite">{this.state.heading1}</h3>
         </div>
-        <div className="row float-left w-25">
-          <div class="z-depth-5 rounded border-0 ">
-            <img alt="b" className="img-halfScreen rounded onHover" src={propalLeft} />
-          </div>          
-        </div>  
-        <div className="row w-32 h-25">
-          <div class="col">
-            <p className="section-subtitle display-linebreak mbr-light sRotate text-left ">
-              {this.state.proposalContent}
-            </p>
-          </div>
+        <div className="mb-auto mr-auto image ml-3">
+          <img alt="b" className="z-depth-5 img-halfScreen rounded onHover" src={propalLeft} />
         </div>
-        <div class="row float-right w-25">
-          <div class="z-depth-5 rounded border-0">
-            <img alt="b"  className="img-halfScreen rounded onHover" src={propalRight} />
-          </div>
-          
+        <div className="align-self-center align-self-md-center text-left mr-5 content">
+          <p className="section-subtitle display-linebreak sRotate">
+            {this.state.proposalContent}
+          </p>
+        </div>
+        <div className="ml-auto mb-0 image mr-3">
+          <img alt="b" className=" z-depth-5 img-halfScreen rounded onHover" src={propalRight} />
         </div>
       </div>
     );
