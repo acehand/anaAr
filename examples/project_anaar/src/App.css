@@ -45,7 +45,7 @@
   height: 100%;
 }
 .navPointer {
-  background: url("./Images/heartIcon2.png") center no-repeat;
+  background: url("./Images/heartIcon3.png") center no-repeat;
   position: absolute;
   margin-left:-10%;
   width:100%;
@@ -78,10 +78,10 @@
 .section-subtitle {
   vertical-align: inherit;
   line-height: 1.2;
-  font-weight: 300;
+  font-weight: 200;
   text-align: center;
   font-family: 'Euphoria', cursive;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 .section-text {
   font-style: normal;
@@ -150,8 +150,13 @@ section {
   font-weight: 900 !important;
   transform: rotate(-13Deg);
 }
+#sFour div.shadowLayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 #sFour div.d-flex {
-  height:80%;
+  height:100%;
 }
 #sFour div.d-flex div.title{
   height:5%;
@@ -192,10 +197,10 @@ li.a {
 }
 
 #sTwo P.content {
-  font-size: 2em;
-  line-height: 1;
+  /* line-height: 1; */
+  /* font-size: 2em;
   font-weight: bold;
-  position: relative;
+  position: relative; */
 }
 .mid-block{
   margin-top:30%;

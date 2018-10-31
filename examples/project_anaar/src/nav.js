@@ -62,9 +62,9 @@ handleScroll(event) {
           <div className="navPointer" style={{ marginLeft: this.state.active + '%' }}/>
           <Nav navbar right className="justify-content-center">
             <Item title="Meet" to="#sOne"/>
-            <Item title="Spark" to="#sTwo"/>
+            <Item title="Connect" to="#sTwo"/>
             <Item title="Grow" to="#sThree"/>
-            <Item title="Confirm" to="#sFour"/>
+            <Item title="Woo" to="#sFour"/>
             <Item title="D-Day" to="#sFive"/>
             <Item title="D-place" to="#sSix"/> 
           </Nav>
