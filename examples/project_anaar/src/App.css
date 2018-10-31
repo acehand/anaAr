@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montez|Sacramento');
-@import url('https://fonts.googleapis.com/css?family=Montez|Nunito');
+@import url('https://fonts.googleapis.com/css?family=Euphoria+Script');
 
 
 .App {
@@ -72,7 +72,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 1.2;
-  font-family: 'montez';
+  font-family: 'Montez', cursive;
   font-size: 5em;
 }
 .section-subtitle {
@@ -80,13 +80,13 @@
   line-height: 1.2;
   font-weight: 300;
   text-align: center;
-  font-family: 'Sacramento', cursive;
+  font-family: 'Euphoria', cursive;
   font-size: 2rem;
 }
 .section-text {
   font-style: normal;
   line-height: 1.6;
-  font-family: 'Sacramento', cursive;
+  font-family: 'Euphoria', cursive;
   font-size: 1rem;
 }
 
@@ -132,13 +132,14 @@ section {
   opacity: 1;
 }
 #sFive {
-  background :rgba(255, 255, 255, 0.8);
-  margin-left:10%
-}
-#sSix{
   background: linear-gradient(rgba(245,255,239,0.7), rgba(255,255,255,.7)), url("./Images/minutes2.jpg") center no-repeat;
   background-position: center;
   background-size: cover;
+}
+#sSix{
+  /* background: linear-gradient(rgba(245,255,239,0.7), rgba(255,255,255,.7)), url("./Images/minutes2.jpg") center no-repeat;
+  background-position: center;
+  background-size: cover; */
 }
 #sSeven {
   border-top: 2px;

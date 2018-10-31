@@ -165,15 +165,11 @@ export class SectionFive extends React.Component {
       inviteSub2: "You are invited to brighten up the next page of our story ",
 
       reception1: "#1 Making the reception fun by dancing with us",
-      receptionDate: "Saturday, 8th of December 2018",
+      receptionDate: "Saturday, 8th of December 2018 \n Evening 7pm",
 
       wedding1: "#2 Cheering at our traditional wedding ceremony",
-      weddingDate: "Sunday, 9th of December 2018",
-      // reception1: "Starting with a reception that aims to be a fun dance party, on,",
-      // receptionDate: "Saturday, 8th of December 2018",
+      weddingDate: "Sunday, 9th of December 2018 \n Morning 8am",
 
-      // wedding1: "Followed by a traditional wedding ceremony on,",
-      // weddingDate: "Sunday, 9th of December 2018",
     }
   }
   render() {
@@ -185,16 +181,16 @@ export class SectionFive extends React.Component {
             <Media object src = {inviteImage}/>
           </Media>
           <Media body className="ml-4">
-            <p style={{marginTop:"15%"}} className="section-subtitle mbr-light">
+            <p style={{marginTop:"5%"}} className="section-subtitle mbr-light">
               {this.state.inviteSub1}<br />
               {this.state.inviteSub2}<br /><br />
               by<br/>
               {this.state.reception1}<br />
               on<br/>
-              <span>{this.state.receptionDate}</span><br /><br/>
+              <span class="display-linebreak">{this.state.receptionDate}</span><br /><br/>
               {this.state.wedding1}<br />
               on<br/>
-              <strong>{this.state.weddingDate}</strong><br/>
+              <strong><span class="display-linebreak">{this.state.weddingDate}</span></strong><br/>
             </p>
       </Media>
         </Media>

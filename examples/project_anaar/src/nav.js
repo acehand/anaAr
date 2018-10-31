@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link';
 import {
   Navbar,
   Nav,
@@ -8,12 +9,12 @@ import {
   Fa,
 } from 'mdbreact';
 
-const Item = ({title, property}) => (
+const Item = ({title, to}) => (
   <NavItem>
     <Fa icon="circle" size="9x" />
-    <NavLink smooth="true" to="#sOne">
+    <Link smooth="true" to={to}>
       <p>{title}</p>
-    </NavLink>
+    </Link>
   </NavItem>
 );
 class Navigate extends React.Component {
@@ -60,13 +61,12 @@ handleScroll(event) {
           <div className="headBgImage"></div>
           <div className="navPointer" style={{ marginLeft: this.state.active + '%' }}/>
           <Nav navbar right className="justify-content-center">
-            <Item title="Meet"/>
-            <Item title="Spark" />
-            <Item title="Grow" />
-            <Item title="Confirm" />
-            <Item title="Gather" />
-            <Item title="D-Day" />
-            <Item title="D-place" />            
+            <Item title="Meet" to="#sOne"/>
+            <Item title="Spark" to="#sTwo"/>
+            <Item title="Grow" to="#sThree"/>
+            <Item title="Confirm" to="#sFour"/>
+            <Item title="D-Day" to="#sFive"/>
+            <Item title="D-place" to="#sSix"/> 
           </Nav>
         </Navbar>
       </BrowserRouter>
