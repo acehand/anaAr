@@ -164,13 +164,16 @@ div.shadowLayer {
 #sFour div.d-flex div.title{
   height:5%;
 }
-#sFour div.d-flex div.image{
-  height:40%;
-}
 #sFour div.d-flex div.content{
   height:1%;
   margin-left:-5%;
   margin-top:1%;
+}
+#sFour div.d-flex div{
+  z-index:3000;
+}
+#sFour img {
+  z-index:40000;
 }
 
 #sFive div.z-depth-5 {
