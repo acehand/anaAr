@@ -140,7 +140,7 @@ export class SectionFive extends React.Component {
       <div className="w-100 h-100">
         <div className="d-flex justify-content-center flex-column">
           <div className="mb-auto">
-            <h3 className="section-title">{this.state.inviteTitle1}</h3>
+            <h3 className="section-title white-text">{this.state.inviteTitle1}</h3>
           </div>
         </div>        
         <div className="d-flex flex-row justify-content-center w-100 h-75">
