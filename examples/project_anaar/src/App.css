@@ -137,7 +137,7 @@ section {
   background-size: cover;
 }
 #sSeven {
-  background:teal;
+  background: linear-gradient(rgba(0, 128, 128, .5), rgba(0, 128, 128, .5));
   width:90%;
   border-top: 2px;  
   margin-left:10%
