@@ -38,11 +38,11 @@
 
 .headBgImage {
   background: url("./Images/nav_left_man.png")  no-repeat , url("./Images/nav_center_line.png") no-repeat, url("./Images/nav_right_man.png")  no-repeat;
-  background-size : 3% 65px, 90.25% 100% , 3% 65px ;
-  background-position:  0%, 20% -10px, 95%;
+  background-size : 2.5% 55px, 90.5% 100% , 2.5% 55px;
+  background-position:  0%, 22% -9px, 95%;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 90%;
 }
 .navPointer {
   background: url("./Images/heartIcon3.png") center no-repeat;
@@ -89,20 +89,60 @@
   font-family: 'Euphoria', cursive;
   font-size: 1rem;
 }
-
-.leftNav{
-  margin-right: 10px;
+.display-linebreak {
+  white-space: pre-line;
+  text-align: "center";
+  align-content: "center";
 }
 
-.w-32 {
-  position: relative;
-  margin-top:23%;
-  
+.whitey {
+  background: linear-gradient(to right, white 0%, grey 100%);
+}  
+.teal {
+  background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
 }
-.mt-7 {
-  margin-top : 16% !important;
+.tomato {
+  background: linear-gradient(to right, tomato 0%, gold 100%);
+}
+.fWhite {
+  color:white;
+}
+.mbr-white {
+  color: #ffffff; }
+
+.mbr-black {
+  color: #000000; }
+
+.mbr-bg-white {
+  background-color: #ffffff; }
+
+.mbr-bg-black {
+  background-color: #000000; }
+
+/*! Text-aligns */
+.align-left {
+  text-align: left; }
+
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
+/* short hands */
+.h-80 {
+  height:80%;
+}
+div.shadowLayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.img-fullscreen {
+  align-items: center;
+  -webkit-align-items: center;
 }
 
+/*Sectionss*/
 section {
   height: 90%;
   width: 80%;
@@ -138,12 +178,15 @@ section {
 }
 #sSeven {
   background: linear-gradient(rgba(0, 128, 128, .5), rgba(0, 128, 128, .5));
-  width:90%;
+  width:80%;
   border-top: 2px;  
   margin-left:10%
 }
+
+
 #sSeven iframe {
   position:relative;
+  vertical-align: middle;
   height:50%;
   width:80%;
   margin-top:11%;
@@ -153,11 +196,7 @@ section {
   font-weight: 900 !important;
   transform: rotate(-13Deg);
 }
-div.shadowLayer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
+
 #sFour div.d-flex {
   height:100%;
 }
@@ -184,44 +223,12 @@ div.shadowLayer {
 }
 
 li a.active {
-  /* background-color: white ;
-  color: #333; */
   left : -20px;
   transition: all 2s ease-in;
 }
 li.a {
   width: 100%;
   left: 10px;
-  transition: all 2s ease-out;
-}
-.top-block{
-  margin-top:-15%;
-  /* margin-left : 20%; */
-}
-.center-text {
-  margin-left : 20%;
-}
-
-.mid-block{
-  margin-top:30%;
-}
-.display-linebreak {
-  white-space: pre-line;
-  text-align: "center";
-  align-content: "center";
-}
-.img-fullscreen {
-  align-items: center;
-  -webkit-align-items: center;
-}
-.img-halfScreen {
-  /* position: relative;
-  display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  max-width:250px; */
 }
 
 div.topImg {
@@ -256,25 +263,13 @@ div.bottomImg{
   background: url("./Images/rainB1.jpg") center no-repeat;
 }
 
-div.float-left {
-n  margin-left: 4%;
-}
-div.float-right {
-  margin-right: 4%;
-}
-/* div.border {
-  margin-top: 5%;
-} */
-div.borderRight {
-  border-right: 2px solid Orange!important;
-}
-
 #sFour .onHover{
   opacity: 0.3;
 }
 #sFour .onHover:hover{
   opacity: 1;
 }
+
 .thumbnail {
   padding: .75rem;
   border: 1px solid #dee2e6;
@@ -285,42 +280,6 @@ div.borderRight {
 .thumbnail img {
   box-shadow: 22px 22px 22px 21px rgba(0, 0, 3, 0.4);
 }
-
-
-.whitey {
-  background: linear-gradient(to right, white 0%, grey 100%);
-}  
-.teal {
-  background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
-}
-.tomato {
-  background: linear-gradient(to right, tomato 0%, gold 100%);
-}
-.fWhite {
-  color:white;
-}
-.mbr-white {
-  color: #ffffff; }
-
-.mbr-black {
-  color: #000000; }
-
-.mbr-bg-white {
-  background-color: #ffffff; }
-
-.mbr-bg-black {
-  background-color: #000000; }
-
-/*! Text-aligns */
-.align-left {
-  text-align: left; }
-
-.align-center {
-  text-align: center; }
-
-.align-right {
-  text-align: right; }
-
   
 /*! Font-weight  */
 

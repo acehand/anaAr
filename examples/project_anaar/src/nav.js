@@ -65,7 +65,7 @@ handleScroll(event) {
             <Item title="Connect" to="#sTwo"/>
             <Item title="Grow" to="#sThree"/>
             <Item title="Woo" to="#sFour"/>
-            <Item title="D-Day" to="#sFive"/>
+            <Item title="Knot" to="#sFive"/>
             <Item title="D-place" to="#sSix"/> 
           </Nav>
         </Navbar>

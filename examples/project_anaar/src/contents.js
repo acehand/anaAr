@@ -142,8 +142,8 @@ export class SectionFive extends React.Component {
           <div className="mb-auto">
             <h3 className="section-title white-text">{this.state.inviteTitle1}</h3>
           </div>
-        </div>        
-        <div className="d-flex flex-row justify-content-center w-100 h-75">
+        </div>
+        <div className="d-flex flex-row justify-content-center w-100 h-80">
           <div className="align-items-center mt-3 border border-dark thumbnail">
             <Media object src={inviteImage} className="w-100 h-100" />
           </div>
