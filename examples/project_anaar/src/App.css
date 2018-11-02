@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montez|Sacramento');
 @import url('https://fonts.googleapis.com/css?family=Euphoria+Script');
+@import url('https://fonts.googleapis.com/css?family=Give+You+Glory|Kalam|Share+Tech+Mono');
 
 
 .App {
@@ -25,6 +26,9 @@
 .App-intro {
   font-size: large;
 }
+.navbar {
+  box-shadow: none !important;
+}
 
 .nav {
    width:100%;
@@ -33,7 +37,7 @@
   background: white;
   width:100%;
   height:7%;
-  box-shadow: 22px 22px 22px 21px rgba(0, 0, 3, 0.4);
+  /* box-shadow: 5px 5px 5px 5px rgba(0, 0, 3, 0.4); */
 }
 
 .headBgImage {
@@ -46,19 +50,19 @@
 }
 .navPointer {
   background: url("./Images/heartIcon3.png") center no-repeat;
-  position: absolute;
-  margin-left:-10%;
-  width:100%;
+  width:5%;
   height: 100%;
-  top:-20%;
+  margin-top:-8px;
+  margin-left:10%;
+  position : absolute;
   z-index:100;
 }
 .nav-item {
-  width:10%;
+  width:15%;
   z-index: 10;
 }
 .nav-item i {
-  margin-top:15%;
+  margin-top:14%;
 }
 .nav-item a{
   margin-top:-5%;
@@ -66,27 +70,43 @@
 .nav-item p {
   color : black;
 }
+.nav-item a {
+  font-family: 'Give You Glory', cursive;
+  font-size:20px;
+}
 /* content font */
 .section-title {
   vertical-align: inherit;
+  color:black;
   font-style: normal;
   font-weight: 700;
   line-height: 1.2;
   font-family: 'Montez', cursive;
   font-size: 5em;
 }
+.section-date {
+  font-family: 'Share Tech Mono', monospace;
+  text-decoration: underline;
+}
 .section-subtitle {
   vertical-align: inherit;
   line-height: 1.2;
-  font-weight: 200;
+  font-weight: 300;
   text-align: center;
-  font-family: 'Euphoria', cursive;
+  font-family: 'kalam', cursive;
   font-size: 1.75rem;
+}
+#sOne .section-subtitle {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+#sFive .section-subtitle {
+  font-size: 2rem;
 }
 .section-text {
   font-style: normal;
   line-height: 1.6;
-  font-family: 'Euphoria', cursive;
+  font-family: 'kalam', cursive;
   font-size: 1rem;
 }
 .display-linebreak {
@@ -129,8 +149,17 @@
 .align-right {
   text-align: right; }
 /* short hands */
-.h-80 {
-  height:80%;
+.h-70 {
+  height:70%;
+}
+.h-15 {
+  height:15%;
+}
+.h-85 {
+  height:85%;
+}
+.w-40 {
+  width: 40%;
 }
 div.shadowLayer {
   position: absolute;
@@ -148,6 +177,7 @@ section {
   width: 80%;
   margin-left:10%;
   position: relative;
+  box-shadow: 10px 12px 12px 12px rgba(20, 12, 13, 0.2);
 }
 
 #sOne {
@@ -162,17 +192,18 @@ section {
   background-size: cover;
 }
 #sThree{
-  background : teal;
-  opacity: .5;
+  background : Teal;
+  opacity: .8;
+  
 }
 #sFour {
-  background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,.3)), url("./Images/proposalBackground.jpg") center no-repeat;
+  background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,.1)), url("./Images/proposalBackground.jpg") center no-repeat;
   background-position: center;
   background-size: cover;
   opacity: 1;
 }
 #sFive {
-  background: linear-gradient(rgba(245,255,239,0.7), rgba(255,255,255,.7)), url("./Images/minutes2.jpg") center no-repeat;
+  background: linear-gradient(rgba(245,255,239,0.4), rgba(255,255,255,.4)), url("./Images/minutes2.jpg") center no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -257,10 +288,11 @@ div.bottomImg{
 }
 
 .bgImage {
+  background: #FFFFFF;
   height: 100%;
   width: 100%;
-  position: absolute;
-  background: url("./Images/rainB1.jpg") center no-repeat;
+  position: absolute;  
+  /* background : url("./Images/rainB1.jpg") center no-repeat; */
 }
 
 #sFour .onHover{
@@ -275,14 +307,13 @@ div.bottomImg{
   border: 1px solid #dee2e6;
   border-radius: .25rem;
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
 .thumbnail img {
-  box-shadow: 22px 22px 22px 21px rgba(0, 0, 3, 0.4);
+  /* box-shadow: 22px 22px 22px 21px rgba(0, 0, 3, 0.4); */
 }
   
 /*! Font-weight  */
-
 .mbr-regular {
   font-weight: 400; }
 

@@ -12,8 +12,8 @@ export class SectionOne extends React.Component {
     super(props);
     this.state = {
       heading1: "Anand & Archana",
-      subHeading1: "There were two people who knew each other for a very long time.",
-      subHeading2: "But they never really saw each other...",
+      subHeading1: "There were two people who knew",
+      subHeading2: "each other for a very long time. \n But they never really saw each other...",
       // subHeading1: "For a very long time, they knew each other.",
       // subHeading2: "But they never really saw each other.",
       // subHeading3: "Until they were struck by the lightning from each other.",
@@ -24,10 +24,10 @@ export class SectionOne extends React.Component {
     return (
       <div className="d-flex flex-column justify-content-center w-100 h-100">
         <div className="align-items-start title h-25 mb-auto">
-          <h1 className=" section-title white-text">{this.state.heading1}</h1>
+          <h1 className=" section-title">{this.state.heading1}</h1>
         </div>
-        <div className="align-self-center mb-auto">
-          <p className="section-subtitle mbr-light text-center">
+        <div className="align-self-center mt-5 mb-auto">
+          <p className="section-subtitle mbr-light text-center display-linebreak">
             {this.state.subHeading1}<br />
             {this.state.subHeading2}<br />
           </p>
@@ -70,7 +70,7 @@ export class SectionTwo extends React.Component {
     return(
       <div className="d-flex justify-content-center flex-column">
         <div className="align-self-center title">
-          <h3 className="text-center section-title fWhite">{this.state.heading1}</h3>
+          <h3 className="text-center section-title">{this.state.heading1}</h3>
         </div>
         <div className="align-self-center align-self-md-center w-100">
           <AnimatedContent left={this.state.left0} right={this.state.right0} />
@@ -97,7 +97,7 @@ export class SectionFour extends React.Component {
         <div className="shadowLayer">
           <div className="d-flex justify-content-center flex-column">
             <div className="mb-auto">
-              <h3 className="text-center section-title fWhite">{this.state.heading1}</h3>
+              <h3 className="text-center section-title">{this.state.heading1}</h3>
             </div>
             <div className="align-self-center mb-auto">
               <p className="section-subtitle display-linebreak sRotate">
@@ -125,7 +125,7 @@ export class SectionFive extends React.Component {
     this.state = {
       inviteTitle1: "Mangalyam Thandunanena",
       inviteSub1: "As we team up for the game of life,",
-      inviteSub2: "You are invited to brighten up the next page of our story ",
+      inviteSub2: "You are invited to brighten up the \n next page of our story by",
 
       reception1: "#1 Making the reception fun by dancing with us",
       receptionDate: "7pm Saturday, 8th of December 2018",
@@ -138,26 +138,25 @@ export class SectionFive extends React.Component {
   render() {
     return (
       <div className="w-100 h-100">
-        <div className="d-flex justify-content-center flex-column">
+        <div className="d-flex justify-content-center flex-column h-15">
           <div className="mb-auto">
-            <h3 className="section-title white-text">{this.state.inviteTitle1}</h3>
+            <h3 className="section-title">{this.state.inviteTitle1}</h3>
           </div>
         </div>
-        <div className="d-flex flex-row justify-content-center w-100 h-80">
-          <div className="align-items-center mt-3 border border-dark thumbnail">
-            <Media object src={inviteImage} className="w-100 h-100" />
+        <div className="d-flex flex-row w-100 h-85 ml-2 mb-2">
+          <div className="align-items-center m-3 w-40">
+            <Media object src={inviteImage} className="border border-dark thumbnail"/>      
           </div>
           <div className="align-self-center ml-5">
-            <p className="align-middle section-subtitle mbr-light">
+            <p className="align-middle section-subtitle mbr-light display-linebreak">
               {this.state.inviteSub1}<br />
-              {this.state.inviteSub2}<br />
-              by<br />
+              {this.state.inviteSub2}<br /><br />
               {this.state.reception1}<br />
               on<br />
-              <span class="display-linebreak">{this.state.receptionDate}</span><br /><br />
+              <span class="display-linebreak section-date">{this.state.receptionDate}</span><br /><br />
               {this.state.wedding1}<br />
               on<br />
-              <strong><span class="display-linebreak">{this.state.weddingDate}</span></strong><br />
+              <strong><span class="display-linebreak section-date">{this.state.weddingDate}</span></strong><br />
             </p>
           </div>
         </div>

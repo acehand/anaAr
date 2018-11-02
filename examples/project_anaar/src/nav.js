@@ -63,10 +63,10 @@ handleScroll(event) {
           <Nav navbar right className="justify-content-center">
             <Item title="Meet" to="#sOne"/>
             <Item title="Connect" to="#sTwo"/>
-            <Item title="Grow" to="#sThree"/>
+            <Item title="Bond" to="#sThree"/>
             <Item title="Woo" to="#sFour"/>
             <Item title="Knot" to="#sFive"/>
-            <Item title="D-place" to="#sSix"/> 
+            <Item title="Venue" to="#sSix"/> 
           </Nav>
         </Navbar>
       </BrowserRouter>

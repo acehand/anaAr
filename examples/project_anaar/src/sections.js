@@ -12,9 +12,9 @@ class Contentsections extends React.Component{
       offsetLen: 6,
       loadNavigation:false,
       threshold : 0,
-      active:-25.45,
-      maxLeft : -25.45,
-      maxRight : 25.45,
+      active: 10,
+      maxLeft : 10,
+      maxRight : 84,
       a:1, 
       flipped : false,
 
@@ -43,20 +43,27 @@ class Contentsections extends React.Component{
     this.setState({flipped:true});
   }
   handleScroll() {
-    var activeState = (this.parallax.current / this.parallax.container.offsetHeight),
-     threshold = this.state.threshold + (activeState * 10);
+    console.log(this.parallax.current);
+    var activeState = (this.parallax.current )/this.parallax.container.offsetHeight,
+     threshold = (activeState * 14.5);
+    
+    console.log("activeState "+activeState);
+    
      if (activeState === 0 || threshold < 0) {
        threshold = 0;
      }
+    console.log("th" + threshold);
      this.setState({active: (threshold + this.state.maxLeft)});
   }
   
   handleClick(parallax, offset) {
+    console.log("a" + parallax.offset);
     let currentOffset = offset || parallax.offset;
     
     if (currentOffset === this.state.offsetLen) {
       currentOffset=-1;
     }
+    
     parallax.scrollTo(currentOffset + 1);
   }
   render() {
@@ -64,20 +71,19 @@ class Contentsections extends React.Component{
       <div class="bgImage">
       {this._renderNavigation()}
         <Parallax ref={ref => (this.parallax = ref)} pages={9}>
-          <Parallax.Layer offset={0} speed={0} factor={8} onClick={e => this.handleClick(this.parallax,.1)}/>
-          <Parallax.Layer factor={1} offset={0.1} speed={.2} onClick={e => this.handleClick(this.parallax,.1)}>
+          <Parallax.Layer factor={1} offset={0.1} speed={0} onClick={e => this.handleClick(this.parallax,.1)}>
             <section id="sOne" class="img-fullscreen">
               <SectionOne />  
             </section>
           </Parallax.Layer>
           
-          <Parallax.Layer offset={1.2} speed={.2} factor={1} onClick={e => this.handleClick(this.parallax, 1.3)}>
+          <Parallax.Layer offset={1.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 1.3)}>
             <section id="sTwo">
               <SectionTwo/>
             </section>
           </Parallax.Layer>
 
-          <Parallax.Layer offset={2.1} speed={0.3} factor={1} onClick={e => this.handleClick(this.parallax, 2.2)}>
+          <Parallax.Layer offset={2.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 2.2)}>
             <section id="sThree"></section>
           </Parallax.Layer>
           <Parallax.Layer offset={2.19} speed={-.3} onClick={e => this.handleClick(this.parallax, 2.1)}>
@@ -87,19 +93,19 @@ class Contentsections extends React.Component{
             <div class="bottomImg"></div>
           </Parallax.Layer> 
           
-          <Parallax.Layer factor={1} offset={3.2} speed={0} onClick={e => this.handleClick(this.parallax,3.1)}>
+          <Parallax.Layer factor={1} offset={3.1} speed={0} onClick={e => this.handleClick(this.parallax,3.1)}>
             <section id="sFour">
               <SectionFour />
             </section>
           </Parallax.Layer>
           
-          <Parallax.Layer factor={1} offset={4.4} speed={0} onClick={e => this.handleClick(this.parallax,4.3)}>
+          <Parallax.Layer factor={1} offset={4.1} speed={0} onClick={e => this.handleClick(this.parallax,4.3)}>
             <section id="sFive">
               <SectionFive />
             </section>
           </Parallax.Layer>
 
-          <Parallax.Layer factor={1} offset={5.6} speed={0} onClick={e => this.handleClick(this.parallax,5.4)}>
+          <Parallax.Layer factor={1} offset={5.1} speed={0} onClick={e => this.handleClick(this.parallax,5.4)}>
             <section id="sSeven">
                 <iframe
                   title="maps"
