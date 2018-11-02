@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  Container, Row, Col,Card,  CardTitle, CardText, CardColumns,
-  CardSubtitle, CardBody, Media, Animation
-} from 'mdbreact'
+import {Media, Animation} from 'mdbreact'
 import propalLeft from './Images/proposalLeft2.jpg'
 import propalRight from './Images/proposalRight.jpg'
 import inviteImage from './Images/inviteImg.gif'
@@ -14,10 +11,6 @@ export class SectionOne extends React.Component {
       heading1: "Anand & Archana",
       subHeading1: "There were two people who knew",
       subHeading2: "each other for a very long time. \n But they never really saw each other...",
-      // subHeading1: "For a very long time, they knew each other.",
-      // subHeading2: "But they never really saw each other.",
-      // subHeading3: "Until they were struck by the lightning from each other.",
-      // subHeading4: "After that, even Zues couldn't stop them.",
     }
   }
   render() {

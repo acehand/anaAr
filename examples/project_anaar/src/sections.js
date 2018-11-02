@@ -2,7 +2,6 @@ import React from 'react';
 import {Parallax } from 'react-spring';
 import Navigate from './nav';
 import {SectionOne, SectionTwo, SectionFour, SectionFive} from './contents';
-import {SectionSix} from './section_six';
 
 class Contentsections extends React.Component{  
   constructor(props) {
@@ -17,13 +16,10 @@ class Contentsections extends React.Component{
       maxRight : 84,
       a:1, 
       flipped : false,
-
       card1Content: 'He made her laugh. \n She made him work lesser. \n He played tricks on her.\nShe teased him by not completing her stories.\n He woke her up every morning.\n She slept longer.\nHe talked and talked and talked.\nShe listened!',
       card2Content : "Hangouts brough them closer.So much so that, he `proposed` to her via Hangouts",
       card3Content: "She dressed up for a photoshoot. \n She posed. But he Proposed. \n Of course, she said yes - t7hey had already decided a date! \n. As much as she saw it coming, she didnt see it coming\n",
-      
     };
-    // This binding is necessary to make `this` work in the callback
     this.handleClick = this.handleClick.bind(this);
     this.handleFlipping = this.handleFlipping.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
@@ -43,69 +39,63 @@ class Contentsections extends React.Component{
     this.setState({flipped:true});
   }
   handleScroll() {
-    console.log(this.parallax.current);
     var activeState = (this.parallax.current )/this.parallax.container.offsetHeight,
      threshold = (activeState * 14.5);
-    
-    console.log("activeState "+activeState);
-    
      if (activeState === 0 || threshold < 0) {
        threshold = 0;
      }
-    console.log("th" + threshold);
      this.setState({active: (threshold + this.state.maxLeft)});
   }
   
   handleClick(parallax, offset) {
-    console.log("a" + parallax.offset);
     let currentOffset = offset || parallax.offset;
     
-    if (currentOffset === this.state.offsetLen) {
+    if (currentOffset === this.state.offsetLen-1) {
       currentOffset=-1;
     }
     
-    parallax.scrollTo(currentOffset + 1);
+    parallax.scrollTo(currentOffset + 1.);
   }
   render() {
     return (
       <div class="bgImage">
       {this._renderNavigation()}
-        <Parallax ref={ref => (this.parallax = ref)} pages={9}>
-          <Parallax.Layer factor={1} offset={0.1} speed={0} onClick={e => this.handleClick(this.parallax,.1)}>
+        <Parallax ref={ref => (this.parallax = ref)} pages={6}>
+          <Parallax.Layer factor={1} offset={0.1} speed={0} onClick={e => this.handleClick(this.parallax,0)}>
             <section id="sOne" class="img-fullscreen">
               <SectionOne />  
             </section>
           </Parallax.Layer>
           
-          <Parallax.Layer offset={1.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 1.3)}>
+          <Parallax.Layer offset={1.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 1)}>
             <section id="sTwo">
               <SectionTwo/>
             </section>
           </Parallax.Layer>
 
-          <Parallax.Layer offset={2.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 2.2)}>
+          <Parallax.Layer offset={2.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 2)}>
             <section id="sThree"></section>
           </Parallax.Layer>
-          <Parallax.Layer offset={2.19} speed={-.3} onClick={e => this.handleClick(this.parallax, 2.1)}>
+          <Parallax.Layer offset={2.19} speed={-.3} onClick={e => this.handleClick(this.parallax, 2)}>
             <div class="topImg"></div>
           </Parallax.Layer>
-          <Parallax.Layer offset={2.2} speed={.5}  onClick={e => this.handleClick(this.parallax, 2.2)}>
+          <Parallax.Layer offset={2.2} speed={.5}  onClick={e => this.handleClick(this.parallax, 2)}>
             <div class="bottomImg"></div>
           </Parallax.Layer> 
           
-          <Parallax.Layer factor={1} offset={3.1} speed={0} onClick={e => this.handleClick(this.parallax,3.1)}>
+          <Parallax.Layer factor={1} offset={3.1} speed={0} onClick={e => this.handleClick(this.parallax,3)}>
             <section id="sFour">
               <SectionFour />
             </section>
           </Parallax.Layer>
           
-          <Parallax.Layer factor={1} offset={4.1} speed={0} onClick={e => this.handleClick(this.parallax,4.3)}>
+          <Parallax.Layer factor={1} offset={4.1} speed={0} onClick={e => this.handleClick(this.parallax,4)}>
             <section id="sFive">
               <SectionFive />
             </section>
           </Parallax.Layer>
 
-          <Parallax.Layer factor={1} offset={5.1} speed={0} onClick={e => this.handleClick(this.parallax,5.4)}>
+          <Parallax.Layer factor={1} offset={5.1} speed={0} onClick={e => this.handleClick(this.parallax,5)}>
             <section id="sSeven">
                 <iframe
                   title="maps"

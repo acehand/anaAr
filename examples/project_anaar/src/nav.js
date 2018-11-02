@@ -4,7 +4,6 @@ import { HashLink as Link } from 'react-router-hash-link';
 import {
   Navbar,
   Nav,
-  NavLink,
   NavItem,
   Fa,
 } from 'mdbreact';
