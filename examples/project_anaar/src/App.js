@@ -8,6 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <ContentSections/>
+        <div className="footer"></div>
       </div>
     );
   }

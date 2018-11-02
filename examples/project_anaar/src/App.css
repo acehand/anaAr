@@ -20,7 +20,7 @@
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .App-intro {
@@ -82,7 +82,7 @@
   font-weight: 700;
   line-height: 1.2;
   font-family: 'Montez', cursive;
-  font-size: 5em;
+  font-size: 5rem;
 }
 .section-date {
   font-family: 'Share Tech Mono', monospace;
@@ -103,12 +103,6 @@
 #sFive .section-subtitle {
   font-size: 2rem;
 }
-.section-text {
-  font-style: normal;
-  line-height: 1.6;
-  font-family: 'kalam', cursive;
-  font-size: 1rem;
-}
 .display-linebreak {
   white-space: pre-line;
   text-align: "center";
@@ -124,20 +118,6 @@
 .tomato {
   background: linear-gradient(to right, tomato 0%, gold 100%);
 }
-.fWhite {
-  color:white;
-}
-.mbr-white {
-  color: #ffffff; }
-
-.mbr-black {
-  color: #000000; }
-
-.mbr-bg-white {
-  background-color: #ffffff; }
-
-.mbr-bg-black {
-  background-color: #000000; }
 
 /*! Text-aligns */
 .align-left {
@@ -177,17 +157,20 @@ section {
   width: 80%;
   margin-left:10%;
   position: relative;
-  box-shadow: 10px 12px 12px 12px rgba(20, 12, 13, 0.2);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
-
+section:hover {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
 #sOne {
-  background: url("./Images/HeaderMain1.jpg") center no-repeat;
+  background: url("./Images/oneBg1.jpg") center no-repeat;
   background-position: center;
   background-size: cover;
   opacity: 1;
 }
  #sTwo {
-  background: url("./Images/skyline2.jpg") center no-repeat;
+  background: url("./Images/skyline3.jpg") center no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -267,7 +250,7 @@ div.topImg {
   background-position: center;
   background-size: cover;
   opacity: 1;
-  height: 100%;
+  height: 80%;
   width: 80%;
   margin-left:10%;
   overflow: hidden!important;
@@ -279,7 +262,7 @@ div.bottomImg{
   background-position: center;
   background-size: cover;
   opacity: 1;
-  height: 100%;
+  height: 80%;
   width: 80%;
   margin-left:10%;
   z-index: 0;
@@ -309,40 +292,27 @@ div.bottomImg{
   max-width: 100%;
   height: 100%;
 }
-.thumbnail img {
-  /* box-shadow: 22px 22px 22px 21px rgba(0, 0, 3, 0.4); */
-}
   
-/*! Font-weight  */
-.mbr-regular {
-  font-weight: 400; }
-
-.mbr-semibold {
-  font-weight: 500; }
-
-.mbr-bold {
-  font-weight: 700; }
 
 body {
   font-style: normal;
   line-height: 1.5;
 }
-hr {
-  -moz-border-bottom-colors: none;
-  -moz-border-image: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  border-color: orangered -moz-use-text-color #FFFFFF;
-  border-style: solid none;
-  border-width: 2px 0;
-  margin-top:3%;
-  width:80%;
-}
+
 .display-1 > .mbr-iconfont {
   font-size: 9.6rem;
 }
 
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #606060;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  text-align: center;
+}
 
 /* ---- Fluid typography for mobile devices ---- */
 /* 1.4 - font scale ratio ( bootstrap == 1.42857 ) */
@@ -350,24 +320,27 @@ hr {
 /* (48 - 20)  48 == 48rem == 768px, 20 == 20rem == 320px(minimal supported viewport) */
 /* 0.65 - min scale variable, may vary */
 @media (max-width: 768px) {
-  #sOne, #stwo, #sThree, #sFour {
-    font-size: 4.8rem;
-    font-size: calc( 2.75rem + (6 - 2.75) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( 1.4 * (2.75rem + (6 - 2.75) * ((100vw - 20rem) / (48 - 20))));
-  }
-  .display-2 {
-    font-size: 2.4rem;
-    font-size: calc( 1.7rem + (3 - 1.7) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( 1.4 * (1.7rem + (3 - 1.7) * ((100vw - 20rem) / (48 - 20))));
-  }
-  .display-4 {
-    font-size: 0.8rem;
-    font-size: calc( 1rem + (1 - 1) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( 1.4 * (1rem + (1 - 1) * ((100vw - 20rem) / (48 - 20))));
-  }
-  .display-5 {
-    font-size: 1.44rem;
+  section .section-title{
+    font-size: 1rem !important;
     font-size: calc( 1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)));
     line-height: calc( 1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20))));
+  }
+  section .section-subtitle, #sFive .section-subtitle{
+    font-size: .5rem !important;
+    font-size: calc( 1rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)));
+    line-height: calc( 1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20))));
+  }
+}
+
+@media (max-width: 320px) {
+  section .section-title{
+    font-size: .5rem !important;
+    font-size: calc( 1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)));
+    line-height: calc( .65 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20))));
+  }
+  section .section-subtitle, #sFive .section-subtitle{
+    font-size: .25rem !important;
+    font-size: calc( 1rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)));
+    line-height: calc( .65 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20))));
   }
 }

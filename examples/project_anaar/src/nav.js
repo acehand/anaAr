@@ -35,23 +35,21 @@ class Navigate extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
+  handleScroll(event) {
+    let scrollTop = event.srcElement.body.scrollTop,
+      itemTranslate = Math.min(0, scrollTop / 3 - 60);
 
-handleScroll(event) {
-  debugger;
-  let scrollTop = event.srcElement.body.scrollTop,
-    itemTranslate = Math.min(0, scrollTop / 3 - 60);
-
-  this.setState({
-    transform: itemTranslate
-  });
-}
+    this.setState({
+      transform: itemTranslate
+    });
+  }
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
   componentWillReceiveProps(nextProps) {
-    this.setState({ active : nextProps.active});
+    this.setState({ active: nextProps.active });
   }
   render() {
     return (
@@ -60,7 +58,7 @@ handleScroll(event) {
           <div className="headBgImage"></div>
           <div className="navPointer" style={{ marginLeft: this.state.active + '%' }}/>
           <Nav navbar right className="justify-content-center">
-            <Item title="Meet" to="#sOne"/>
+            <Item title="Meet" to="#sOne" />
             <Item title="Connect" to="#sTwo"/>
             <Item title="Bond" to="#sThree"/>
             <Item title="Woo" to="#sFour"/>
