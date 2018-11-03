@@ -2,6 +2,7 @@ import React from 'react';
 import {Parallax } from 'react-spring';
 import Navigate from './nav';
 import {SectionOne, SectionTwo, SectionFour, SectionFive} from './contents';
+import Collage from './Images/Collages2.jpg';
 
 class Contentsections extends React.Component{  
   constructor(props) {
@@ -74,12 +75,18 @@ class Contentsections extends React.Component{
           </Parallax.Layer>
 
           <Parallax.Layer offset={2.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 2)}>
-            <section id="sThree"></section>
+            <section id="sThree">
+              <div className="d-flex flex-column">
+                <div className="m-2">
+                  <img alt="b" className="" src={Collage} />
+                </div>
+              </div>
+            </section>
           </Parallax.Layer>
-          <Parallax.Layer offset={2.19} speed={-.3} onClick={e => this.handleClick(this.parallax, 2)}>
+          <Parallax.Layer offset={2.29} speed={-.3} onClick={e => this.handleClick(this.parallax, 2)}>
             <div class="topImg"></div>
           </Parallax.Layer>
-          <Parallax.Layer offset={2.2} speed={.3}  onClick={e => this.handleClick(this.parallax, 2)}>
+          <Parallax.Layer offset={2.3} speed={.3}  onClick={e => this.handleClick(this.parallax, 2)}>
             <div class="bottomImg"></div>
           </Parallax.Layer> 
           
