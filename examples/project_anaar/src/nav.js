@@ -33,7 +33,6 @@ class Navigate extends React.Component {
       active: props.active
     };
   }
-  
   handleClick(id) {
     let element = document.getElementById(id),
       elementBound = element.getBoundingClientRect(),
@@ -83,7 +82,7 @@ class Navigate extends React.Component {
           <Nav navbar right className="justify-content-center">
             <NavItem>
               <Fa icon="circle" size="9x" />
-              <a  onClick={e => this.handleClick(e, "1")}>
+              <a  onClick={e => this.handleClick("1")}>
                 <p>Meet</p>
               </a>
             </NavItem>
