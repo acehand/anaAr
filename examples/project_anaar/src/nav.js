@@ -29,13 +29,21 @@ class Navigate extends React.Component {
     this.state = {
       history : createHistory(),
       isOpen: false,
-      test: "",
+      scrollable : 0,
       active: props.active
     };
   }
   
-  handleClick(e) {
-    // debugger;
+  handleClick(id) {
+    let element = document.getElementById(id),
+      elementBound = element.getBoundingClientRect(),
+      elementPos = elementBound.top * .93,
+      parentElement = element.parentElement.parentElement,
+      currentScrollPos = parentElement.scrollTop,
+      scrollable =  this.state.scrollable + elementPos;
+    parentElement.scrollTo(0, scrollable);
+    this.setState({scrollable : scrollable});
+
   }
   componentWillUnmount() {
     this.unlisten();
@@ -43,9 +51,6 @@ class Navigate extends React.Component {
   componentDidMount() {
     this.state.history.listen((location, action) => {
       let hash = location.hash;
-      // if (hash === "sTwo") {
-      //   this.setState({active : "24.5%"});
-      // }
     });
     window.addEventListener('scroll', this.handleScroll);
   }
@@ -76,12 +81,42 @@ class Navigate extends React.Component {
           <div className="headBgImage"></div>
           <div className="navPointer" style={{ marginLeft: this.state.active + '%' }}/>
           <Nav navbar right className="justify-content-center">
-            <Item title="Meet" to="#sOne"/>
-            <Item title="Connect" to="#sTwo" />
-            <Item title="Bond" to="#sThree"/>
-            <Item title="Woo" to="#sFour"/>
-            <Item title="Knot" to="#sFive"/>
-            <Item title="Venue" to="#sSeven"/> 
+            <NavItem>
+              <Fa icon="circle" size="9x" />
+              <a  onClick={e => this.handleClick(e, "1")}>
+                <p>Meet</p>
+              </a>
+            </NavItem>
+            <NavItem>
+              <Fa icon="circle" size="9x" />
+              <a  onClick={e => this.handleClick("2")}>
+                <p>Connect</p>
+              </a>
+            </NavItem>
+            <NavItem>
+              <Fa icon="circle" size="9x" />
+              <a onClick={e => this.handleClick("3")}>
+                <p>Bond</p>
+              </a>
+            </NavItem>
+            <NavItem>
+              <Fa icon="circle" size="9x" />
+              <a onClick={e => this.handleClick("4")}>
+                <p>Woo</p>
+              </a>
+            </NavItem>
+            <NavItem>
+              <Fa icon="circle" size="9x" />
+              <a onClick={e => this.handleClick("5")}>
+                <p>Knot</p>
+              </a>
+            </NavItem>
+            <NavItem>
+              <Fa icon="circle" size="9x" />
+              <a onClick={e => this.handleClick("6")}>
+                <p>Venue</p>
+              </a>
+            </NavItem>
           </Nav>
         </Navbar>
       </Router>

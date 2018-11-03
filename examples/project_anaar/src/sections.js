@@ -64,19 +64,19 @@ class Contentsections extends React.Component{
       <div class="bgImage">
       {this._renderNavigation()}
         <Parallax ref={ref => (this.parallax = ref)} pages={6}>
-          <Parallax.Layer factor={1} offset={0.1} speed={0} onClick={e => this.handleClick(this.parallax,0)}>
+          <Parallax.Layer id="1" factor={1} offset={0.1} speed={0} onClick={e => this.handleClick(this.parallax,0)}>
             <section id="sOne" class="img-fullscreen">
               <SectionOne />  
             </section>
           </Parallax.Layer>
           
-          <Parallax.Layer offset={1.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 1)}>
+          <Parallax.Layer id="2" offset={1.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 1)}>
             <section id="sTwo">
               <SectionTwo/>
             </section>
           </Parallax.Layer>
 
-          <Parallax.Layer offset={2.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 2)}>
+          <Parallax.Layer id="3" offset={2.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 2)}>\
             <section id="sThree">
               <div className="d-flex flex-column h-100">
                 <div className="m-2 h-50">
@@ -96,19 +96,19 @@ class Contentsections extends React.Component{
             </div>
           </Parallax.Layer> 
           
-          <Parallax.Layer factor={1} offset={3.1} speed={0} onClick={e => this.handleClick(this.parallax,3)}>
+          <Parallax.Layer id = "4" factor={1} offset={3.1} speed={0} onClick={e => this.handleClick(this.parallax,3)}>
             <section id="sFour">
               <SectionFour />
             </section>
           </Parallax.Layer>
           
-          <Parallax.Layer factor={1} offset={4.1} speed={0} onClick={e => this.handleClick(this.parallax,4)}>
+          <Parallax.Layer id="5" factor={1} offset={4.1} speed={0} onClick={e => this.handleClick(this.parallax,4)}>
             <section id="sFive">
               <SectionFive />
             </section>
           </Parallax.Layer>
 
-          <Parallax.Layer factor={1} offset={5.1} speed={0} onClick={e => this.handleClick(this.parallax,5)}>
+          <Parallax.Layer id="6" factor={1} offset={5.1} speed={0} onClick={e => this.handleClick(this.parallax,5)}>
             <section id="sSeven">
               <div className="d-flex justify-content-center flex-column h-15">
                 <div className="mb-auto">
