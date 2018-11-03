@@ -23,6 +23,7 @@ class Navigate extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
+    this.handleClick = this.handleClick.bind(this);
     
     
     this.state = {
@@ -33,6 +34,9 @@ class Navigate extends React.Component {
     };
   }
   
+  handleClick(e) {
+    // debugger;
+  }
   componentWillUnmount() {
     this.unlisten();
   }
@@ -73,11 +77,15 @@ class Navigate extends React.Component {
           <div className="navPointer" style={{ marginLeft: this.state.active + '%' }}/>
           <Nav navbar right className="justify-content-center">
             <Item title="Meet" to="#sOne"/>            
-            <Item title="Connect" to="#sTwo"/>
+            <NavItem>
+              <Fa icon="circle" size="9x" />
+              <a href="/#2" onClick={e => this.handleClick(this.parallax, 2)}>asa</a>
+            </NavItem>
+            
             <Item title="Bond" to="#sThree"/>
             <Item title="Woo" to="#sFour"/>
             <Item title="Knot" to="#sFive"/>
-            <Item title="Venue" to="#sSix"/> 
+            <Item title="Venue" to="#sSeven"/> 
           </Nav>
         </Navbar>
       </Router>

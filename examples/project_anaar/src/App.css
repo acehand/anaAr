@@ -207,7 +207,9 @@ section:hover {
 }
 .sRotate {
   font-weight: 900 !important;
-  transform: rotate(-13Deg);
+  transform: rotate(-18Deg);
+  margin-left : -4%;
+  margin-top : 2%;
 }
 
 #sFour div.d-flex {
@@ -245,27 +247,27 @@ li.a {
 }
 
 div.topImg {
-  background: url("./Images/keyup.png") center no-repeat;
-  background-position: center;
-  background-size: cover;
   opacity: 1;
-  height: 80%;
-  width: 80%;
+  height:40%;
+  width:80%;
   margin-left:10%;
   overflow: hidden!important;
   z-index: 0;
   position: relative
+}
+div.topImg img {
+  height: 100%;
+ 
 }
 div.bottomImg{
   background: url("./Images/keydown.png") center no-repeat;
   background-position: center;
   background-size: cover;
   opacity: 1;
-  height: 80%;
+  height:65%;
   width: 80%;
   margin-left:10%;
   z-index: 0;
-  overflow: hidden!important;
   position: relative;
 }
 

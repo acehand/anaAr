@@ -81,7 +81,7 @@ export class SectionFour extends React.Component {
     super(props);
     this.state = {
       heading1: "When all was peachy...",
-      proposalContent: "She dressed up for a photoshoot. She posed. But he Proposed. \n \xA0 \xA0 \xA0 \xA0 \xA0 As much as she saw it coming, she didn't see it coming.\n \xA0 \xA0 \xA0 \xA0 \xA0 \xA0 \xA0 \xA0 \xA0 Of course, she said yes!",
+      proposalContent: "She dressed up for a photoshoot. She posed. But he Proposed.\n \xA0 \xA0 \xA0 \xA0 \xA0 As much as she saw it coming, she didn't see it coming.\n Of course, she said yes!",
     }
   }
   render() {
@@ -120,10 +120,10 @@ export class SectionFive extends React.Component {
       inviteSub1: "As we team up for the game of life,",
       inviteSub2: "You are invited to brighten up the \n next page of our story by",
 
-      reception1: "#1 Making the reception fun by dancing with us",
+      reception1: "#1 Making the reception fun by dancing \n with us on",
       receptionDate: "7pm Saturday, 8th of December 2018",
 
-      wedding1: "#2 Cheering at our traditional wedding ceremony",
+      wedding1: "#2 Cheering at our traditional wedding \n ceremony on",
       weddingDate: "8am Sunday, 9th of December 2018",
 
     }
@@ -145,10 +145,8 @@ export class SectionFive extends React.Component {
               {this.state.inviteSub1}<br />
               {this.state.inviteSub2}<br /><br />
               {this.state.reception1}<br />
-              on<br />
               <span class="display-linebreak section-date">{this.state.receptionDate}</span><br /><br />
               {this.state.wedding1}<br />
-              on<br />
               <strong><span class="display-linebreak section-date">{this.state.weddingDate}</span></strong><br />
             </p>
           </div>

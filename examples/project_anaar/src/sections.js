@@ -3,6 +3,8 @@ import {Parallax } from 'react-spring';
 import Navigate from './nav';
 import {SectionOne, SectionTwo, SectionFour, SectionFive} from './contents';
 import Collage from './Images/Collages2.jpg';
+import keyUp from './Images/keyup2.png';
+import keyDown from './Images/keydown2.png';
 
 class Contentsections extends React.Component{  
   constructor(props) {
@@ -76,18 +78,22 @@ class Contentsections extends React.Component{
 
           <Parallax.Layer offset={2.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 2)}>
             <section id="sThree">
-              <div className="d-flex flex-column">
-                <div className="m-2">
-                  <img alt="b" className="" src={Collage} />
+              <div className="d-flex flex-column h-100">
+                <div className="m-2 h-50">
+                  <img alt="b" className="h-100" src={Collage} />
                 </div>
               </div>
             </section>
           </Parallax.Layer>
-          <Parallax.Layer offset={2.29} speed={-.3} onClick={e => this.handleClick(this.parallax, 2)}>
-            <div class="topImg"></div>
+          <Parallax.Layer offset={2.57} speed={-.3} onClick={e => this.handleClick(this.parallax, 2)}>
+            <div class="topImg">
+              <img alt="b" className="h-200" src={keyUp} />
+            </div>
           </Parallax.Layer>
-          <Parallax.Layer offset={2.3} speed={.3}  onClick={e => this.handleClick(this.parallax, 2)}>
-            <div class="bottomImg"></div>
+          <Parallax.Layer offset={2.58} speed={.3}  onClick={e => this.handleClick(this.parallax, 2)}>
+            <div class="topImg">
+              <img alt="b" className="h-200"  src={keyDown} />
+            </div>
           </Parallax.Layer> 
           
           <Parallax.Layer factor={1} offset={3.1} speed={0} onClick={e => this.handleClick(this.parallax,3)}>
