@@ -37,11 +37,11 @@ class Navigate extends React.Component {
   handleClick(id) {
     let element = document.getElementById(id),
       elementBound = element.getBoundingClientRect(),
-      elementPos = elementBound.top * .93,
+      threshold = (elementBound.height/elementBound.top),
+      elementPos = ((elementBound.top + window.scrollY)* .08),
       parentElement = element.parentElement.parentElement,
-      currentScrollPos = parentElement.scrollTop,
-      scrollable =  this.state.scrollable + elementPos;
-    parentElement.scrollTo(0, scrollable);
+      scrollable = this.state.scrollable + elementBound.top - (elementPos * threshold);
+    parentElement.scrollTo(0,scrollable);
     this.setState({scrollable : scrollable});
 
   }
