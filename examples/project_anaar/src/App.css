@@ -70,9 +70,13 @@
 .nav-item p {
   color : black;
 }
-.nav-item a, .footer {
+.nav-item a {
   font-family: 'Give You Glory', cursive;
   font-size:20px;
+}
+.footer {
+  font-family: 'Give You Glory', cursive;
+  font-size:1rem;
 }
 
 /* content font */
