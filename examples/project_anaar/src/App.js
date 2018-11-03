@@ -8,7 +8,9 @@ class App extends Component {
     return (
       <div className="App">
         <ContentSections/>
-        <div className="footer"></div>
+        <div className="footer">
+          <span className="float-right red-text"> Designed by the Bride ; Implemented by Groom</span>
+        </div>
       </div>
     );
   }

@@ -76,12 +76,8 @@ class Navigate extends React.Component {
           <div className="headBgImage"></div>
           <div className="navPointer" style={{ marginLeft: this.state.active + '%' }}/>
           <Nav navbar right className="justify-content-center">
-            <Item title="Meet" to="#sOne"/>            
-            <NavItem>
-              <Fa icon="circle" size="9x" />
-              <a href="/#2" onClick={e => this.handleClick(this.parallax, 2)}>asa</a>
-            </NavItem>
-            
+            <Item title="Meet" to="#sOne"/>
+            <Item title="Connect" to="#sTwo" />
             <Item title="Bond" to="#sThree"/>
             <Item title="Woo" to="#sFour"/>
             <Item title="Knot" to="#sFive"/>

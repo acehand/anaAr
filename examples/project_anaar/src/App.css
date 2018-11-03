@@ -70,10 +70,11 @@
 .nav-item p {
   color : black;
 }
-.nav-item a {
+.nav-item a, .footer {
   font-family: 'Give You Glory', cursive;
   font-size:20px;
 }
+
 /* content font */
 .section-title {
   vertical-align: inherit;
@@ -98,6 +99,7 @@
 }
 #sOne .section-subtitle {
   font-weight: 500;
+  color : white;
   font-size: 2.5rem;
 }
 #sFive .section-subtitle {
