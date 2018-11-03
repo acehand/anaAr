@@ -48,14 +48,14 @@ export class SectionTwo extends React.Component {
     this.state = {
       heading1: "One fine fall week...",
       left0: "He bragged about NYC's work life.",
-      right0: "She went there to see it for herself.",
-      left1: "He made her laugh.",
-      right1: "She made him work lesser.",
-      left2: "He played tricks on her.",
-      right2: " She teased him by not completing her stories.",
-      left3: "He woke her up every morning.",
-      right3: "She slept longer.",
-      left4: "He talked and talked and talked.",
+      right0: "She went there to see it for herself. ",
+      left1: "He made her laugh. ",
+      right1: "She made him work lesser. ",
+      left2: "He played tricks on her. ",
+      right2: " She teased him by not completing her stories. ",
+      left3: "He woke her up every morning. ",
+      right3: "She slept longer. ",
+      left4: "He talked and talked and talked. ",
       right4: "She listened!",
     }
   }

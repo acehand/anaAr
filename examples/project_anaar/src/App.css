@@ -97,6 +97,9 @@ body {
   font-family: 'kalam', cursive;
   font-size: 1.75rem;
 }
+#sOne .section-title {
+  font-family: 'sacromento', cursive;
+}
 #sOne .section-subtitle {
   font-weight: 500;
   color : white;
