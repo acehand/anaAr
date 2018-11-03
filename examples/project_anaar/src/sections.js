@@ -85,12 +85,12 @@ class Contentsections extends React.Component{
               </div>
             </section>
           </Parallax.Layer>
-          <Parallax.Layer offset={2.57} speed={-.3} onClick={e => this.handleClick(this.parallax, 2)}>
+          <Parallax.Layer offset={2.57} speed={-.3} factor={1} onClick={e => this.handleClick(this.parallax, 2)}>
             <div class="topImg">
               <img alt="b" className="h-200" src={keyUp} />
             </div>
           </Parallax.Layer>
-          <Parallax.Layer offset={2.58} speed={.3}  onClick={e => this.handleClick(this.parallax, 2)}>
+          <Parallax.Layer offset={2.58} speed={.3} factor={1}  onClick={e => this.handleClick(this.parallax, 2)}>
             <div class="topImg">
               <img alt="b" className="h-200"  src={keyDown} />
             </div>
