@@ -37,19 +37,19 @@ body {
 }
 
 .headBgImage {
-  background: url("./Images/nav_left_man.png")  no-repeat , url("./Images/nav_center_line.png") no-repeat, url("./Images/nav_right_man.png")  no-repeat;
-  background-size : 2.5% 55px, 90.5% 100% , 2.5% 55px;
-  background-position:  0%, 22% -9px, 95%;
+  background: url("./Images/nav_left_man.png")  no-repeat , url("./Images/nav_center_line2.png") no-repeat, url("./Images/nav_right_man.png")  no-repeat;
+  background-size : 2.5% 55px, 91% 3px , 2.5% 55px;
+  background-position:  5%, 62% 25% , 99%;
   position: absolute;
-  width: 100%;
   height: 90%;
+  width: 90%;
 }
 .navPointer {
   background: url("./Images/heartIcon3.png") center no-repeat;
-  width:5%;
+  width:15%;
   height: 100%;
   margin-top:-8px;
-  margin-left:10%;
+  margin-left:0%;
   position : absolute;
   z-index:100;
 }

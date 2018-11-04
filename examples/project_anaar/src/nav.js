@@ -34,17 +34,9 @@ class Navigate extends React.Component {
     };
   }
   handleClick(id) {
-    let element = document.getElementById(id),
-      elementBound = element.getBoundingClientRect(),
-      threshold = (elementBound.height/elementBound.top)/10,
-      factor = Math.floor(elementBound.top/elementBound.height) || 1,
-      parentElement = element.parentElement.parentElement,
-      scrollable = this.state.scrollable + elementBound.top - (elementBound.top * threshold );
-    
-    parentElement.scrollTo(0,scrollable);
-    this.setState({scrollable : scrollable});
-
-  }
+    let element = document.getElementById("scrollLayer"+id);
+    element.scrollIntoView();
+   }
   componentWillUnmount() {
     this.unlisten();
   }

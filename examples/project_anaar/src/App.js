@@ -9,10 +9,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter >
-        <div>
-          <Route path="/" component={ContentSections} exact/>
-        </div>
-        
+        <Route path="/" component={ContentSections} exact/>
       </BrowserRouter>
     );
   }

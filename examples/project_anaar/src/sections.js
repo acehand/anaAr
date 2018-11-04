@@ -14,8 +14,8 @@ class Contentsections extends React.Component{
       offsetLen: 6,
       loadNavigation:false,
       threshold : 0,
-      active: 10,
-      maxLeft : 10,
+      active: 4.55,
+      maxLeft : 4.55,
       maxRight : 84,
       a:1, 
       flipped : false,
@@ -43,7 +43,8 @@ class Contentsections extends React.Component{
   }
   handleScroll() {
     var activeState = (this.parallax.current )/this.parallax.container.offsetHeight,
-     threshold = (activeState * 14.5);
+     threshold = (activeState * 14.75);
+     
      if (activeState === 0 || threshold < 0) {
        threshold = 0;
      }
@@ -51,32 +52,35 @@ class Contentsections extends React.Component{
   }
   
   handleClick(parallax, offset) {
-    let currentOffset = offset || parallax.offset;
+    let currentOffset = (offset || parallax.offset) + 1;
     
     if (currentOffset === this.state.offsetLen-1) {
       currentOffset=-1;
     }
-    
-    parallax.scrollTo(currentOffset + 1.);
+    let element = document.getElementById("scrollLayer" + (currentOffset+1));
+    if (element) {
+      element.scrollIntoView();
+    }
   }
   render() {
     return (
       <div class="bgImage">
       {this._renderNavigation()}
         <Parallax ref={ref => (this.parallax = ref)} pages={6.1}>
+          <Parallax.Layer id="scrollLayer1" offset={0} factor={1} onClick={e => this.handleClick(this.parallax)}></Parallax.Layer>
           <Parallax.Layer id="1" factor={1} offset={0.1} speed={0} onClick={e => this.handleClick(this.parallax,0)}>
             <section id="sOne" class="img-fullscreen">
               <SectionOne />  
             </section>
           </Parallax.Layer>
-          
+          <Parallax.Layer id="scrollLayer2" offset={1} factor={1} onClick={e => this.handleClick(this.parallax)}></Parallax.Layer>
           <Parallax.Layer id="2" offset={1.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 1)}>
             <section id="sTwo">
               <SectionTwo/>
             </section>
           </Parallax.Layer>
-
-          <Parallax.Layer id="3" offset={2.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 2)}>\
+          <Parallax.Layer id="scrollLayer3" offset={2} factor={1} onClick={e => this.handleClick(this.parallax)}></Parallax.Layer>
+          <Parallax.Layer id="3" offset={2.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 2)}>
             <section id="sThree">
               <div className="d-flex flex-column h-100">
                 <div className="m-2 h-50">
@@ -96,18 +100,21 @@ class Contentsections extends React.Component{
             </div>
           </Parallax.Layer> 
           
+          <Parallax.Layer id="scrollLayer4" offset={3} factor={1} onClick={e => this.handleClick(this.parallax)}></Parallax.Layer>
           <Parallax.Layer id = "4" factor={1} offset={3.1} speed={0} onClick={e => this.handleClick(this.parallax,3)}>
             <section id="sFour">
               <SectionFour />
             </section>
           </Parallax.Layer>
           
+          <Parallax.Layer id="scrollLayer5" offset={4} factor={1} onClick={e => this.handleClick(this.parallax)}></Parallax.Layer>
           <Parallax.Layer id="5" factor={1} offset={4.1} speed={0} onClick={e => this.handleClick(this.parallax,4)}>
             <section id="sFive">
               <SectionFive />
             </section>
           </Parallax.Layer>
-
+          
+          <Parallax.Layer id="scrollLayer6" offset={5} factor={1} onClick={e => this.handleClick(this.parallax)}></Parallax.Layer>
           <Parallax.Layer id="6" factor={1} offset={5.1} speed={0} onClick={e => this.handleClick(this.parallax,5)}>
             <section id="sSeven">
               <div className="d-flex justify-content-center flex-column h-15">
