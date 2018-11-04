@@ -17,7 +17,8 @@ class Contentsections extends React.Component{
       active: 4.55,
       maxLeft : 4.55,
       maxRight : 84,
-      a:1, 
+      a:1,
+      showFooterContent : false,
       flipped : false,
       card1Content: 'He made her laugh. \n She made him work lesser. \n He played tricks on her.\nShe teased him by not completing her stories.\n He woke her up every morning.\n She slept longer.\nHe talked and talked and talked.\nShe listened!',
       card2Content : "Hangouts brough them closer.So much so that, he `proposed` to her via Hangouts",
@@ -43,34 +44,39 @@ class Contentsections extends React.Component{
   }
   handleScroll() {
     var activeState = (this.parallax.current )/this.parallax.container.offsetHeight,
-     threshold = (activeState * 14.75);
+     threshold = (activeState * 14.75),
+     showFooterContent = false,
+     boundary = (this.state.offsetLen - 2) * this.parallax.container.offsetHeight;
      
      if (activeState === 0 || threshold < 0) {
        threshold = 0;
      }
-     this.setState({active: (threshold + this.state.maxLeft)});
+     if (this.parallax.current >= boundary) {
+       showFooterContent = true;
+     }
+     this.setState({active: (threshold + this.state.maxLeft), showFooterContent : showFooterContent});
   }
   
   handleClick(parallax, offset) {
     let currentOffset = (offset || parallax.offset) + 1;
     
-    if (currentOffset === this.state.offsetLen-1) {
-      currentOffset=-1;
+    if (currentOffset === this.state.offsetLen) {
+      currentOffset=0;
     }
     let element = document.getElementById("scrollLayer" + (currentOffset+1));
     if (element) {
-      element.scrollIntoView();
+      element.scrollIntoView({'behavior' : 'smooth'});
     }
   }
   render() {
     return (
-      <div class="bgImage">
+      <div className="bgImage">
       {this._renderNavigation()}
         <Parallax ref={ref => (this.parallax = ref)} pages={6.1}>
           <Parallax.Layer id="scrollLayer1" offset={0} factor={1} onClick={e => this.handleClick(this.parallax)}></Parallax.Layer>
           <Parallax.Layer id="1" factor={1} offset={0.1} speed={0} onClick={e => this.handleClick(this.parallax,0)}>
-            <section id="sOne" class="img-fullscreen">
-              <SectionOne />  
+            <section id="sOne" className="img-fullscreen">
+              <SectionOne />
             </section>
           </Parallax.Layer>
           <Parallax.Layer id="scrollLayer2" offset={1} factor={1} onClick={e => this.handleClick(this.parallax)}></Parallax.Layer>
@@ -128,10 +134,12 @@ class Contentsections extends React.Component{
                   frameborder="0" style={{ border: "0" }} allowfullscreen></iframe>
             </section>
           </Parallax.Layer>
-          </Parallax>
+        </Parallax>
+        <div class="footer">
+          <span className={this.state.showFooterContent ? "footerText" : "hideFooterText"}> Designed by thr bride and developed by the groom</span>
+        </div>
       </div>
     );
   }
 }
-
 export default Contentsections;

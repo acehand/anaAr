@@ -6,10 +6,16 @@ import { SectionOne, SectionTwo, SectionFour, SectionFive } from './contents';
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showFooterContent : false
+    };
+  }
   render() {
     return (
       <BrowserRouter >
-        <Route path="/" component={ContentSections} exact/>
+        <ContentSections showFooterContent={this.state.showFooterContent}/>
       </BrowserRouter>
     );
   }

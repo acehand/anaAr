@@ -35,7 +35,7 @@ class Navigate extends React.Component {
   }
   handleClick(id) {
     let element = document.getElementById("scrollLayer"+id);
-    element.scrollIntoView();
+    element.scrollIntoView({ 'behavior': 'smooth' });
    }
   componentWillUnmount() {
     this.unlisten();
@@ -72,7 +72,7 @@ class Navigate extends React.Component {
         <Navbar className="nav-stack" fixed="top">
           <div className="headBgImage"></div>
           <div className="navPointer" style={{ marginLeft: this.state.active + '%' }}/>
-          <Nav navbar right className="justify-content-center">
+          <Nav className="justify-content-center">
             <NavItem>
               <Fa icon="circle" size="9x" />
               <a onClick={e => this.handleClick("1")}>

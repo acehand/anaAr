@@ -73,6 +73,22 @@ body {
 .footer {
   font-family: 'Give You Glory', cursive;
   font-size:1rem;
+  font-weight: normal;
+  line-height: .25;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #FFFFFF;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.footer span.hideFooterText {
+  display: none;
+}
+.footer span.showFooterText {
+  display: inline;
 }
 
 /* content font */
@@ -306,18 +322,6 @@ body {
 .display-1 > .mbr-iconfont {
   font-size: 9.6rem;
 }
-
-.footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #FFFFFF;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-  text-align: center;
-}
-
 /* ---- Fluid typography for mobile devices ---- */
 /* 1.4 - font scale ratio ( bootstrap == 1.42857 ) */
 /* 100vw - current viewport width */
