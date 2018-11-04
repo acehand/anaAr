@@ -2,18 +2,15 @@
 @import url('https://fonts.googleapis.com/css?family=Euphoria+Script');
 @import url('https://fonts.googleapis.com/css?family=Give+You+Glory|Kalam|Share+Tech+Mono');
 
-
 body {
   text-align: center;
 }
-
 .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
-
 .App-title {
   font-size: 1.5rem;
 }
@@ -232,7 +229,6 @@ section:hover {
   margin-left : -4%;
   margin-top : 2%;
 }
-
 #sFour div.d-flex {
   height:100%;
 }
@@ -258,15 +254,14 @@ section:hover {
   height: 100px;
 }
 
-li a.active {
+/* li a.active {
   left : -20px;
   transition: all 2s ease-in;
-}
+} */
 li.a {
   width: 100%;
   left: 10px;
 }
-
 div.topImg {
   opacity: 1;
   height:40%;
@@ -278,18 +273,6 @@ div.topImg {
 }
 div.topImg img {
   height: 100%;
- 
-}
-div.bottomImg{
-  background: url("./Images/keydown.png") center no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity: 1;
-  height:65%;
-  width: 80%;
-  margin-left:10%;
-  z-index: 0;
-  position: relative;
 }
 
 .bgImage {
@@ -305,7 +288,6 @@ div.bottomImg{
 #sFour .onHover:hover{
   opacity: 1;
 }
-
 .thumbnail {
   padding: .75rem;
   border: 1px solid #dee2e6;
@@ -313,15 +295,11 @@ div.bottomImg{
   max-width: 100%;
   height: 100%;
 }  
-
 body {
   font-style: normal;
   line-height: 1.5;
 }
 
-.display-1 > .mbr-iconfont {
-  font-size: 9.6rem;
-}
 /* ---- Fluid typography for mobile devices ---- */
 /* 1.4 - font scale ratio ( bootstrap == 1.42857 ) */
 /* 100vw - current viewport width */
