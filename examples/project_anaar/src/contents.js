@@ -121,10 +121,10 @@ export class SectionFive extends React.Component {
       inviteSub2: "You are invited to brighten up the \n next page of our story by",
 
       reception1: "#1 Making the reception fun by dancing \n with us on",
-      receptionDate: "7pm Saturday, 8th of December 2018",
+      receptionDate: "7pm Saturday \n 8th of December 2018",
 
       wedding1: "#2 Cheering at our traditional wedding \n ceremony on",
-      weddingDate: "8am Sunday, 9th of December 2018",
+      weddingDate: "8am Sunday \n 9th of December 2018",
 
     }
   }

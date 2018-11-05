@@ -136,7 +136,7 @@ class Contentsections extends React.Component{
           </Parallax.Layer>
         </Parallax>
         <div class="footer">
-          <span className={this.state.showFooterContent ? "footerText" : "hideFooterText"}> Designed by thr bride and developed by the groom</span>
+          <span className={this.state.showFooterContent ? "footerText" : "hideFooterText"}> Designed by thr Bride ; developed by the Groom</span>
         </div>
       </div>
     );

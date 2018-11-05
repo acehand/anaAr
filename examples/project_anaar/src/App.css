@@ -35,11 +35,11 @@ body {
 
 .headBgImage {
   background: url("./Images/nav_left_man.png")  no-repeat , url("./Images/nav_center_line2.png") no-repeat, url("./Images/nav_right_man.png")  no-repeat;
-  background-size : 2.5% 55px, 91% 3px , 2.5% 55px;
-  background-position:  5%, 62% 25% , 99%;
+  background-size : 2.5% 55px, 93.5% 3px , 2.5% 55px;
+  background-position: 1%, 41% 24% , 98.5%;
   position: absolute;
   height: 90%;
-  width: 90%;
+  width: 95%;
 }
 .navPointer {
   background: url("./Images/heartIcon3.png") center no-repeat;

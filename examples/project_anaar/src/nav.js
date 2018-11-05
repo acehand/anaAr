@@ -88,7 +88,7 @@ class Navigate extends React.Component {
             <NavItem>
               <Fa icon="circle" size="9x" />
               <a onClick={e => this.handleClick("3")}>
-                <p>Bond</p>
+                <p>Hangout</p>
               </a>
             </NavItem>
             <NavItem>
