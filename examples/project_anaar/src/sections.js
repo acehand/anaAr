@@ -74,7 +74,7 @@ class Contentsections extends React.Component{
       {this._renderNavigation()}
         <Parallax ref={ref => (this.parallax = ref)} pages={6.1}>
           <Parallax.Layer id="scrollLayer1" offset={0} factor={1} onClick={e => this.handleClick(this.parallax)}></Parallax.Layer>
-          <Parallax.Layer id="1" factor={1} offset={0.1} speed={0} onClick={e => this.handleClick(this.parallax,0)}>
+          <Parallax.Layer id="1" factor={1} offset={0.09} speed={0} onClick={e => this.handleClick(this.parallax,0)}>
             <section id="sOne" className="img-fullscreen">
               <SectionOne />
             </section>
@@ -136,7 +136,7 @@ class Contentsections extends React.Component{
           </Parallax.Layer>
         </Parallax>
         <div class="footer">
-          <span className={this.state.showFooterContent ? "footerText" : "hideFooterText"}> Designed by thr Bride ; developed by the Groom</span>
+          <span className={this.state.showFooterContent ? "footerText" : "hideFooterText"}> Designed by thr Bride ; Developed by the Groom</span>
         </div>
       </div>
     );

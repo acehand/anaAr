@@ -16,7 +16,7 @@ export class SectionOne extends React.Component {
   render() {
     return (
       <div className="d-flex flex-column justify-content-center w-100 h-100">
-        <div className="align-items-start title h-25 mb-auto">
+        <div className="align-items-center title h-25 mb-auto mt-5">
           <h1 className=" section-title">{this.state.heading1}</h1>
         </div>
         <div className="align-self-center mt-5 mb-auto">
@@ -121,10 +121,10 @@ export class SectionFive extends React.Component {
       inviteSub2: "You are invited to brighten up the \n next page of our story by",
 
       reception1: "#1 Making the reception fun by dancing \n with us on",
-      receptionDate: "7pm Saturday \n 8th of December 2018",
+      receptionDate: "7pm Saturday\n 8th of December 2018",
 
       wedding1: "#2 Cheering at our traditional wedding \n ceremony on",
-      weddingDate: "8am Sunday \n 9th of December 2018",
+      weddingDate: "8am Sunday\n 9th of December 2018",
 
     }
   }
@@ -137,7 +137,7 @@ export class SectionFive extends React.Component {
           </div>
         </div>
         <div className="d-flex flex-row w-100 h-85 ml-2 mb-2 mr-2">
-          <div className="align-items-center m-3 w-40">
+          <div className="align-items-center m-3 mb-5 w-40">
             <Media object src={inviteImage} className="border border-dark thumbnail"/>      
           </div>
           <div className="align-self-center ml-5">
