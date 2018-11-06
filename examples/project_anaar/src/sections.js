@@ -16,7 +16,7 @@ class Contentsections extends React.Component{
       threshold : 0,
       active: 4.55,
       maxLeft : 4.55,
-      maxRight : 84,
+      maxRight : 78,
       a:1,
       showFooterContent : false,
       flipped : false,
