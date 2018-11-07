@@ -17,7 +17,6 @@ class Contentsections extends React.Component{
       active: 5.55,
       maxLeft : 5.55,
       maxRight : 78,
-      a:1,
       showFooterContent : false,
       flipped : false,
       card1Content: 'He made her laugh. \n She made him work lesser. \n He played tricks on her.\nShe teased him by not completing her stories.\n He woke her up every morning.\n She slept longer.\nHe talked and talked and talked.\nShe listened!',
@@ -74,8 +73,10 @@ class Contentsections extends React.Component{
   render() {
     return (
       <div className="bgImage">
-      <div className="navPointer" style={{ marginLeft: this.state.active + '%' }} />
-      <div className="headBgImage"></div>
+      <div className="navImage">
+        <div className="headBgImage"></div>
+        <div className="navPointer" style={{ marginLeft: this.state.active + '%' }} />
+      </div>
       {this._renderNavigation()}
         <Parallax ref={ref => (this.parallax = ref)} pages={6.1}>
           <Parallax.Layer id="scrollLayer1" offset={0} factor={1} onClick={e => this.handleClick(this.parallax)}></Parallax.Layer>
@@ -93,9 +94,9 @@ class Contentsections extends React.Component{
           <Parallax.Layer id="scrollLayer3" offset={2} factor={1} onClick={e => this.handleClick(this.parallax)}></Parallax.Layer>
           <Parallax.Layer id="3" offset={2.1} speed={0} factor={1} onClick={e => this.handleClick(this.parallax, 2)}>
             <section id="sThree">
-              <div className="d-flex flex-column h-100">
+              <div className="hangouts d-flex flex-column">
                 <div className="m-2 h-50">
-                  <img alt="b" className="h-100" src={Collage} />
+                  <img alt="b" src={Collage} />
                 </div>
               </div>
             </section>
