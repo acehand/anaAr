@@ -24,49 +24,53 @@ body {
   height: 11%;
   margin-top: -1.5%;
   width: 100%;
-  z-index: 1042;
 }
 .headBgImage {
   height: 100%;
   width: 100%;
   background: url("./Images/full-image-nav-3.png") center no-repeat;
   background-size: contain;
-  position : absolute
+  position : absolute;
+  z-index: 101 !important ;
 }
 .navPointer {
   background: url("./Images/heartIcon3.png") center no-repeat;
-  height: 100%;
   width: 15.5%;
-  z-index:1043;
+  z-index:101;
+  height: 100%;
   position : absolute;
 }
 .navbar {
-  box-shadow: none !important;
+  /* box-shadow: none !important; */
   margin-top:-1%;
 }
-.nav {
-   width:100%;
-}
 .nav-stack{
-  z-index:1040;
-  background: white;
+  position: absolute;
   width:100%;
-  height:10%;
+  z-index: 100 !important;
+  height:12%;
+  background : white;
 }
 .navbar ul {
   height: 100%;
+  width:100%;
 }
 .nav-item {
   width:15%;
   height: 90%;
-  margin-top:1.05%;
+  margin-top:.91%;
+}
+.nav-item i{
+  /* z-index: 1140 !important; */
 }
 .nav-item a{
-  margin-top:-6%;
+  margin-top:-5%;
   font-family: 'Give You Glory', cursive;
   font-size: 1.25rem;
-  z-index: 1055 !important;
-  line-height: 2rem;
+  line-height: 2.5rem;
+}
+.nav-item a:hover{
+  color:pink;
 }
 .nav-item p {
   color : black;
@@ -82,7 +86,7 @@ body {
   bottom: 0;
   left: 0;
   padding: 1rem;
-  /* background-color: #c0c0c0; */
+  background-color: white;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 .footer span.hideFooterText {
@@ -258,15 +262,6 @@ section:hover {
 #sSix div.row {
   height: 100px;
 }
-
-/* li a.active {
-  left : -20px;
-  transition: all 2s ease-in;
-} */
-li.a {
-  width: 100%;
-  left: 10px;
-}
 div.topImg {
   opacity: 1;
   height:40%;
@@ -283,8 +278,11 @@ div.topImg img {
   height: 100%;
   width: 100%;
   position: absolute;  
+  background: white;
 }
-
+.content {
+  /* height: 92% !important; */
+}
 #sFour .onHover{
   opacity: 0.3;
 }

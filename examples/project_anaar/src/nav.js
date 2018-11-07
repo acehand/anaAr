@@ -69,7 +69,7 @@ class Navigate extends React.Component {
   render() {
     return (
       <Router history={this.state.history}>
-        <Navbar className="nav-stack" fixed="top">
+        <Navbar className="nav-stack">
           <Nav className="justify-content-center">
             <NavItem>
               <Fa icon="circle"  />
