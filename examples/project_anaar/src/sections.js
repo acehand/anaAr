@@ -14,8 +14,8 @@ class Contentsections extends React.Component{
       offsetLen: 6,
       loadNavigation:false,
       threshold : 0,
-      active: 4.55,
-      maxLeft : 4.55,
+      active: 5.55,
+      maxLeft : 5.55,
       maxRight : 78,
       a:1,
       showFooterContent : false,
@@ -51,6 +51,9 @@ class Contentsections extends React.Component{
      if (activeState === 0 || threshold < 0) {
        threshold = 0;
      }
+     if (threshold > this.state.maxRight) {
+       
+     }
      if (this.parallax.current >= boundary) {
        showFooterContent = true;
      }
@@ -71,10 +74,12 @@ class Contentsections extends React.Component{
   render() {
     return (
       <div className="bgImage">
+      <div className="navPointer" style={{ marginLeft: this.state.active + '%' }} />
+      <div className="headBgImage"></div>
       {this._renderNavigation()}
         <Parallax ref={ref => (this.parallax = ref)} pages={6.1}>
           <Parallax.Layer id="scrollLayer1" offset={0} factor={1} onClick={e => this.handleClick(this.parallax)}></Parallax.Layer>
-          <Parallax.Layer id="1" factor={1} offset={0.09} speed={0} onClick={e => this.handleClick(this.parallax,0)}>
+          <Parallax.Layer id="1" factor={1} offset={0.1} speed={0} onClick={e => this.handleClick(this.parallax,0)}>
             <section id="sOne" className="img-fullscreen">
               <SectionOne />
             </section>

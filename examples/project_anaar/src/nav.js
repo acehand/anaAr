@@ -70,41 +70,39 @@ class Navigate extends React.Component {
     return (
       <Router history={this.state.history}>
         <Navbar className="nav-stack" fixed="top">
-          <div className="headBgImage"></div>
-          <div className="navPointer" style={{ marginLeft: this.state.active + '%' }}/>
           <Nav className="justify-content-center">
             <NavItem>
-              <Fa icon="circle" size="9x" />
+              <Fa icon="circle"  />
               <a onClick={e => this.handleClick("1")}>
                 <p>Meet</p>
               </a>
             </NavItem>
             <NavItem>
-              <Fa icon="circle" size="9x" />
+              <Fa icon="circle" />
               <a  onClick={e => this.handleClick("2")}>
                 <p>Connect</p>
               </a>
             </NavItem>
             <NavItem>
-              <Fa icon="circle" size="9x" />
+              <Fa icon="circle"  />
               <a onClick={e => this.handleClick("3")}>
                 <p>Hangout</p>
               </a>
             </NavItem>
             <NavItem>
-              <Fa icon="circle" size="9x" />
+              <Fa icon="circle" />
               <a onClick={e => this.handleClick("4")}>
                 <p>Woo</p>
               </a>
             </NavItem>
             <NavItem>
-              <Fa icon="circle" size="9x" />
+              <Fa icon="circle" />
               <a onClick={e => this.handleClick("5")}>
                 <p>Knot</p>
               </a>
             </NavItem>
             <NavItem>
-              <Fa icon="circle" size="9x" />
+              <Fa icon="circle" />
               <a onClick={e => this.handleClick("6")}>
                 <p>Venue</p>
               </a>
