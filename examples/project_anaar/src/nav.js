@@ -25,7 +25,6 @@ class Navigate extends React.Component {
     this.handleScroll = this.handleScroll.bind(this);
     this.handleClick = this.handleClick.bind(this);
     
-    
     this.state = {
       history : createHistory(),
       isOpen: false,
@@ -70,6 +69,10 @@ class Navigate extends React.Component {
     return (
       <Router history={this.state.history}>
         <Navbar className="nav-stack">
+          <div className="navImage">
+            <div className="headBgImage"></div>
+            <div className="navPointer" style={{ marginLeft: this.state.active + '%' }} />
+          </div>
           <Nav className="justify-content-center">
             <NavItem>
               <Fa icon="circle"  />

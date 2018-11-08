@@ -14,8 +14,8 @@ class Contentsections extends React.Component{
       offsetLen: 6,
       loadNavigation:false,
       threshold : 0,
-      active: 5.55,
-      maxLeft : 5.55,
+      active: 4.55,
+      maxLeft : 4.55,
       maxRight : 78,
       showFooterContent : false,
       flipped : false,
@@ -73,10 +73,6 @@ class Contentsections extends React.Component{
   render() {
     return (
       <div className="bgImage">
-        <div className="navImage">
-          <div className="headBgImage"></div>
-          <div className="navPointer" style={{ marginLeft: this.state.active + '%' }} />
-        </div>
       {this._renderNavigation()}
       
         <Parallax ref={ref => (this.parallax = ref)} pages={6.1}>

@@ -21,7 +21,7 @@ body {
 }
 .navImage {
   position : absolute;
-  height: 11%;
+  height: 100%;
   margin-top: -1.5%;
   width: 100%;
 }
@@ -41,7 +41,6 @@ body {
   position : absolute;
 }
 .navbar {
-  /* box-shadow: none !important; */
   margin-top:-1%;
 }
 .nav-stack{
@@ -65,12 +64,10 @@ body {
 }
 .nav-item a{
   margin-top:-5%;
+  z-index: 3000;;
   font-family: 'Give You Glory', cursive;
   font-size: 1.25rem;
   line-height: 2.5rem;
-}
-.nav-item a:hover{
-  color:pink;
 }
 .nav-item p {
   color : black;
