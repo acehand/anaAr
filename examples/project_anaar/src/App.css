@@ -64,7 +64,7 @@ body {
   margin-top:1.4%;
 }
 .nav-item a{
-   margin-top:1%;
+  margin-top:1%;
   z-index: 3000;;
   font-family: 'Give You Glory', cursive;
   font-size: 1.25rem;
@@ -371,10 +371,14 @@ body {
   #sThree img, .topImg, .bottomImg {
     max-height: 320px !important;
   }
-  .navbar, .nav-item a, section .section-title{
+   section .section-title{
     font-size: 1rem !important;
     line-height: 1.5rem !important;
     font-weight: 200 !important;
+  }
+  .nav-item a {
+    font-size: 1.25rem !important;
+    line-height: 2.5rem !important;
   }
   section .section-subtitle, #sFive .section-subtitle{
     font-size: .75rem !important;
@@ -393,10 +397,14 @@ body {
   #sThree img, .topImg, .bottomImg {
     max-height: 1000px !important;
   }
-  .navbar, .nav-item a, section .section-title{
+   section .section-title{
     font-size: 2rem !important;
     line-height: 1.5rem !important;
     font-weight: 400 !important;
+  }
+  .nav-item a {
+    font-size: 1.25rem !important;
+    line-height: 2.5rem !important;
   }
   section .section-subtitle, #sFive .section-subtitle{
     font-size: 1rem !important;
