@@ -302,7 +302,7 @@ div.topImg img {
 }
 body {
   font-style: normal;
-  line-height: 1.5;
+  line-height: 1.5rem;
 }
 
 /* ---- Fluid typography for mobile devices ---- */
@@ -311,56 +311,91 @@ body {
 /* (48 - 20)  48 == 48rem == 768px, 20 == 20rem == 320px(minimal supported viewport) */
 /* 0.65 - min scale variable, may vary */
 @media (min-width: 640px){
- section .section-title{
-    font-size: .5rem !important;
-    font-size: calc( 1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( .65 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20))));
+ div.content{
+    height: 80% !important;
+  }
+  #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
+    background-size:  cover !important;
+  }
+  img {
+    min-width: 300px !important;
+    min-height: 300px !important;;
+  }
+  #sThree img, .topImg, .bottomImg {
+    max-height: 320px !important;
+  }
+  section .section-title{
+    font-size: 1rem !important;
   }
   section .section-subtitle, #sFive .section-subtitle{
-    font-size: .25rem !important;
-    font-size: calc( 1rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( .65 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20))));
+    font-size: .75rem !important;
   }
 }
  
 @media (min-width: 768px){
-section .section-title{
-    font-size: 1rem !important;
-    font-size: calc( 1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( 1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20))));
+  div.content{
+    height: 80% !important;
+  }
+  #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
+    background-size:  cover !important;
+  }
+  image {
+    max-width: 600px !important;
+    max-height: 600px !important;;
+  }
+  section {
+    /* height: 60% !important;
+    width: 60% !important; */
+  }
+  section .section-title{
+    font-size: 2rem !important;
+    line-height: 2.5rem !important;
+    font-weight: 400 !important;
+    /* line-height: calc( 1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)))); */
   }
   section .section-subtitle, #sFive .section-subtitle{
-    font-size: .5rem !important;
-    font-size: calc( 1rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( 1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20))));
+    font-size: 1.25rem !important;
+    line-height: 2rem !important;
+    font-weight: 200 !important;
+    /* line-height: calc( 1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)))); */
   }
 }
  
 @media (min-width: 1024px){
- 
-
- 
+  image {
+    width: 900px !important;
+    height: 900px !important;;
+  }
 }
  
 @media (min-width: 1200px){
  
-
- 
 }
 
-@media (max-width: 320px) {
-  img {
-    min-width: 300px !important;
-    max-height: 100px !important;;
+@media only screen and (max-width: 320px), only screen and (min-device-width: 320px) {
+  div.content{
+    height: 80% !important;
+  }
+  #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
+    background-size:  cover !important;
+  }
+  image {
+    min-width: 10% !important;
+    max-height: 200px !important;;
+  }
+  #sThree img, .topImg, .bottomImg {
+    max-height: 120px !important;
   }
   section .section-title{
-    font-size: .5rem !important;
-    font-size: calc( 1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( .65 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20))));
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+    font-weight: 200 !important;
+    /* line-height: calc( 1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)))); */
   }
   section .section-subtitle, #sFive .section-subtitle{
-    font-size: .25rem !important;
-    font-size: calc( 1rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( .65 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20))));
+    font-size: .75rem !important;
+    line-height: 1rem !important;
+    font-weight: 100 !important;
+    /* line-height: calc( 1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)))); */
   }
 }

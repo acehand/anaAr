@@ -75,7 +75,7 @@ class Contentsections extends React.Component{
       <div className="bgImage">
       {this._renderNavigation()}
       
-        <Parallax ref={ref => (this.parallax = ref)} pages={6.1}>
+        <Parallax ref={ref => (this.parallax = ref)} pages={6.1} className="content">
           <Parallax.Layer id="scrollLayer1" offset={0} factor={1} onClick={e => this.handleClick(this.parallax)}></Parallax.Layer>
           <Parallax.Layer id="1" factor={1} offset={0.1} speed={0} onClick={e => this.handleClick(this.parallax,0)}>
             <section id="sOne" className="img-fullscreen">
