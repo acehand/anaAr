@@ -323,7 +323,7 @@ body {
   #sThree img, .topImg, .bottomImg {
     max-height: 120px !important;
   }
-  section .section-title{
+  .navbar, .nav-item a, section .section-title{
     font-size: 1rem !important;
     line-height: 1.5rem !important;
     font-weight: 200 !important;
@@ -348,7 +348,7 @@ body {
   #sThree img, .topImg, .bottomImg {
     max-height: 320px !important;
   }
-  section .section-title{
+  .navbar, .nav-item a, section .section-title{
     font-size: 1rem !important;
     line-height: 1.5rem !important;
     font-weight: 200 !important;
@@ -371,7 +371,7 @@ body {
   #sThree img, .topImg, .bottomImg {
     max-height: 320px !important;
   }
-  section .section-title{
+  .navbar, .nav-item a, section .section-title{
     font-size: 1rem !important;
     line-height: 1.5rem !important;
     font-weight: 200 !important;
@@ -393,7 +393,7 @@ body {
   #sThree img, .topImg, .bottomImg {
     max-height: 1000px !important;
   }
-  section .section-title{
+  .navbar, .nav-item a, section .section-title{
     font-size: 2rem !important;
     line-height: 1.5rem !important;
     font-weight: 400 !important;
