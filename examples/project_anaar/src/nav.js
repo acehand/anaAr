@@ -6,6 +6,7 @@ import createHistory from 'history/createBrowserHistory';
 import {
   Navbar,
   Nav,
+  NavbarBrand,
   NavItem,
   Fa,
 } from 'mdbreact';
@@ -68,11 +69,11 @@ class Navigate extends React.Component {
   render() {
     return (
       <Router history={this.state.history}>
-        <Navbar className="nav-stack">
-          <div className="navImage">
+        <Navbar className="nav-stack" expand>
+          <NavbarBrand className="h-100">
             <div className="headBgImage"></div>
             <div className="navPointer" style={{ marginLeft: this.state.active + '%' }} />
-          </div>
+          </NavbarBrand>
           <Nav className="justify-content-center">
             <NavItem>
               <Fa icon="circle"  />
