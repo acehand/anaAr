@@ -310,72 +310,9 @@ body {
 /* 100vw - current viewport width */
 /* (48 - 20)  48 == 48rem == 768px, 20 == 20rem == 320px(minimal supported viewport) */
 /* 0.65 - min scale variable, may vary */
-@media (min-width: 640px){
- div.content{
-    height: 80% !important;
-  }
-  #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
-    background-size:  cover !important;
-  }
-  img {
-    min-width: 300px !important;
-    min-height: 300px !important;;
-  }
-  #sThree img, .topImg, .bottomImg {
-    max-height: 320px !important;
-  }
-  section .section-title{
-    font-size: 1rem !important;
-  }
-  section .section-subtitle, #sFive .section-subtitle{
-    font-size: .75rem !important;
-  }
-}
- 
-@media (min-width: 768px){
-  div.content{
-    height: 80% !important;
-  }
-  #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
-    background-size:  cover !important;
-  }
-  image {
-    max-width: 600px !important;
-    max-height: 600px !important;;
-  }
-  section {
-    /* height: 60% !important;
-    width: 60% !important; */
-  }
-  section .section-title{
-    font-size: 2rem !important;
-    line-height: 2.5rem !important;
-    font-weight: 400 !important;
-    /* line-height: calc( 1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)))); */
-  }
-  section .section-subtitle, #sFive .section-subtitle{
-    font-size: 1.25rem !important;
-    line-height: 2rem !important;
-    font-weight: 200 !important;
-    /* line-height: calc( 1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)))); */
-  }
-}
- 
-@media (min-width: 1024px){
-  image {
-    width: 900px !important;
-    height: 900px !important;;
-  }
-}
- 
-@media (min-width: 1200px){
- 
-}
 
-@media only screen and (max-width: 320px), only screen and (min-device-width: 320px) {
-  div.content{
-    height: 80% !important;
-  }
+
+@media only screen and (min-width: 640px), only screen and (min-width: 640px) {
   #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
     background-size:  cover !important;
   }
@@ -399,3 +336,73 @@ body {
     /* line-height: calc( 1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)))); */
   }
 }
+
+@media only screen and (min-width: 768px), only screen and (min-device-width: 768px) {
+  #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
+    background-size:  cover !important;
+  }
+  image {
+    min-width: 50% !important;
+    max-height: 300px !important;;
+  }
+  #sThree img, .topImg, .bottomImg {
+    max-height: 320px !important;
+  }
+  section .section-title{
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+    font-weight: 200 !important;
+  }
+  section .section-subtitle, #sFive .section-subtitle{
+    font-size: .75rem !important;
+    line-height: 1rem !important;
+    font-weight: 100 !important;
+  }
+}
+
+@media only screen and (min-width: 768px), only screen and (min-device-width: 768px) {
+  #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
+    background-size:  cover !important;
+  }
+  image {
+    min-width: 50% !important;
+    max-height: 300px !important;;
+  }
+  #sThree img, .topImg, .bottomImg {
+    max-height: 320px !important;
+  }
+  section .section-title{
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+    font-weight: 200 !important;
+  }
+  section .section-subtitle, #sFive .section-subtitle{
+    font-size: .75rem !important;
+    line-height: 1rem !important;
+    font-weight: 100 !important;
+  }
+}
+@media only screen and (min-width: 1024px), only screen and (min-device-width: 1024px) {
+  #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
+    background-size:  cover !important;
+  }
+  image {
+    min-width: 90% !important;
+    max-height: 100% !important;;
+  }
+  #sThree img, .topImg, .bottomImg {
+    max-height: 1000px !important;
+  }
+  section .section-title{
+    font-size: 2rem !important;
+    line-height: 1.5rem !important;
+    font-weight: 400 !important;
+  }
+  section .section-subtitle, #sFive .section-subtitle{
+    font-size: 1rem !important;
+    line-height: 1.4rem !important;
+    font-weight: 300 !important;
+  }
+}
+
+
