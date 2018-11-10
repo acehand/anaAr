@@ -323,21 +323,26 @@ body {
   #sThree img, .topImg, .bottomImg {
     max-height: 120px !important;
   }
-  .navbar, .nav-item a, section .section-title{
-    font-size: 1rem !important;
-    line-height: 1.5rem !important;
-    font-weight: 200 !important;
-    /* line-height: calc( 1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)))); */
+  #sFive img{
+    min-width: 200px;
+    max-height: 250px;
+  }
+  section .section-title{
+    font-size: 2rem !important;
+    line-height: 2rem !important;
+    font-weight: 300 !important;
   }
   section .section-subtitle, #sFive .section-subtitle{
     font-size: .75rem !important;
-    line-height: 1rem !important;
+    line-height: 1.5rem !important;
     font-weight: 100 !important;
-    /* line-height: calc( 1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)))); */
+  }
+  .navbar, .nav-item a{
+    visibility: hidden !important;
   }
 }
 
-@media only screen and (min-width: 768px), only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 640px), only screen and (min-device-width: 640px) {
   #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
     background-size:  cover !important;
   }
@@ -349,6 +354,7 @@ body {
     max-height: 320px !important;
   }
   .navbar, .nav-item a, section .section-title{
+    visibility: visible !important;
     font-size: 1rem !important;
     line-height: 1.5rem !important;
     font-weight: 200 !important;
@@ -368,7 +374,7 @@ body {
     min-width: 50% !important;
     max-height: 300px !important;;
   }
-  #sThree img, .topImg, .bottomImg {
+  #sThree img, .topImg, .bottomImg, #sFive img{
     max-height: 320px !important;
   }
    section .section-title{
@@ -377,6 +383,7 @@ body {
     font-weight: 200 !important;
   }
   .nav-item a {
+    visibility: visible !important;
     font-size: 1.25rem !important;
     line-height: 2.5rem !important;
   }
@@ -391,11 +398,11 @@ body {
     background-size:  cover !important;
   }
   image {
-    min-width: 90% !important;
+    min-width: 100% !important;
     max-height: 100% !important;;
   }
-  #sThree img, .topImg, .bottomImg {
-    max-height: 1000px !important;
+  #sThree img, .topImg, .bottomImg #sFive img{
+    max-height: auto !important;
   }
    section .section-title{
     font-size: 2rem !important;
@@ -403,14 +410,16 @@ body {
     font-weight: 400 !important;
   }
   .nav-item a {
+    visibility: visible !important;
+    font-family: 'Give You Glory', cursive;
     font-size: 1.25rem !important;
     line-height: 2.5rem !important;
   }
   section .section-subtitle, #sFive .section-subtitle{
-    font-size: 1rem !important;
-    line-height: 1.4rem !important;
-    font-weight: 300 !important;
+    font-size: 1.75rem !important;
+    line-height: 1.2rem !important;
+    font-weight: 200 !important;
+    text-align: center;
   }
 }
-
 
