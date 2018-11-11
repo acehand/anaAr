@@ -325,6 +325,10 @@ body {
     min-width: 200px;
     max-height: 250px;
   }
+  #sFive div.flex-row {
+    margin-left : 0% !important;
+  }
+  
   section .section-title{
     font-size: 2rem !important;
     line-height: 2rem !important;
