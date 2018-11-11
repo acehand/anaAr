@@ -312,7 +312,7 @@ body {
 /* 0.65 - min scale variable, may vary */
 
 
-@media only screen and (min-width: 320px), only screen and (min-device-width: 320px) {
+ @media only screen and (min-width: 320px) and (max-width: 639px), only screen and (min-device-width: 320px) and (max-device-width: 639px) {
   #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
     background-size:  cover !important;
   }
@@ -341,8 +341,7 @@ body {
     visibility: hidden !important;
   }
 }
-
-@media only screen and (min-width: 640px), only screen and (min-device-width: 640px) {
+@media only screen and (min-width: 640px) and (max-width:767px), only screen and (min-device-width: 640px) and (max-width:767px) {
   #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
     background-size:  cover !important;
   }
@@ -365,8 +364,7 @@ body {
     font-weight: 100 !important;
   }
 }
-
-@media only screen and (min-width: 768px), only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width:1023px), only screen and (min-device-width: 768px) and (max-width:1023px) {
   #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
     background-size:  cover !important;
   }
@@ -378,9 +376,9 @@ body {
     max-height: 320px !important;
   }
    section .section-title{
-    font-size: 1rem !important;
+    font-size: 2rem !important;
     line-height: 1.5rem !important;
-    font-weight: 200 !important;
+    font-weight: 400 !important;
   }
   .nav-item a {
     visibility: visible !important;
@@ -393,7 +391,11 @@ body {
     font-weight: 100 !important;
   }
 }
-@media only screen and (min-width: 1024px), only screen and (min-device-width: 1024px) {
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
   #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
     background-size:  cover !important;
   }
@@ -401,10 +403,13 @@ body {
     min-width: 100% !important;
     max-height: 100% !important;;
   }
-  #sThree img, .topImg, .bottomImg #sFive img{
-    max-height: auto !important;
+  #sThree img, .topImg, .bottomImg {  
+    max-height: 320px !important;
   }
-   section .section-title{
+  #sFive img{
+    max-height: 450px;
+  }
+  section .section-title{
     font-size: 2rem !important;
     line-height: 1.5rem !important;
     font-weight: 400 !important;
@@ -416,10 +421,23 @@ body {
     line-height: 2.5rem !important;
   }
   section .section-subtitle, #sFive .section-subtitle{
-    font-size: 1.75rem !important;
-    line-height: 1.2rem !important;
-    font-weight: 200 !important;
-    text-align: center;
+  vertical-align: inherit!important;
+  line-height: 1.2 !important;
+  font-weight: 200 !important;
+  text-align: center !important;
+  font-family: 'kalam', cursive !important;
+  font-size: 1.75rem !important;
+  }
+  #sOne .section-title {
+    font-weight: 400 !important;
+    font-size:7rem !important;
+  }
+  #sOne .section-subtitle {
+    font-weight: 400 !important;
+    color : white !important;
+    font-size: 4rem !important;
+  }
+  #sFive .section-subtitle {
+    font-size: 2rem !important;
   }
 }
-
