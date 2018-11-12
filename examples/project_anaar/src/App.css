@@ -35,7 +35,7 @@ body {
 .navPointer {
   background: url("./Images/heartIcon3.png") center no-repeat;
   width: 15.5%;
-  z-index:101;
+  z-index:300;
   height: 100%;
   position : absolute;
 }
@@ -60,11 +60,12 @@ body {
 .nav-item {
   width:15%;
   height: 100%;
+  z-index:200;
   margin-top:1.3%;
 }
 .nav-item a{
   margin-top:1%;
-  z-index: 3000;;
+  z-index: 3000;
   font-family: 'Give You Glory', cursive;
   font-size: 1.25rem;
   line-height: 1.6rem;
