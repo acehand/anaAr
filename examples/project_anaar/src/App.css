@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css?family=Montez|Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Euphoria+Script');
+@import url('https://fonts.googleapis.com/css?family=Give+You+Glory|Kalam|Share+Tech+Mono');
+@import url('https://fonts.googleapis.com/css?family=Lovers+Quarrel');
+
+body {
+  text-align: center;
+}
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+.App-title {
+  font-size: 1.5rem;
+}
+.App-intro {
+  font-size: large;
+}
+.navImage {
+  position : absolute;
+  height: 100%;
+  margin-top: -1.4%;
+  width: 100%;
+}
+.headBgImage {
+  height: 100%;
+  width: 100%;
+  background: url("./Images/full-image-nav-3.png") center no-repeat;
+  background-size: contain;
+  position : absolute;
+  z-index: 101 !important ;
+}
+.navPointer {
+  background: url("./Images/heartIcon3.png") center no-repeat;
+  width: 15.5%;
+  z-index:300;
+  height: 100%;
+  position : absolute;
+}
+.navbar {
+  margin-top:-1%;
+}
+.navbar-brand{
+  margin-top:-2%;
+  margin-left:-1.4%;
+}
+.nav-stack{
+  position: absolute;
+  width:100%;
+  z-index: 100 !important;
+  height:10%;
+  background : white;
+}
+.navbar ul {
+  height: 100%;
+  width:100%;
+}
+.nav-item {
+  width:15%;
+  height: 100%;
+  z-index:200;
+  margin-top:1.2%;
+  margin-left:-.06%;
+}
+
+.nav-item:fullscreen, .nav-item:-ms-fullscreen, .nav-item:-moz-full-screen, .nav-item:-webkit-full-screen { 
+		margin-top:1.4% !important;
+	}
+.nav-item i {
+  margin-top:1%;
+}
+.nav-item a{
+  margin-top:1%;
+  z-index: 3000;
+  font-family: 'Give You Glory', cursive;
+  font-size: 1.25rem;
+  line-height: 1.6rem;
+}
+.nav-item p {
+  color : black;
+}
+.footer {
+  font-family: 'Give You Glory', cursive;
+  font-size:1rem;
+  font-weight: normal;
+  line-height: .25;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.footer span.hideFooterText {
+  display: none;
+}
+.footer span.showFooterText {
+  display: inline;
+}
+/* content font */
+.section-title {
+  vertical-align: inherit;
+  color:black;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: 'Montez', cursive;
+  font-size: 5rem;
+}
+.section-date {
+  font-family: 'Share Tech Mono', monospace;
+  text-decoration: underline;
+}
+.section-subtitle {
+  vertical-align: inherit;
+  line-height: 1.2;
+  font-weight: 200;
+  text-align: center;
+  font-family: 'kalam', cursive;
+  font-size: 1.75rem;
+}
+#sOne .section-title {
+  font-family: 'Lovers Quarrel', cursive;
+  font-weight: 400;
+  font-size:7rem;
+}
+#sOne .section-subtitle {
+  font-weight: 400;
+  color : white;
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 4rem;
+}
+#sFive .section-subtitle {
+  font-size: 2rem;
+}
+.display-linebreak {
+  white-space: pre-line;
+  text-align: "center";
+  align-content: "center";
+}
+
+.whitey {
+  background: linear-gradient(to right, white 0%, grey 100%);
+}  
+.teal {
+  background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
+}
+.tomato {
+  background: linear-gradient(to right, tomato 0%, gold 100%);
+}
+
+/*! Text-aligns */
+.align-left {
+  text-align: left; }
+
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
+/* short hands */
+.h-70 {
+  height:70%;
+}
+.h-15 {
+  height:15%;
+}
+.h-85 {
+  height:85%;
+}
+.w-40 {
+  width: 40%;
+}
+div.shadowLayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.img-fullscreen {
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+/*Sectionss*/
+section {
+  height: 90%;
+  width: 80%;
+  margin-left:10%;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+section:hover {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+#sOne {
+  background: url("./Images/oneBg1.jpg") center no-repeat;
+  
+  opacity: 1;
+}
+ #sTwo {
+  background: url("./Images/skyline3.jpg") center no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#sThree{
+  background : Teal;
+  opacity: .8;
+}
+#sFour {
+  background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,.1)), url("./Images/proposalBackground.jpg") center no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+}
+#sFive {
+  background: linear-gradient(rgba(245,255,239,0.4), rgba(255,255,255,.4)), url("./Images/minutes2.jpg") center no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#sSeven {
+  background: url("./Images/mapsbg.jpg") center no-repeat;
+  width:80%;
+  border-top: 2px;  
+  margin-left:10%
+}
+
+#sSeven iframe {
+  position:relative;
+  vertical-align: middle;
+  height:50%;
+  width:80%;
+  margin-top:8%;
+  opacity: 1 !important;
+}
+.sRotate {
+  font-weight: 900 !important;
+  transform: rotate(-18Deg);
+  margin-left : -4%;
+  margin-top : 2%;
+}
+#sFour div.d-flex {
+  height:100%;
+}
+#sFour div.d-flex div.title{
+  height:5%;
+}
+#sFour div.d-flex div.content{
+  height:1%;
+  margin-left:-5%;
+  margin-top:1%;
+}
+#sFour div.d-flex div{
+  z-index:3000;
+}
+#sFour img {
+  z-index:40000;
+}
+
+#sFive div.z-depth-5 {
+  margin-top: 9%
+}
+#sSix div.row {
+  height: 100px;
+}
+div.topImg {
+  opacity: 1;
+  height:40%;
+  width:80%;
+  margin-left:10%;
+  overflow: hidden!important;
+  z-index: 0;
+  position: relative
+}
+div.topImg img {
+  height: 100%;
+}
+.bgImage {
+  height: 100%;
+  width: 100%;
+  position: absolute;  
+  background: white;
+}
+.content {
+  /* height: 92% !important; */
+}
+#sFour .onHover{
+  opacity: 0.3;
+}
+#sFour .onHover:hover{
+  opacity: 1;
+}
+.thumbnail {
+  padding: .75rem;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  max-width: 100%;
+  height: 100%;
+}
+.hangouts {
+  height: 100%;
+}
+.hangouts img{
+  height: 100%;
+}
+body {
+  font-style: normal;
+  line-height: 1.5rem;
+}
+
+/* ---- Fluid typography for mobile devices ---- */
+/* 1.4 - font scale ratio ( bootstrap == 1.42857 ) */
+/* 100vw - current viewport width */
+/* (48 - 20)  48 == 48rem == 768px, 20 == 20rem == 320px(minimal supported viewport) */
+/* 0.65 - min scale variable, may vary */
+
+ @media only screen and (min-width: 320px) and (max-width: 639px), only screen and (min-device-width: 320px) and (max-device-width: 639px) {
+  #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
+    background-size:  cover !important;
+  }
+  image {
+    min-width: 10% !important;
+    max-height: 200px !important;;
+  }
+  #sThree img, .topImg, .bottomImg {
+    max-height: 120px !important;
+  }
+  #sFour .section-title{
+    margin-top:1px;
+  }
+  #sOne .section-title {
+    font-weight:300 !important;
+    font-size:4rem !important;
+  }
+  #sOne .section-subtitle {
+    font-weight:300 !important;
+    font-size:2rem !important;
+  }
+  #sFive img{
+    min-width: 200px;
+    max-height: 250px;
+  }
+  #sFive div.flex-row {
+    margin-left : -.4% !important;
+  }
+  #sFive div.flex-row div.align-items-center{
+    margin-left : 0% !important;
+  }
+  section .section-title{
+    font-size: 2rem !important;
+    line-height: 2rem !important;
+    font-weight: 300 !important;
+  }
+  section .section-subtitle, #sFive .section-subtitle{
+    font-size: .75rem !important;
+    line-height: 1rem !important;
+    font-weight: 100 !important;
+  }
+  .navbar, .nav-item a{
+    visibility: hidden !important;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width:767px), only screen and (min-device-width: 640px) and (max-width:767px) {
+  #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
+    background-size:  cover !important;
+    }
+  image {
+    min-width: 50% !important;
+    max-height: 300px !important;;
+  }
+  #sThree img, .topImg, .bottomImg {
+    max-height: 320px !important;
+  }
+  .navbar, .nav-item a, section .section-title{
+    visibility: visible !important;
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+    font-weight: 200 !important;
+  }
+  section .section-subtitle, #sFive .section-subtitle{
+    font-size: .75rem !important;
+    line-height: 1rem !important;
+    font-weight: 100 !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width:1023px), only screen and (min-device-width: 768px) and (max-width:1023px) {
+  #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
+    background-size:  cover !important;
+  }
+  image {
+    min-width: 50% !important;
+    max-height: 300px !important;;
+  }
+  #sThree img, .topImg, .bottomImg, #sFive img{
+    max-height: 320px !important;
+  }
+   section .section-title{
+    font-size: 2rem !important;
+    line-height: 1.5rem !important;
+    font-weight: 400 !important;
+  }
+  .nav-item a {
+    visibility: visible !important;
+    font-size: 1.25rem !important;
+    line-height: 2.5rem !important;
+  }
+  section .section-subtitle, #sFive .section-subtitle{
+    font-size: .75rem !important;
+    line-height: 1rem !important;
+    font-weight: 100 !important;
+  }
+}
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+  #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
+    background-size:  cover !important;
+  }
+  image {
+    min-width: 100% !important;
+    max-height: 100% !important;;
+  }
+  #sThree img, .topImg, .bottomImg {  
+    max-height: 320px !important;
+  }
+  #sFive img{
+    max-height: 450px;
+  }
+  section .section-title{
+    font-size: 2rem !important;
+    line-height: 1.5rem !important;
+    font-weight: 400 !important;
+  }
+  .nav-item a {
+    visibility: visible !important;
+    font-family: 'Give You Glory', cursive;
+    font-size: 1.25rem !important;
+    line-height: 2.5rem !important;
+  }
+  section .section-subtitle, #sFive .section-subtitle{
+  vertical-align: inherit!important;
+  line-height: 1.2 !important;
+  font-weight: 200 !important;
+  text-align: center !important;
+  font-family: 'kalam', cursive !important;
+  font-size: 1.75rem !important;
+  }
+  #sOne .section-title {
+    font-weight: 400 !important;
+    font-size:7rem !important;
+  }
+  #sOne .section-subtitle {
+    font-weight: 400 !important;
+    color : white !important;
+    font-size: 4rem !important;
+  }
+  #sFive .section-subtitle {
+    font-size: 2rem !important;
+  }
+}
