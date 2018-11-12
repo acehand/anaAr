@@ -16,7 +16,7 @@ class Contentsections extends React.Component{
       threshold : 0,
       active: 5.55,
       maxLeft : 5.55,
-      maxRight : 78,
+      maxRight : 79,
       showFooterContent : false,
       flipped : false,
       card1Content: 'He made her laugh. \n She made him work lesser. \n He played tricks on her.\nShe teased him by not completing her stories.\n He woke her up every morning.\n She slept longer.\nHe talked and talked and talked.\nShe listened!',
@@ -45,7 +45,8 @@ class Contentsections extends React.Component{
     var activeState = (this.parallax.current )/this.parallax.container.offsetHeight,
      threshold = (activeState * 14.75),
      showFooterContent = false,
-     boundary = (this.state.offsetLen - 2) * this.parallax.container.offsetHeight;
+     boundary = (this.state.offsetLen - 2) * this.parallax.container.offsetHeight,
+     scrollRight =0;
      
      if (activeState === 0 || threshold < 0) {
        threshold = 0;
@@ -56,7 +57,11 @@ class Contentsections extends React.Component{
      if (this.parallax.current >= boundary) {
        showFooterContent = true;
      }
-     this.setState({active: (threshold + this.state.maxLeft), showFooterContent : showFooterContent});
+     scrollRight = threshold + this.state.maxLeft;
+     if (scrollRight > this.state.maxRight) {
+       scrollRight = this.state.maxRight;
+     }
+     this.setState({active: (scrollRight), showFooterContent : showFooterContent});
   }
   
   handleClick(parallax, offset) {
