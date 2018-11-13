@@ -5,6 +5,9 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import './index.css';
 import App from './App';
+import $ from 'jquery';
+import './sakura/jquery-sakura.css';
+// import './sakura/jquery-sakura.js';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));

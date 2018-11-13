@@ -6,6 +6,7 @@ import Collage from './Images/Collages2.jpg';
 import keyUp from './Images/keyup2.png';
 import keyDown from './Images/keydown2.png';
 
+
 class Contentsections extends React.Component{  
   constructor(props) {
     super(props);
