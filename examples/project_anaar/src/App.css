@@ -339,6 +339,7 @@ body {
   #sOne .section-subtitle {
     font-weight:300 !important;
     font-size:2rem !important;
+    font-family: 'Lovers Quarrel', cursive !important;
   }
   #sFive img{
     min-width: 200px;
@@ -373,7 +374,17 @@ body {
     max-height: 300px !important;;
   }
   #sThree img, .topImg, .bottomImg {
-    max-height: 320px !important;
+    max-height: 300px !important;
+  }
+  #sOne .section-title {
+    font-weight: 200 !important;
+    font-size:7rem !important;
+  }
+  #sOne .section-subtitle {
+    font-weight: 100 !important;
+    color : white !important;
+    font-size: 1.5rem !important;
+    font-family: 'Lovers Quarrel', cursive !important;
   }
   .navbar, .nav-item a, section .section-title{
     visibility: visible !important;
@@ -385,6 +396,7 @@ body {
     font-size: .75rem !important;
     line-height: 1rem !important;
     font-weight: 100 !important;
+    font-family: 'Lovers Quarrel', cursive !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width:1023px), only screen and (min-device-width: 768px) and (max-width:1023px) {
@@ -459,6 +471,7 @@ body {
     font-weight: 400 !important;
     color : white !important;
     font-size: 4rem !important;
+    font-family: 'Lovers Quarrel', cursive !important;
   }
   #sFive .section-subtitle {
     font-size: 2rem !important;
