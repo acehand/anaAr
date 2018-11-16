@@ -137,8 +137,8 @@ export class SectionFive extends React.Component {
           </div>
         </div>
         <div className="d-flex flex-row w-100 h-85 ml-2 mb-2 mr-2">
-          <div className="align-items-center m-3 mb-5 w-40">
-            <Media object src={inviteImage} className="border border-dark thumbnail"/>      
+          <div className="align-self-center m-3 mb-5 w-40">
+            <Media object src={inviteImage} className="border border-dark thumbnail align-middle"/>
           </div>
           <div className="align-self-center ml-5">
             <p className="align-middle section-subtitle mbr-light display-linebreak">
