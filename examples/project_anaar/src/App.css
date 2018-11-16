@@ -429,10 +429,13 @@ body {
     line-height: 2rem !important;
     font-family: 'Lovers Quarrel', cursive !important;
   }
+  #sFive div.flex-row {
+    height: auto;
+  }
   section .section-title{
-    font-size: 2rem !important;
-    line-height: 1.5rem !important;
-    font-weight: 400 !important;
+    font-size: 3rem !important;
+    line-height: 3rem !important;
+    font-weight: 300 !important;
   }
   .nav-item a {
     visibility: visible !important;
@@ -440,8 +443,8 @@ body {
     line-height: 1.8rem !important;
   }
   section .section-subtitle, #sFive .section-subtitle{
-    font-size: .75rem !important;
-    line-height: 1rem !important;
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
     font-weight: 100 !important;
   }
 }
