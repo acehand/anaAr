@@ -371,10 +371,10 @@ body {
     }
   image {
     min-width: 50% !important;
-    max-height: 300px !important;;
+    max-height: 40% !important;;
   }
   #sThree img, .topImg, .bottomImg {
-    max-height: 300px !important;
+    max-height: 70% !important;
   }
   #sOne .section-title {
     font-weight: 200 !important;
@@ -426,10 +426,7 @@ body {
     font-weight: 100 !important;
   }
 }
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px) 
-  and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
 
   #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven {
     background-size:  cover !important;
